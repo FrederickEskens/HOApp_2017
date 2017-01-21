@@ -1,5 +1,5 @@
 ﻿using System;
-
+using HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers;
 using UIKit;
 
 namespace HOApp_2017.iOS
@@ -21,6 +21,9 @@ namespace HOApp_2017.iOS
 				var title = string.Format ("{0} clicks!", count++);
 				Button.SetTitle (title, UIControlState.Normal);
 			};
+
+			var appController = AppController.Instance;
+			Button.SetTitle(appController.GetCopy("testKey"),UIControlState.Normal);
 		}
 
 		public override void DidReceiveMemoryWarning ()

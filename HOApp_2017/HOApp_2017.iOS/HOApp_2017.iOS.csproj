@@ -59,6 +59,7 @@
     <MtouchProfiling>true</MtouchProfiling>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignProvision>fd8d85bd-f53b-4a62-a9c6-7d9f7de6e6b7</CodesignProvision>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -138,6 +139,11 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\HOApp_2017\SharedAssets\HO.sqlite">
+      <Link>SharedAssets\HO.sqlite</Link>
+    </Content>
   </ItemGroup>
   <Import Project="..\HOApp_2017\HOApp_2017.projitems" Label="Shared" Condition="Exists('..\HOApp_2017\HOApp_2017.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
