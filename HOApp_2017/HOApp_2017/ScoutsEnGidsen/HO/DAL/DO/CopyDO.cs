@@ -6,7 +6,7 @@
 //
 // Copyright (c) 2017 Bazookas
 //
-using System;
+
 using SQLite;
 
 namespace HOApp_2017.ScoutsEnGidsen.HO.DAL.DO

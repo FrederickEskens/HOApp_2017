@@ -392,6 +392,9 @@ namespace HOApp_2017.Droid
 			// aapt resource value: 0x7f030006
 			public const int hockeyapp_view_feedback_message = 2130903046;
 			
+			// aapt resource value: 0x7f030007
+			public const int Leefregels = 2130903047;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
