@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_pink">
+    android:background="@color/background_color"
+    android:scrollbars="none">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/intro"
+            android:id="@+id/header_image"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:src="@drawable/intro" />
+            android:adjustViewBounds="true" />
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
@@ -24,17 +24,16 @@
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blue"
+                android:textColor="@color/primary_text_color"
                 android:textSize="36sp"
                 android:textStyle="bold"
                 android:paddingTop="20sp"
-                android:paddingBottom="10sp"
-                android:text="Herfstontmoeting" />
+                android:paddingBottom="10sp" />
             <TextView
                 android:id="@+id/body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/blue" />
+                android:textColor="@color/primary_text_color" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

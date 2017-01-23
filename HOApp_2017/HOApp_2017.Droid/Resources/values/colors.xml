@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <color name="background_pink">#efa690</color>
-  <color name="blue">#003050</color>
+  <color name="background_color">#efa690</color>
+  <color name="primary_text_color">#003050</color>
+  <color name="secondary_text_color">#6F4D43</color>
 </resources>
