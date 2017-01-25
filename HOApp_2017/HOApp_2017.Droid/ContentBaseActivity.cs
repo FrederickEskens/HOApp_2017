@@ -1,4 +1,3 @@
-using System.Text;
 using Android.App;
 using Android.OS;
 using Android.Support.Design.Widget;
@@ -6,12 +5,12 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+
 using NavigationDrawer;
-using ActionBarDrawerToggle = Android.Support.V7.App.ActionBarDrawerToggle;
 
 namespace HOApp_2017.Droid
 {
-    [Activity(Label = "ContentBaseActivity", MainLauncher = true)]
+    [Activity(Label = "H0 2017", MainLauncher = true)]
     public class ContentBaseActivity : AppCompatActivity
     {
         public ImageView HeaderImage;
@@ -19,6 +18,7 @@ namespace HOApp_2017.Droid
         public TextView Body;
 
         DrawerLayout drawerLayout;
+        MyActionBarDrawerToggle drawerToggle;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -41,7 +41,7 @@ namespace HOApp_2017.Droid
             navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
 
             // Create ActionBarDrawerToggle button and add it to the toolbar
-            var drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, Resource.String.open_drawer, Resource.String.close_drawer);
+            drawerToggle = new MyActionBarDrawerToggle(this, drawerLayout, Resource.String.app_name, Resource.String.app_name);
             drawerLayout.AddDrawerListener(drawerToggle);
             drawerToggle.SyncState();
 
@@ -98,28 +98,13 @@ namespace HOApp_2017.Droid
             drawerLayout.CloseDrawers();
         }
 
-        //add custom icon to toolbar
-        public override bool OnCreateOptionsMenu(Android.Views.IMenu menu)
-        {
-            MenuInflater.Inflate(Resource.Menu.action_menu, menu);
-            if (menu != null)
-            {
-                menu.FindItem(Resource.Id.action_refresh).SetVisible(true);
-                menu.FindItem(Resource.Id.action_attach).SetVisible(false);
-            }
-            return base.OnCreateOptionsMenu(menu);
-        }
-
         //define action for toolbar icon press
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    
-                    return true;
-                case Resource.Id.action_attach:
-                    //FnAttachImage();
+                    drawerToggle.OnOptionsItemSelected(item);
                     return true;
                 default:
                     return base.OnOptionsItemSelected(item);
@@ -130,7 +115,7 @@ namespace HOApp_2017.Droid
         {
             if (FragmentManager.BackStackEntryCount != 0)
             {
-                FragmentManager.PopBackStack();// fragmentManager.popBackStack();
+                FragmentManager.PopBackStack();
             }
             else
             {

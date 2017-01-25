@@ -2218,9 +2218,6 @@ namespace HOApp_2017.Droid
 			// aapt resource value: 0x7f06009a
 			public const int action0 = 2131099802;
 			
-			// aapt resource value: 0x7f0600a8
-			public const int action_attach = 2131099816;
-			
 			// aapt resource value: 0x7f06005e
 			public const int action_bar = 2131099742;
 			
@@ -2262,9 +2259,6 @@ namespace HOApp_2017.Droid
 			
 			// aapt resource value: 0x7f06003f
 			public const int action_mode_close_button = 2131099711;
-			
-			// aapt resource value: 0x7f0600a7
-			public const int action_refresh = 2131099815;
 			
 			// aapt resource value: 0x7f060040
 			public const int activity_chooser_view_content = 2131099712;
@@ -2512,26 +2506,26 @@ namespace HOApp_2017.Droid
 			// aapt resource value: 0x7f060016
 			public const int multiply = 2131099670;
 			
-			// aapt resource value: 0x7f0600af
-			public const int nav_about = 2131099823;
-			
-			// aapt resource value: 0x7f0600ae
-			public const int nav_instellingen = 2131099822;
-			
 			// aapt resource value: 0x7f0600ad
-			public const int nav_jaarlied = 2131099821;
-			
-			// aapt resource value: 0x7f0600aa
-			public const int nav_kaart = 2131099818;
+			public const int nav_about = 2131099821;
 			
 			// aapt resource value: 0x7f0600ac
-			public const int nav_leefregels = 2131099820;
+			public const int nav_instellingen = 2131099820;
 			
 			// aapt resource value: 0x7f0600ab
-			public const int nav_praktisch = 2131099819;
+			public const int nav_jaarlied = 2131099819;
+			
+			// aapt resource value: 0x7f0600a8
+			public const int nav_kaart = 2131099816;
+			
+			// aapt resource value: 0x7f0600aa
+			public const int nav_leefregels = 2131099818;
 			
 			// aapt resource value: 0x7f0600a9
-			public const int nav_programma = 2131099817;
+			public const int nav_praktisch = 2131099817;
+			
+			// aapt resource value: 0x7f0600a7
+			public const int nav_programma = 2131099815;
 			
 			// aapt resource value: 0x7f060099
 			public const int nav_view = 2131099801;
@@ -2911,70 +2905,64 @@ namespace HOApp_2017.Droid
 			public const int design_text_input_password_icon = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int headerdrawerlayout = 2130903081;
+			public const int hockeyapp_activity_expiry_info = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int hockeyapp_activity_expiry_info = 2130903082;
+			public const int hockeyapp_activity_feedback = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int hockeyapp_activity_feedback = 2130903083;
+			public const int hockeyapp_activity_login = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int hockeyapp_activity_login = 2130903084;
+			public const int hockeyapp_activity_update = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int hockeyapp_activity_update = 2130903085;
+			public const int hockeyapp_fragment_update = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int hockeyapp_fragment_update = 2130903086;
+			public const int hockeyapp_view_feedback_message = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int hockeyapp_view_feedback_message = 2130903087;
+			public const int Leefregels = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int homeLayout = 2130903088;
+			public const int Main = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int Leefregels = 2130903089;
+			public const int notification_media_action = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int Main = 2130903090;
+			public const int notification_media_cancel_action = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int notification_media_action = 2130903091;
+			public const int notification_template_big_media = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int notification_media_cancel_action = 2130903092;
+			public const int notification_template_big_media_narrow = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int notification_template_big_media = 2130903093;
+			public const int notification_template_lines = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int notification_template_big_media_narrow = 2130903094;
+			public const int notification_template_media = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int notification_template_lines = 2130903095;
+			public const int notification_template_part_chronometer = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int notification_template_media = 2130903096;
+			public const int notification_template_part_time = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int notification_template_part_chronometer = 2130903097;
+			public const int select_dialog_item_material = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int notification_template_part_time = 2130903098;
+			public const int select_dialog_multichoice_material = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int select_dialog_item_material = 2130903099;
+			public const int select_dialog_singlechoice_material = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int select_dialog_multichoice_material = 2130903100;
-			
-			// aapt resource value: 0x7f03003d
-			public const int select_dialog_singlechoice_material = 2130903101;
-			
-			// aapt resource value: 0x7f03003e
-			public const int support_simple_spinner_dropdown_item = 2130903102;
+			public const int support_simple_spinner_dropdown_item = 2130903100;
 			
 			static Layout()
 			{
@@ -2990,10 +2978,7 @@ namespace HOApp_2017.Droid
 		{
 			
 			// aapt resource value: 0x7f0c0000
-			public const int action_menu = 2131492864;
-			
-			// aapt resource value: 0x7f0c0001
-			public const int navmenu = 2131492865;
+			public const int navmenu = 2131492864;
 			
 			static Menu()
 			{
@@ -3112,9 +3097,6 @@ namespace HOApp_2017.Droid
 			
 			// aapt resource value: 0x7f070023
 			public const int character_counter_pattern = 2131165219;
-			
-			// aapt resource value: 0x7f07006f
-			public const int close_drawer = 2131165295;
 			
 			// aapt resource value: 0x7f07006c
 			public const int hello = 2131165292;
@@ -3335,17 +3317,11 @@ namespace HOApp_2017.Droid
 			// aapt resource value: 0x7f070024
 			public const int library_name = 2131165220;
 			
-			// aapt resource value: 0x7f07006e
-			public const int open_drawer = 2131165294;
-			
 			// aapt resource value: 0x7f070013
 			public const int search_menu_title = 2131165203;
 			
 			// aapt resource value: 0x7f070014
 			public const int status_bar_notification_info_overflow = 2131165204;
-			
-			// aapt resource value: 0x7f070070
-			public const int strBottomLine = 2131165296;
 			
 			static String()
 			{
@@ -3845,6 +3821,9 @@ namespace HOApp_2017.Droid
 			
 			// aapt resource value: 0x7f080168
 			public const int MyTheme_Base = 2131231080;
+			
+			// aapt resource value: 0x7f08016a
+			public const int NavigationDrawerStyle = 2131231082;
 			
 			// aapt resource value: 0x7f080019
 			public const int Platform_AppCompat = 2131230745;

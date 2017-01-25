@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
-	<string name="app_name">HO 2017</string>
-  <string name="open_drawer">Open drawer</string>
-  <string name="close_drawer">Close drawer</string>
-  <string name="strBottomLine">From android material design</string>
+	<string name="app_name">Herfstontmoeting 2017</string>
 </resources>

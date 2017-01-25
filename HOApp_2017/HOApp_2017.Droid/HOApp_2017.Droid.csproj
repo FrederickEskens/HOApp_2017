@@ -104,6 +104,7 @@
     <Compile Include="HomeFragment.cs" />
     <Compile Include="JaarliedActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="MyActionBarDrawerToggle.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,8 +117,6 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\app_bar.axml" />
-    <AndroidResource Include="Resources\layout\headerdrawerlayout.axml" />
-    <AndroidResource Include="Resources\layout\homeLayout.axml" />
     <AndroidResource Include="Resources\layout\Main.axml" />
   </ItemGroup>
   <ItemGroup>
@@ -205,9 +204,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\menu\navmenu.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\menu\action_menu.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Styles.xml" />
