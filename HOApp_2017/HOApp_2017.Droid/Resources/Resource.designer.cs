@@ -2213,7 +2213,7 @@ namespace HOApp_2017.Droid
 		{
 			
 			// aapt resource value: 0x7f060098
-			public const int HomeFrameLayout = 2131099800;
+			public const int FrameLayout = 2131099800;
 			
 			// aapt resource value: 0x7f06009a
 			public const int action0 = 2131099802;
@@ -2512,17 +2512,26 @@ namespace HOApp_2017.Droid
 			// aapt resource value: 0x7f060016
 			public const int multiply = 2131099670;
 			
-			// aapt resource value: 0x7f0600ac
-			public const int nav_SearchApartment = 2131099820;
+			// aapt resource value: 0x7f0600af
+			public const int nav_about = 2131099823;
 			
-			// aapt resource value: 0x7f0600ab
-			public const int nav_friends = 2131099819;
+			// aapt resource value: 0x7f0600ae
+			public const int nav_instellingen = 2131099822;
 			
-			// aapt resource value: 0x7f0600a9
-			public const int nav_home = 2131099817;
+			// aapt resource value: 0x7f0600ad
+			public const int nav_jaarlied = 2131099821;
 			
 			// aapt resource value: 0x7f0600aa
-			public const int nav_messages = 2131099818;
+			public const int nav_kaart = 2131099818;
+			
+			// aapt resource value: 0x7f0600ac
+			public const int nav_leefregels = 2131099820;
+			
+			// aapt resource value: 0x7f0600ab
+			public const int nav_praktisch = 2131099819;
+			
+			// aapt resource value: 0x7f0600a9
+			public const int nav_programma = 2131099817;
 			
 			// aapt resource value: 0x7f060099
 			public const int nav_view = 2131099801;

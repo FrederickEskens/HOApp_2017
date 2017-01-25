@@ -1,29 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-  <group android:checkableBehavior="single">
+  <group>
     <item
-      android:id="@+id/nav_home"
-      android:icon="@drawable/ic_home_black_24dp"
-      android:title="Home" />
+      android:id="@+id/nav_programma"
+      android:title="Programma" />
     <item
-      android:id="@+id/nav_messages"
-      android:icon="@drawable/ic_question_answer_black_24dp"
-      android:title="Write Post" />
+      android:id="@+id/nav_kaart"
+      android:title="Kaart" />
     <item
-      android:id="@+id/nav_friends"
-      android:icon="@drawable/ic_supervisor_account_black_24dp"
-      android:title="Members" />
+      android:id="@+id/nav_praktisch"
+      android:title="Praktische info" />
     <item
-      android:id="@+id/nav_SearchApartment"
-      android:icon="@drawable/ic_devices_black_24dp"
-      android:title="Devices" />
+      android:id="@+id/nav_leefregels"
+      android:title="Leefregels" />
+    <item
+      android:id="@+id/nav_jaarlied"
+      android:title="Jaarlied" />
+    <item
+      android:id="@+id/nav_instellingen"
+      android:title="Instellingen" />
+    <item
+      android:id="@+id/nav_about"
+      android:title="Over deze app" />
   </group> 
-  <item android:title="Review">
-    <menu>
-      <item
-        android:title="Post" />
-      <item
-        android:title="Ratings" />
-     </menu>
-  </item>
 </menu>

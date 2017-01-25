@@ -32,6 +32,7 @@ namespace HOApp_2017.Droid
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
             SetSupportActionBar(toolbar);
             SupportActionBar.SetTitle(Resource.String.app_name);
+
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.SetDisplayShowHomeEnabled(true);
 
@@ -41,39 +42,55 @@ namespace HOApp_2017.Droid
 
             // Create ActionBarDrawerToggle button and add it to the toolbar
             var drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, Resource.String.open_drawer, Resource.String.close_drawer);
-            drawerLayout.SetDrawerListener(drawerToggle);
+            drawerLayout.AddDrawerListener(drawerToggle);
             drawerToggle.SyncState();
 
             //load default home screen
-            var ft = FragmentManager.BeginTransaction();
-            ft.AddToBackStack(null);
-            ft.Add(Resource.Id.HomeFrameLayout, new HomeFragment());
-            ft.Commit();
+            LoadFragment(new HomeFragment());
 
             HeaderImage = FindViewById<ImageView>(Resource.Id.header_image);
             Title = FindViewById<TextView>(Resource.Id.title);
             Body = FindViewById<TextView>(Resource.Id.body);
         }
 
-        
+        private void LoadFragment(Fragment fragment)
+        {
+            var ft = FragmentManager.BeginTransaction();
+            ft.AddToBackStack(null);
+            ft.Add(Resource.Id.FrameLayout, fragment);
+            ft.Commit();
+        }
 
         protected override void OnResume()
         {
             SupportActionBar.SetTitle(Resource.String.app_name);
             base.OnResume();
         }
+
         //define action for navigation menu selection
         void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
             switch (e.MenuItem.ItemId)
             {
-                case (Resource.Id.nav_home):
-                    Toast.MakeText(this, "Home selected!", ToastLength.Short).Show();
+                case (Resource.Id.nav_programma):
+                    LoadFragment(new HomeFragment());
                     break;
-                case (Resource.Id.nav_messages):
+                case (Resource.Id.nav_kaart):
                     Toast.MakeText(this, "Message selected!", ToastLength.Short).Show();
                     break;
-                case (Resource.Id.nav_friends):
+                case (Resource.Id.nav_praktisch):
+                    // React on 'Friends' selection
+                    break;
+                case (Resource.Id.nav_leefregels):
+                    // React on 'Friends' selection
+                    break;
+                case (Resource.Id.nav_jaarlied):
+                    LoadFragment(new JaarliedFragment());
+                    break;
+                case (Resource.Id.nav_instellingen):
+                    // React on 'Friends' selection
+                    break;
+                case (Resource.Id.nav_about):
                     // React on 'Friends' selection
                     break;
             }
@@ -81,7 +98,7 @@ namespace HOApp_2017.Droid
             drawerLayout.CloseDrawers();
         }
 
-        //add custom icon to tolbar
+        //add custom icon to toolbar
         public override bool OnCreateOptionsMenu(Android.Views.IMenu menu)
         {
             MenuInflater.Inflate(Resource.Menu.action_menu, menu);
@@ -92,13 +109,14 @@ namespace HOApp_2017.Droid
             }
             return base.OnCreateOptionsMenu(menu);
         }
-        //define action for tolbar icon press
+
+        //define action for toolbar icon press
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
             switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    //this.Activity.Finish();
+                    
                     return true;
                 case Resource.Id.action_attach:
                     //FnAttachImage();
