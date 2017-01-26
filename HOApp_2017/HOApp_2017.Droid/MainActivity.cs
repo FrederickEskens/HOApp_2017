@@ -9,7 +9,7 @@ using HOApp_2017.Droid.Utilities;
 
 namespace HOApp_2017.Droid
 {
-    [Activity(Label = "H0 2017", MainLauncher = true)]
+    [Activity(Label = "HO 2017", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
         DrawerLayout _drawerLayout;
@@ -46,6 +46,8 @@ namespace HOApp_2017.Droid
 
         private void LoadFragment(Fragment fragment)
         {
+            //TODO: optimize
+            //TODO: configure AddToBackStack
             var ft = FragmentManager.BeginTransaction();
             ft.AddToBackStack(null);
             ft.Add(Resource.Id.FrameLayout, fragment);
@@ -105,6 +107,7 @@ namespace HOApp_2017.Droid
         // To avoid direct app exit on backpressed and to show fragment from stack
         public override void OnBackPressed()
         {
+            //TODO: prevent white screen on end of stack
             if (FragmentManager.BackStackEntryCount != 0)
             {
                 FragmentManager.PopBackStack();

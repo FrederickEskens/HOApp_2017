@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+  <style name="AppTheme" parent="AppBaseTheme">
+    <item name="android:colorButtonNormal">@color/primary_blue</item>
+    <item name="android:statusBarColor">@color/primary_blue_dark</item>
+  </style>
+</resources>
