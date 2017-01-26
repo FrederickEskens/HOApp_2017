@@ -2978,7 +2978,7 @@ namespace HOApp_2017.Droid
 		{
 			
 			// aapt resource value: 0x7f0c0000
-			public const int navmenu = 2131492864;
+			public const int nav_menu = 2131492864;
 			
 			static Menu()
 			{

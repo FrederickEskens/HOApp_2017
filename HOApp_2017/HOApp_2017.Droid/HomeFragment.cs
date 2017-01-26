@@ -51,4 +51,3 @@ namespace HOApp_2017.Droid
         }
     }
 }
-

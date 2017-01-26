@@ -4,6 +4,7 @@ using Android.Support.Design.Widget;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
+
 using HOApp_2017.Droid.Utilities;
 
 namespace HOApp_2017.Droid
@@ -11,8 +12,8 @@ namespace HOApp_2017.Droid
     [Activity(Label = "H0 2017", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        DrawerLayout drawerLayout;
-        MyActionBarDrawerToggle drawerToggle;
+        DrawerLayout _drawerLayout;
+        MyActionBarDrawerToggle _drawerToggle;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -20,7 +21,7 @@ namespace HOApp_2017.Droid
 
             SetContentView(Resource.Layout.Main);
 
-            drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            _drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
             // Init toolbar
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
@@ -35,9 +36,9 @@ namespace HOApp_2017.Droid
             navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
 
             // Create ActionBarDrawerToggle button and add it to the toolbar
-            drawerToggle = new MyActionBarDrawerToggle(this, drawerLayout, Resource.String.app_name, Resource.String.app_name);
-            drawerLayout.AddDrawerListener(drawerToggle);
-            drawerToggle.SyncState();
+            _drawerToggle = new MyActionBarDrawerToggle(this, _drawerLayout);
+            _drawerLayout.AddDrawerListener(_drawerToggle);
+            _drawerToggle.SyncState();
 
             // Load default home screen
             LoadFragment(new HomeFragment());
@@ -58,7 +59,7 @@ namespace HOApp_2017.Droid
         }
 
         // Define action for navigation menu selection
-        void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
+        private void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
         {
             switch (e.MenuItem.ItemId)
             {
@@ -85,7 +86,7 @@ namespace HOApp_2017.Droid
                     break;
             }
             
-            drawerLayout.CloseDrawers();
+            _drawerLayout.CloseDrawers();
         }
 
         // Define action for toolbar icon press
@@ -94,7 +95,7 @@ namespace HOApp_2017.Droid
             switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    drawerToggle.OnOptionsItemSelected(item);
+                    _drawerToggle.OnOptionsItemSelected(item);
                     return true;
                 default:
                     return base.OnOptionsItemSelected(item);

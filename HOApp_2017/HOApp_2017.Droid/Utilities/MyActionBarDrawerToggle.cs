@@ -7,16 +7,12 @@ namespace HOApp_2017.Droid.Utilities
 {
     public class MyActionBarDrawerToggle : SupportActionBarDrawerToggle
     {
-        private AppCompatActivity mHostActivity;
-        private int mOpenedResource;
-        private int mClosedResource;
+        private readonly AppCompatActivity _hostActivity;
 
-        public MyActionBarDrawerToggle(AppCompatActivity host, DrawerLayout drawerLayout, int openedResource, int closedResource)
-        : base(host, drawerLayout, openedResource, closedResource)
+        public MyActionBarDrawerToggle(AppCompatActivity host, DrawerLayout drawerLayout)
+        : base(host, drawerLayout, Resource.String.app_name, Resource.String.app_name)
         {
-            mHostActivity = host;
-            mOpenedResource = openedResource;
-            mClosedResource = closedResource;
+            _hostActivity = host;
         }
 
         public override void OnDrawerOpened(Android.Views.View drawerView)
@@ -26,7 +22,7 @@ namespace HOApp_2017.Droid.Utilities
             if (drawerType == 0)
             {
                 base.OnDrawerOpened(drawerView);
-                mHostActivity.SupportActionBar.SetTitle(mOpenedResource);
+                _hostActivity.SupportActionBar.SetTitle(Resource.String.app_name);
             }
         }
 
@@ -37,7 +33,7 @@ namespace HOApp_2017.Droid.Utilities
             if (drawerType == 0)
             {
                 base.OnDrawerClosed(drawerView);
-                mHostActivity.SupportActionBar.SetTitle(mClosedResource);
+                _hostActivity.SupportActionBar.SetTitle(Resource.String.app_name);
             }
         }
 
