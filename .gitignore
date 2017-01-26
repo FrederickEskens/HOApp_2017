@@ -64,5 +64,5 @@ Temporary Items
 */*/*/obj/*
 */*/*/*/bin/*
 */*/*/*/obj/*
-packages/
-.vs/
+packages/*
+.vs/*
