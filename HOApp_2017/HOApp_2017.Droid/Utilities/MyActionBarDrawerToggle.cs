@@ -1,8 +1,9 @@
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
+
 using SupportActionBarDrawerToggle = Android.Support.V7.App.ActionBarDrawerToggle;
 
-namespace HOApp_2017.Droid
+namespace HOApp_2017.Droid.Utilities
 {
     public class MyActionBarDrawerToggle : SupportActionBarDrawerToggle
     {
@@ -20,7 +21,7 @@ namespace HOApp_2017.Droid
 
         public override void OnDrawerOpened(Android.Views.View drawerView)
         {
-            int drawerType = (int)drawerView.Tag;
+            var drawerType = (int)drawerView.Tag;
 
             if (drawerType == 0)
             {
@@ -31,7 +32,7 @@ namespace HOApp_2017.Droid
 
         public override void OnDrawerClosed(Android.Views.View drawerView)
         {
-            int drawerType = (int)drawerView.Tag;
+            var drawerType = (int)drawerView.Tag;
 
             if (drawerType == 0)
             {
@@ -42,7 +43,7 @@ namespace HOApp_2017.Droid
 
         public override void OnDrawerSlide(Android.Views.View drawerView, float slideOffset)
         {
-            int drawerType = (int)drawerView.Tag;
+            var drawerType = (int)drawerView.Tag;
 
             if (drawerType == 0)
             {

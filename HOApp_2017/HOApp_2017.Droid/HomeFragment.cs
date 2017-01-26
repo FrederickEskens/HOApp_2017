@@ -1,39 +1,22 @@
 using System.Text;
-using Android;
-using Android.App;
-using Android.Content;
+
 using Android.OS;
-using Android.Runtime;
-using Android.Util;
 using Android.Views;
-using Android.Widget;
-using Resource = HOApp_2017.Droid.Resource;
 
-namespace NavigationDrawer
+namespace HOApp_2017.Droid
 {
-    public class HomeFragment : Fragment
+    public class HomeFragment : ContentBaseFragment
     {
-        public override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-        }
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            // Use this to return your custom view for this Fragment
-            // return inflater.Inflate(Resource.Layout.YourFragment, container, false);
-            View view = inflater.Inflate(HOApp_2017.Droid.Resource.Layout.ContentBase, container, false);
-
-            var HeaderImage = view.FindViewById<ImageView>(Resource.Id.header_image);
-            var Title = view.FindViewById<TextView>(Resource.Id.title);
-            var Body = view.FindViewById<TextView>(Resource.Id.body);
+            var view = base.OnCreateView(inflater, container, savedInstanceState);
 
             HeaderImage.SetImageResource(Resource.Drawable.headers_intro);
             Title.Text = "Herfstontmoeting";
 
             Body.Text = FillBody();
 
-            return view;//base.OnCreateView (inflater.Inflate(Resource.Layout.homeLayout, container, savedInstanceState);
+            return view;
         }
 
         private string FillBody()

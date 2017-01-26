@@ -1,52 +1,117 @@
-﻿using System.Text;
-
 using Android.App;
 using Android.OS;
+using Android.Support.Design.Widget;
+using Android.Support.V4.Widget;
+using Android.Support.V7.App;
+using Android.Views;
+using HOApp_2017.Droid.Utilities;
 
 namespace HOApp_2017.Droid
 {
-	[Activity (Label = "HO 2017", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : ContentBaseActivity
+    [Activity(Label = "H0 2017", MainLauncher = true)]
+    public class MainActivity : AppCompatActivity
     {
-		protected override void OnCreate (Bundle bundle)
-		{
-		    base.OnCreate (bundle);
+        DrawerLayout drawerLayout;
+        MyActionBarDrawerToggle drawerToggle;
 
-		    HeaderImage.SetImageResource(Resource.Drawable.headers_intro);
-		    Title.Text = "Herfstontmoeting";
-
-		    FillBody();
-		}
-
-        private void FillBody()
+        protected override void OnCreate(Bundle savedInstanceState)
         {
-            var sb = new StringBuilder();
-            sb.AppendLine(
-                "Herfstontmoeting is het startweekend voor alle leiding van Scouts en Gidsen Vlaanderen. Deze app is jouw digitale gids doorheen het weekend.");
-            sb.Append(System.Environment.NewLine);
-            sb.AppendLine("Tip: gebruik de knop links bovenaan om het menu te openen.");
-            sb.Append(System.Environment.NewLine);
-            sb.AppendLine("Veel plezier!");
-            sb.Append(System.Environment.NewLine);
-            sb.Append(System.Environment.NewLine);
-            sb.AppendLine("Welkom op HO!");
-            sb.AppendLine("van de verbondscommissaris");
-            sb.Append(System.Environment.NewLine);
-            sb.AppendLine("Of ik gegroeid ben binnen scouting? Daar stond ik nog niet bij stil.");
-            sb.Append(System.Environment.NewLine);
-            sb.AppendLine(
-                "Uit verschillende uniformen gegroeid, dat uiteraard. Maar toch vooral voor de fun bij de scouts gebleven. En omdat ik nieuwe dingen leerde kennen. Of ja, later werd dat voor de vrienden. En eigenlijk ook voor de kansen en de vrijheid die we er kregen. En voor de verantwoordelijkheid waar we er stapsgewijs steeds meer van mochten dragen. Voor de experimenteerkansen. Om iets door te geven aan de jongverkenners. Om met de groep op stap te mogen gaan.");
-            sb.Append(System.Environment.NewLine);
-            sb.AppendLine(
-                "Dus gegroeid? Ja, eigenlijk wel. Ferm gegroeid zelfs, van kapoen tot groepsleider. Herfstontmoeting als start van een jaar vol groeikansen? Ik gun het jullie en ik gun het onze leden.");
-            sb.Append(System.Environment.NewLine);
-            sb.AppendLine("Ga ervoor! Santé. Op de groei!");
-            sb.Append(System.Environment.NewLine);
-            sb.AppendLine("Een stevige linker,");
-            sb.AppendLine("Christophe Lambrechts, ");
-            sb.AppendLine("verbondscommissaris");
+            base.OnCreate(savedInstanceState);
 
-            Body.Text = sb.ToString();
+            SetContentView(Resource.Layout.Main);
+
+            drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+
+            // Init toolbar
+            var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
+            SetSupportActionBar(toolbar);
+            SupportActionBar.SetTitle(Resource.String.app_name);
+
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            SupportActionBar.SetDisplayShowHomeEnabled(true);
+
+            // Attach item selected handler to navigation view
+            var navigationView = FindViewById<NavigationView>(Resource.Id.nav_view);
+            navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
+
+            // Create ActionBarDrawerToggle button and add it to the toolbar
+            drawerToggle = new MyActionBarDrawerToggle(this, drawerLayout, Resource.String.app_name, Resource.String.app_name);
+            drawerLayout.AddDrawerListener(drawerToggle);
+            drawerToggle.SyncState();
+
+            // Load default home screen
+            LoadFragment(new HomeFragment());
+        }
+
+        private void LoadFragment(Fragment fragment)
+        {
+            var ft = FragmentManager.BeginTransaction();
+            ft.AddToBackStack(null);
+            ft.Add(Resource.Id.FrameLayout, fragment);
+            ft.Commit();
+        }
+
+        protected override void OnResume()
+        {
+            SupportActionBar.SetTitle(Resource.String.app_name);
+            base.OnResume();
+        }
+
+        // Define action for navigation menu selection
+        void NavigationView_NavigationItemSelected(object sender, NavigationView.NavigationItemSelectedEventArgs e)
+        {
+            switch (e.MenuItem.ItemId)
+            {
+                case (Resource.Id.nav_programma):
+                    LoadFragment(new HomeFragment());
+                    break;
+                case (Resource.Id.nav_kaart):
+                    //LoadFragment(new KaartFragment());
+                    break;
+                case (Resource.Id.nav_praktisch):
+                    //LoadFragment(new PraktischFragment());
+                    break;
+                case (Resource.Id.nav_leefregels):
+                    //LoadFragment(new LeefregelsFragment());
+                    break;
+                case (Resource.Id.nav_jaarlied):
+                    LoadFragment(new JaarliedFragment());
+                    break;
+                case (Resource.Id.nav_instellingen):
+                    //LoadFragment(new InstellingenFragment());
+                    break;
+                case (Resource.Id.nav_about):
+                    LoadFragment(new AboutFragment());
+                    break;
+            }
+            
+            drawerLayout.CloseDrawers();
+        }
+
+        // Define action for toolbar icon press
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                case Android.Resource.Id.Home:
+                    drawerToggle.OnOptionsItemSelected(item);
+                    return true;
+                default:
+                    return base.OnOptionsItemSelected(item);
+            }
+        }
+
+        // To avoid direct app exit on backpressed and to show fragment from stack
+        public override void OnBackPressed()
+        {
+            if (FragmentManager.BackStackEntryCount != 0)
+            {
+                FragmentManager.PopBackStack();
+            }
+            else
+            {
+                base.OnBackPressed();
+            }
         }
     }
 }

@@ -98,13 +98,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutActivity.cs" />
-    <Compile Include="ContentBaseActivity.cs" />
+    <Compile Include="AboutFragment.cs" />
+    <Compile Include="ContentBaseFragment.cs" />
+    <Compile Include="MainActivity.cs" />
     <Compile Include="JaarliedFragment.cs" />
     <Compile Include="HomeFragment.cs" />
-    <Compile Include="JaarliedActivity.cs" />
-    <Compile Include="MainActivity.cs" />
-    <Compile Include="MyActionBarDrawerToggle.cs" />
+    <Compile Include="Utilities\MyActionBarDrawerToggle.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
