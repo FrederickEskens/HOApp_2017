@@ -66,6 +66,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin-Sidebar-Unified">
+      <HintPath>..\..\Components\SidebarNavigation-1.9\lib\ios-unified\Xamarin-Sidebar-Unified.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
@@ -133,11 +136,39 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="S&amp;G\ViewControllers\Base\BaseViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\ContentViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\ContentViewController.designer.cs">
+      <DependentUpon>ContentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\IntroViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\IntroViewController.designer.cs">
+      <DependentUpon>IntroViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\ProgramViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\ProgramViewController.designer.cs">
+      <DependentUpon>ProgramViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\SideMenuViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\SideMenuViewController.designer.cs">
+      <DependentUpon>SideMenuViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\HOApp_2017\SharedAssets\HO.sqlite">
       <Link>SharedAssets\HO.sqlite</Link>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="SidebarNavigation">
+      <Version>1.9</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="S&amp;G\" />
+    <Folder Include="S&amp;G\ViewControllers\" />
+    <Folder Include="S&amp;G\ViewControllers\Base\" />
   </ItemGroup>
   <Import Project="..\HOApp_2017\HOApp_2017.projitems" Label="Shared" Condition="Exists('..\HOApp_2017\HOApp_2017.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
