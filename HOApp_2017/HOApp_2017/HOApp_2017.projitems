@@ -9,6 +9,18 @@
     <Import_RootNamespace>HOApp_2017</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)MyClass.cs" />
+    <Folder Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DAL\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DAL\DO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\AppController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\NavigationController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DL\Database.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DL\DatabaseHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DL\SQLite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\Utilities\CollectionHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DAL\DO\CopyDO.cs" />
   </ItemGroup>
 </Project>
