@@ -14,6 +14,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DAL\" />
     <Folder Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DAL\DO\" />
     <Folder Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\BaseControllers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\VO\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\AppController.cs" />
@@ -27,5 +28,6 @@
       <Link>ScoutsEnGidsen\HO\BL\Controllers\BaseControllers\BaseContentController.cs</Link>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\IntroPageController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\VO\MenuItemVO.cs" />
   </ItemGroup>
 </Project>

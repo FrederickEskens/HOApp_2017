@@ -16,6 +16,9 @@ namespace HOApp_2017.iOS
 		UIKit.UIButton btnOpenMenu { get; set; }
 
 		[Outlet]
+		UIKit.UIImageView imgBurger { get; set; }
+
+		[Outlet]
 		UIKit.UILabel lblViewTitle { get; set; }
 
 		[Outlet]
@@ -36,6 +39,11 @@ namespace HOApp_2017.iOS
 			if (vwContent != null) {
 				vwContent.Dispose ();
 				vwContent = null;
+			}
+
+			if (imgBurger != null) {
+				imgBurger.Dispose ();
+				imgBurger = null;
 			}
 		}
 	}

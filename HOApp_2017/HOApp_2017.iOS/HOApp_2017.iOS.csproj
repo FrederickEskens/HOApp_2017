@@ -153,6 +153,18 @@
     <Compile Include="S&amp;G\ViewControllers\SideMenuViewController.designer.cs">
       <DependentUpon>SideMenuViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuFooter.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuFooter.designer.cs">
+      <DependentUpon>SideMenuFooter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuTableViewCell.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuTableViewCell.designer.cs">
+      <DependentUpon>SideMenuTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Source\SideMenuTableViewSource.cs" />
+    <Compile Include="S&amp;G\TableView\Source\BaseTableViewSource.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\BaseTableViewCell.cs" />
+    <Compile Include="S&amp;G\ViewControllers\Base\BaseContentViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\HOApp_2017\SharedAssets\HO.sqlite">
@@ -169,6 +181,25 @@
     <Folder Include="S&amp;G\" />
     <Folder Include="S&amp;G\ViewControllers\" />
     <Folder Include="S&amp;G\ViewControllers\Base\" />
+    <Folder Include="SharedAssets\Images\" />
+    <Folder Include="SharedAssets\Images\General\" />
+    <Folder Include="S&amp;G\TableView\" />
+    <Folder Include="S&amp;G\TableView\Cell\" />
+    <Folder Include="S&amp;G\TableView\Source\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\General\burger.png">
+      <Link>SharedAssets\Images\General\burger.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\facebook.png">
+      <Link>SharedAssets\Images\Menu\facebook.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\instagram.png">
+      <Link>SharedAssets\Images\Menu\instagram.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\twitter.png">
+      <Link>SharedAssets\Images\Menu\twitter.png</Link>
+    </BundleResource>
   </ItemGroup>
   <Import Project="..\HOApp_2017\HOApp_2017.projitems" Label="Shared" Condition="Exists('..\HOApp_2017\HOApp_2017.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

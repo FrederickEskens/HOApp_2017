@@ -3,11 +3,12 @@
 using System;
 
 using Foundation;
+using HOApp_2017.iOS.SG.ViewControllers.Base;
 using UIKit;
 
 namespace HOApp_2017.iOS
 {
-	public partial class ProgramViewController : UIViewController
+	public partial class ProgramViewController : BaseContentViewController
 	{
 		public ProgramViewController (IntPtr handle) : base (handle)
 		{

@@ -17,6 +17,9 @@ namespace HOApp_2017.iOS
 
 		[Outlet]
 		UIKit.UIButton btnProgramm { get; set; }
+
+		[Outlet]
+		UIKit.UITableView tblSideMenu { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
@@ -28,6 +31,11 @@ namespace HOApp_2017.iOS
 			if (btnProgramm != null) {
 				btnProgramm.Dispose ();
 				btnProgramm = null;
+			}
+
+			if (tblSideMenu != null) {
+				tblSideMenu.Dispose ();
+				tblSideMenu = null;
 			}
 		}
 	}
