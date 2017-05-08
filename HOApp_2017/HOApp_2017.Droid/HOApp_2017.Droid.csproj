@@ -99,9 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutFragment.cs" />
-    <Compile Include="ContentBaseFragment.cs" />
-    <Compile Include="MainActivity.cs" />
     <Compile Include="JaarliedFragment.cs" />
+    <Compile Include="InstellingenFragment.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="LeefregelsFragment.cs" />
     <Compile Include="HomeFragment.cs" />
     <Compile Include="Utilities\MyActionBarDrawerToggle.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -117,6 +118,12 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\app_bar.axml" />
     <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\Instellingen.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\About.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\ContentBase.axml">

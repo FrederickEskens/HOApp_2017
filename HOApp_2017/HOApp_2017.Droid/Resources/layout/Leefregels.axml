@@ -1,17 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:rowCount="4"
-    android:columnCount="2">
+    android:background="@color/background_color"
+    android:scrollbars="none">
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:background="@color/background_color"
+      android:paddingLeft="35sp"
+      android:paddingRight="45sp"
+      android:paddingBottom="10sp"
+      android:paddingTop="10sp">
+    <TextView
+        android:id="@+id/leefregels_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_blue"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:paddingTop="20sp"
+        android:paddingLeft="8sp"
+        android:paddingBottom="10sp" />
+    <TextView
+        android:id="@+id/leefregels_intro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingTop="10sp"
+        android:paddingLeft="8sp"
+        android:paddingBottom="20sp" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:paddingBottom="10sp"
+        android:orientation="horizontal">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_weight="1">
         <ImageView
-            android:layout_width="100sp"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             android:paddingLeft="8sp"
             android:paddingRight="8sp"
             android:src="@drawable/leefregels_alcohol" />
@@ -19,16 +53,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:text="Je drinkt alcohol met mate." />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:text="Je drinkt alcohol met mate" />
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_weight="1" >
         <ImageView
-            android:layout_width="100sp"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             android:paddingLeft="8sp"
             android:paddingRight="8sp"
             android:src="@drawable/leefregels_rookzones" />
@@ -36,6 +74,141 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:text="Je rookt in de rookzones." />
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:text="Je rookt in de rookzones" />
+      </LinearLayout>
     </LinearLayout>
-</GridLayout>
+    <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingBottom="10sp"
+          android:orientation="horizontal">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_weight="1">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:src="@drawable/leefregels_eigendrank" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:text="Je consumeert enkel drank aangeboden door de organisatie" />
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_weight="1" >
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:src="@drawable/leefregels_nachtrust" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:text="Je respecteert vanaf 22 uur de nachtrust van anderen" />
+      </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:paddingBottom="10sp"
+          android:orientation="horizontal">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_weight="1">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:src="@drawable/leefregels_respect" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:text="Je toont respect voor mekaar, natuur en materiaal" />
+      </LinearLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_weight="1" >
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:src="@drawable/leefregels_actie" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:text="Je neemt actief deel aan het programma" />
+      </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10sp"
+        android:orientation="horizontal">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_weight="1">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:src="@drawable/leefregels_geendrugs" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:text="Je kickt zonder drugs" />
+      </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/leefregels_outro"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:paddingTop="10sp"
+        android:paddingLeft="8sp"
+        android:paddingBottom="10sp" />
+  </LinearLayout>
+</ScrollView>

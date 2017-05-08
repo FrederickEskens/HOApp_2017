@@ -6,6 +6,7 @@ using Android.Support.V7.App;
 using Android.Views;
 
 using HOApp_2017.Droid.Utilities;
+using Fragment = Android.Support.V4.App.Fragment;
 
 namespace HOApp_2017.Droid
 {
@@ -48,7 +49,7 @@ namespace HOApp_2017.Droid
         {
             //TODO: optimize
             //TODO: configure AddToBackStack
-            var ft = FragmentManager.BeginTransaction();
+            var ft = SupportFragmentManager.BeginTransaction();
             ft.AddToBackStack(null);
             ft.Add(Resource.Id.FrameLayout, fragment);
             ft.Commit();
@@ -75,13 +76,13 @@ namespace HOApp_2017.Droid
                     //LoadFragment(new PraktischFragment());
                     break;
                 case (Resource.Id.nav_leefregels):
-                    //LoadFragment(new LeefregelsFragment());
+                    LoadFragment(new LeefregelsFragment());
                     break;
                 case (Resource.Id.nav_jaarlied):
                     LoadFragment(new JaarliedFragment());
                     break;
                 case (Resource.Id.nav_instellingen):
-                    //LoadFragment(new InstellingenFragment());
+                    LoadFragment(new InstellingenFragment());
                     break;
                 case (Resource.Id.nav_about):
                     LoadFragment(new AboutFragment());
