@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <string-array name="gouw_array">
+    <item>Gouw Antwerpen</item>
+    <item>Gouw Heide</item>
+    <item>Gouw Opsinjoor</item>
+    <item>Gouw Kempen</item>
+    <item>Gouw Webra</item>
+    <item>Gouw Oost-Brabant</item>
+    <item>Gouw Limburg</item>
+    <item>Gouw Gent</item>
+    <item>Gouw Land van Egmont</item>
+    <item>Gouw Waas</item>
+  </string-array>
+
+  <string-array name="about_dev">
+    <item>Jeroen Crevits</item>
+    <item>Frederick Eskens</item>
+  </string-array>
+
+  <string-array name="about_testers">
+    <item>Jeroen Crevits</item>
+    <item>Frederick Eskens</item>
+  </string-array>
+
+  <string-array name="about_photos">
+    <item>Jeroen Crevits</item>
+    <item>Frederick Eskens</item>
+  </string-array>
+
+  <string-array name="about_illustrations">
+    <item>Jeroen Crevits</item>
+    <item>Frederick Eskens</item>
+  </string-array>
+
+  <string-array name="about_badge">
+    <item>Jeroen Crevits</item>
+    <item>Frederick Eskens</item>
+  </string-array>
+
+  <string-array name="about_thanks">
+    <item>Jeroen Crevits</item>
+    <item>Frederick Eskens</item>
+  </string-array>
+</resources>

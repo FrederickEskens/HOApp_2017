@@ -15,4 +15,12 @@
     <item name="android:textSize">17sp</item>
     <item name="android:layout_marginLeft">10sp</item>
   </style>
+
+  <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">
+   
+  </style>
+
+  <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+
+  </style>
 </resources>
