@@ -1,7 +1,7 @@
 using System;
+
 using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.V4.App;
 using Android.Views;
 using Android.Widget;
@@ -37,6 +37,7 @@ namespace HOApp_2017.Droid
         }
 
         public IntPtr Handle { get; }
+
         public void OnItemSelected(AdapterView parent, View view, int position, long id)
         {
             ((TextView) parent.GetChildAt(0)).SetTextColor(Color.Black);

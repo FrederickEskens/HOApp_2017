@@ -7,20 +7,18 @@ namespace HOApp_2017.Droid
 {
     public class JaarliedFragment : Fragment
     {
-        ImageView HeaderImage;
-        TextView Title;
-        TextView Body;
+        private ImageView headerImage;
+        private TextView title;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(HOApp_2017.Droid.Resource.Layout.ContentBase, container, false);
 
-            HeaderImage = view.FindViewById<ImageView>(Resource.Id.header_image);
-            Title = view.FindViewById<TextView>(Resource.Id.title);
-            Body = view.FindViewById<TextView>(Resource.Id.body);
+            headerImage = view.FindViewById<ImageView>(Resource.Id.header_image);
+            title = view.FindViewById<TextView>(Resource.Id.title);
 
-            HeaderImage.SetImageResource(Resource.Drawable.headers_jaarlied);
-            Title.Text = "Jaarlied";
+            headerImage.SetImageResource(Resource.Drawable.headers_jaarlied);
+            title.Text = "Jaarlied";
 
             return view;
         }

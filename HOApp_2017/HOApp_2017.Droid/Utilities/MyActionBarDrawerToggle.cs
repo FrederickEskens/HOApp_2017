@@ -7,12 +7,12 @@ namespace HOApp_2017.Droid.Utilities
 {
     public class MyActionBarDrawerToggle : SupportActionBarDrawerToggle
     {
-        private readonly AppCompatActivity _hostActivity;
+        private readonly AppCompatActivity hostActivity;
 
         public MyActionBarDrawerToggle(AppCompatActivity host, DrawerLayout drawerLayout)
         : base(host, drawerLayout, Resource.String.app_name, Resource.String.app_name)
         {
-            _hostActivity = host;
+            hostActivity = host;
         }
 
         public override void OnDrawerOpened(Android.Views.View drawerView)
@@ -22,7 +22,7 @@ namespace HOApp_2017.Droid.Utilities
             if (drawerType == 0)
             {
                 base.OnDrawerOpened(drawerView);
-                _hostActivity.SupportActionBar.SetTitle(Resource.String.app_name);
+                hostActivity.SupportActionBar.SetTitle(Resource.String.app_name);
             }
         }
 
@@ -33,7 +33,7 @@ namespace HOApp_2017.Droid.Utilities
             if (drawerType == 0)
             {
                 base.OnDrawerClosed(drawerView);
-                _hostActivity.SupportActionBar.SetTitle(Resource.String.app_name);
+                hostActivity.SupportActionBar.SetTitle(Resource.String.app_name);
             }
         }
 

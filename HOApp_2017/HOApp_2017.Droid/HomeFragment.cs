@@ -9,27 +9,27 @@ namespace HOApp_2017.Droid
 {
     public class HomeFragment : Fragment
     {
-        ImageView HeaderImage;
-        TextView Title;
-        TextView Body;
+        private ImageView headerImage;
+        private TextView title;
+        private TextView body;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(HOApp_2017.Droid.Resource.Layout.ContentBase, container, false);
 
-            HeaderImage = view.FindViewById<ImageView>(Resource.Id.header_image);
-            Title = view.FindViewById<TextView>(Resource.Id.title);
-            Body = view.FindViewById<TextView>(Resource.Id.body);
+            headerImage = view.FindViewById<ImageView>(Resource.Id.header_image);
+            title = view.FindViewById<TextView>(Resource.Id.title);
+            body = view.FindViewById<TextView>(Resource.Id.body);
 
-            HeaderImage.SetImageResource(Resource.Drawable.headers_intro);
-            Title.Text = "Herfstontmoeting";
+            headerImage.SetImageResource(Resource.Drawable.headers_intro);
+            title.Text = "Herfstontmoeting";
 
-            Body.Text = FillBody();
+            body.Text = FillBody();
 
             return view;
         }
 
-        private string FillBody()
+        private static string FillBody()
         {
             var sb = new StringBuilder();
             sb.AppendLine(

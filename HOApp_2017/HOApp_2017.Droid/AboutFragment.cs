@@ -1,4 +1,3 @@
-using System.Collections;
 using Android.OS;
 using Android.Support.V4.App;
 using Android.Views;
@@ -8,24 +7,22 @@ namespace HOApp_2017.Droid
 {
     public class AboutFragment : Fragment
     {
-        ImageView HeaderImage;
-        TextView Title;
-        TextView Body;
+        private ImageView headerImage;
+        private TextView title;
 
-        TextView devTextView;
-        TextView testersTextView;
-        TextView photosTextView;
-        TextView illustrationsTextView;
-        TextView badgeTextView;
-        TextView thanksTextView;
+        private TextView devTextView;
+        private TextView testersTextView;
+        private TextView photosTextView;
+        private TextView illustrationsTextView;
+        private TextView badgeTextView;
+        private TextView thanksTextView;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = inflater.Inflate(HOApp_2017.Droid.Resource.Layout.About, container, false);
 
-            HeaderImage = view.FindViewById<ImageView>(Resource.Id.header_image);
-            Title = view.FindViewById<TextView>(Resource.Id.about_title);
-            Body = view.FindViewById<TextView>(Resource.Id.body);
+            headerImage = view.FindViewById<ImageView>(Resource.Id.header_image);
+            title = view.FindViewById<TextView>(Resource.Id.about_title);
 
             devTextView = view.FindViewById<TextView>(Resource.Id.about_dev);
             testersTextView = view.FindViewById<TextView>(Resource.Id.about_testers);
@@ -34,8 +31,8 @@ namespace HOApp_2017.Droid
             badgeTextView = view.FindViewById<TextView>(Resource.Id.about_badge);
             thanksTextView = view.FindViewById<TextView>(Resource.Id.about_thanks);
 
-            HeaderImage.SetImageResource(Resource.Drawable.headers_about);
-            Title.Text = "Over deze app";
+            headerImage.SetImageResource(Resource.Drawable.headers_about);
+            title.Text = "Over deze app";
 
             PopulateCredits();
 
@@ -59,7 +56,7 @@ namespace HOApp_2017.Droid
             BuildTextView(thanksTextView, thanksResource);
         }
 
-        private void BuildTextView(TextView textView, string[] resource)
+        private static void BuildTextView(TextView textView, string[] resource)
         {
             foreach (var item in resource)
             {

@@ -6,6 +6,7 @@ using Android.Support.V7.App;
 using Android.Views;
 
 using HOApp_2017.Droid.Utilities;
+
 using Fragment = Android.Support.V4.App.Fragment;
 
 namespace HOApp_2017.Droid
@@ -13,8 +14,8 @@ namespace HOApp_2017.Droid
     [Activity(Label = "HO 2017", MainLauncher = true)]
     public class MainActivity : AppCompatActivity
     {
-        DrawerLayout _drawerLayout;
-        MyActionBarDrawerToggle _drawerToggle;
+        private DrawerLayout drawerLayout;
+        private MyActionBarDrawerToggle drawerToggle;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -22,7 +23,7 @@ namespace HOApp_2017.Droid
 
             SetContentView(Resource.Layout.Main);
 
-            _drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
+            drawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
 
             // Init toolbar
             var toolbar = FindViewById<Android.Support.V7.Widget.Toolbar>(Resource.Id.app_bar);
@@ -37,9 +38,9 @@ namespace HOApp_2017.Droid
             navigationView.NavigationItemSelected += NavigationView_NavigationItemSelected;
 
             // Create ActionBarDrawerToggle button and add it to the toolbar
-            _drawerToggle = new MyActionBarDrawerToggle(this, _drawerLayout);
-            _drawerLayout.AddDrawerListener(_drawerToggle);
-            _drawerToggle.SyncState();
+            drawerToggle = new MyActionBarDrawerToggle(this, drawerLayout);
+            drawerLayout.AddDrawerListener(drawerToggle);
+            drawerToggle.SyncState();
 
             // Load default home screen
             LoadFragment(new HomeFragment());
@@ -89,7 +90,7 @@ namespace HOApp_2017.Droid
                     break;
             }
             
-            _drawerLayout.CloseDrawers();
+            drawerLayout.CloseDrawers();
         }
 
         // Define action for toolbar icon press
@@ -98,7 +99,7 @@ namespace HOApp_2017.Droid
             switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    _drawerToggle.OnOptionsItemSelected(item);
+                    drawerToggle.OnOptionsItemSelected(item);
                     return true;
                 default:
                     return base.OnOptionsItemSelected(item);
