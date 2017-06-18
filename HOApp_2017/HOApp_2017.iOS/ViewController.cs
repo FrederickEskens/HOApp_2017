@@ -1,12 +1,13 @@
 ﻿using System;
-
+using HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers;
+using SidebarNavigation;
 using UIKit;
 
 namespace HOApp_2017.iOS
 {
 	public partial class ViewController : UIViewController
 	{
-		int count = 1;
+		public SidebarController SidebarController { get; private set; }
 
 		public ViewController (IntPtr handle) : base (handle)
 		{
@@ -16,11 +17,9 @@ namespace HOApp_2017.iOS
 		{
 			base.ViewDidLoad ();
 			// Perform any additional setup after loading the view, typically from a nib.
-			Button.AccessibilityIdentifier = "myButton";
-			Button.TouchUpInside += delegate {
-				var title = string.Format ("{0} clicks!", count++);
-				Button.SetTitle (title, UIControlState.Normal);
-			};
+			var storyBoard = UIStoryboard.FromName("Main", null);
+			SidebarController = new SidebarController(this, storyBoard.InstantiateViewController("content"), storyBoard.InstantiateViewController("menu"));
+			SidebarController.MenuLocation = SidebarController.MenuLocations.Left;
 		}
 
 		public override void DidReceiveMemoryWarning ()
