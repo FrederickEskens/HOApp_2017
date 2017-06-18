@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>HO gids</string>
 	<key>CFBundleIdentifier</key>
-	<string>be.scoutsengidsenvlaanderen.hogids.dev</string>
+	<string>be.bazookas.mobile.scoutsengidsenvlaanderen.hogids.dev</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -15,7 +15,6 @@
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
-		<integer>2</integer>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
@@ -28,9 +27,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -47,9 +43,13 @@
 	<string>HO gids</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.5</string>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiY3JlamVyIiwiYSI6ImNqM2p5c3U4MDAwM3EzMm83aDB1MG9hanAifQ.hxbQ82oY3n7shNMlpTur2g</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Shows your location on the map and helps improve OpenStreetMap.</string>
 </dict>
 </plist>

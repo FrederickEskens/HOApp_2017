@@ -9,18 +9,12 @@ using System.CodeDom.Compiler;
 
 namespace HOApp_2017.iOS
 {
-	[Register ("IntroViewController")]
-	partial class IntroViewController
+	[Register ("MapViewController")]
+	partial class MapViewController
 	{
-		[Outlet]
-		UIKit.UIImageView imgIntroTopImage { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (imgIntroTopImage != null) {
-				imgIntroTopImage.Dispose ();
-				imgIntroTopImage = null;
-			}
 		}
 	}
 }

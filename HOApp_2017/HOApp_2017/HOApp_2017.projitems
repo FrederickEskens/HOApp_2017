@@ -29,5 +29,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\IntroPageController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\VO\MenuItemVO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\Utilities\GeneralConstants.cs" />
   </ItemGroup>
 </Project>
