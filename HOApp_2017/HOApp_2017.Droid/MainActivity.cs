@@ -71,7 +71,7 @@ namespace HOApp_2017.Droid
                     LoadFragment(new HomeFragment());
                     break;
                 case (Resource.Id.nav_kaart):
-                    //LoadFragment(new KaartFragment());
+                    LoadFragment(new KaartFragment());
                     break;
                 case (Resource.Id.nav_praktisch):
                     //LoadFragment(new PraktischFragment());

@@ -120,6 +120,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutFragment.cs" />
+    <Compile Include="SupportKaartFragment.cs" />
+    <Compile Include="KaartFragment.cs" />
     <Compile Include="JaarliedFragment.cs" />
     <Compile Include="InstellingenFragment.cs" />
     <Compile Include="MainActivity.cs" />
@@ -145,6 +147,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\About.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MapLayout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
