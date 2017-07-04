@@ -181,6 +181,10 @@
     <Compile Include="S&amp;G\ViewControllers\MapViewController.designer.cs">
       <DependentUpon>MapViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="S&amp;G\ViewControllers\ImageMapViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\ImageMapViewController.designer.cs">
+      <DependentUpon>ImageMapViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\HOApp_2017\SharedAssets\HO.sqlite">
@@ -296,6 +300,15 @@
     </BundleResource>
     <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\tent.png">
       <Link>SharedAssets\Images\Map\tent.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\map.png">
+      <Link>SharedAssets\Images\Map\map.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\UserIcon.png">
+      <Link>SharedAssets\Images\Map\UserIcon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\UserIcon%402x.png">
+      <Link>SharedAssets\Images\Map\UserIcon%402x.png</Link>
     </BundleResource>
   </ItemGroup>
   <Import Project="..\HOApp_2017\HOApp_2017.projitems" Label="Shared" Condition="Exists('..\HOApp_2017\HOApp_2017.projitems')" />

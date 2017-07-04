@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -265,6 +265,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udY-H9-jmy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2335" y="74"/>
+        </scene>
+        <!--Image Map View Controller-->
+        <scene sceneID="037-I5-fyy">
+            <objects>
+                <viewController restorationIdentifier="MapImageView" storyboardIdentifier="MapImageView" id="DsM-Ib-HaK" customClass="ImageMapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E24-ub-nEQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ok6-uu-S1p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R0C-QV-eXK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N6b-N7-GXI">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AE3-Rf-bXO">
+                                        <rect key="frame" x="0.0" y="0.0" width="3129" height="2480"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2480" id="SmA-yN-PmC"/>
+                                            <constraint firstAttribute="width" constant="3129" id="X3g-Ef-TVT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5F-pL-u1m">
+                                        <rect key="frame" x="10" y="10" width="57" height="57"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="3129" id="AfR-09-lq4"/>
+                                            <constraint firstAttribute="height" constant="2480" id="HJQ-KE-WOh"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="AE3-Rf-bXO" firstAttribute="top" secondItem="N6b-N7-GXI" secondAttribute="top" id="KHA-yU-mRK"/>
+                                    <constraint firstItem="AE3-Rf-bXO" firstAttribute="leading" secondItem="N6b-N7-GXI" secondAttribute="leading" id="Vzk-PA-k5o"/>
+                                    <constraint firstAttribute="bottom" secondItem="AE3-Rf-bXO" secondAttribute="bottom" id="hwc-lq-Qxv"/>
+                                    <constraint firstAttribute="trailing" secondItem="AE3-Rf-bXO" secondAttribute="trailing" id="q35-Oj-6fR"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ok6-uu-S1p" firstAttribute="top" secondItem="N6b-N7-GXI" secondAttribute="bottom" id="57o-Uz-oR5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N6b-N7-GXI" secondAttribute="trailing" id="UdJ-TB-yF8"/>
+                            <constraint firstItem="N6b-N7-GXI" firstAttribute="leading" secondItem="R0C-QV-eXK" secondAttribute="leadingMargin" id="hph-sU-DML"/>
+                            <constraint firstItem="N6b-N7-GXI" firstAttribute="top" secondItem="E24-ub-nEQ" secondAttribute="bottom" id="ld8-aw-CLL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imgUserLocation" destination="c5F-pL-u1m" id="Lqa-xD-4rz"/>
+                        <outlet property="mapImage" destination="AE3-Rf-bXO" id="dv7-VD-tZj"/>
+                        <outlet property="scrMapScroll" destination="N6b-N7-GXI" id="7x3-cP-KEV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQn-lP-Wua" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2961" y="70"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="7j7-Q0-u8O">

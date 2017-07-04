@@ -136,7 +136,7 @@ namespace HOApp_2017.iOS
 		{
             _introViewController = Storyboard.InstantiateViewController("IntroViewController") as BaseContentViewController;
             _programmViewController = Storyboard.InstantiateViewController("ProgramViewController") as BaseContentViewController;
-            _mapViewController = Storyboard.InstantiateViewController("MapViewController") as BaseContentViewController;
+            _mapViewController = Storyboard.InstantiateViewController("MapImageView") as BaseContentViewController;
             ActiveViewController = _introViewController;
 		}
 		#endregion

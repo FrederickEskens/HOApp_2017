@@ -45,6 +45,7 @@ namespace HOApp_2017.iOS
             MKCoordinateSpan span = new MKCoordinateSpan(KilometresToLatitudeDegrees(2.5), KilometresToLongitudeDegrees(2.5, coords.Latitude));
             mapView.Region = new MKCoordinateRegion(coords, span);
             mapView.MapType = MKMapType.Standard;
+            mapView.ShowsUserLocation = true;
             mapView.Delegate = new MapDelegate() { PolygonStyles = new Dictionary<IMKOverlay, string>() };
             ParseGeoJson();
             View = mapView;
