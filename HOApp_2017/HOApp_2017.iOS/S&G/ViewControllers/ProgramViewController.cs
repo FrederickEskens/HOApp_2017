@@ -13,5 +13,10 @@ namespace HOApp_2017.iOS
 		public ProgramViewController (IntPtr handle) : base (handle)
 		{
 		}
-	}
+
+        public override void SetData()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

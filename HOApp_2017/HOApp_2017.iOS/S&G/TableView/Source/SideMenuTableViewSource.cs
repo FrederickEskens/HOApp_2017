@@ -47,18 +47,18 @@ namespace HOApp_2017.iOS.SG.TableView.Source
 
 		public override UIKit.UIView GetViewForHeader(UIKit.UITableView tableView, nint section)
 		{
-			var footer = tableView.DequeueReusableCell(SideMenuFooter.Key) as SideMenuFooter;
+            var footer = tableView.DequeueReusableCell(SideMenuFooterLogo.Key) as SideMenuFooterLogo;
 			return footer;
 		}
 
 		public override UIKit.UIView GetViewForFooter(UIKit.UITableView tableView, nint section)
 		{
-			var footer = tableView.DequeueReusableCell(SideMenuFooter.Key) as SideMenuFooter;
+			var footer = tableView.DequeueReusableCell(SideMenuFooterLogo.Key) as SideMenuFooterLogo;
 			return footer;
 		}
 		public override nfloat GetHeightForFooter(UIKit.UITableView tableView, nint section)
 		{
-			return 100;
+			return 200;
 		}
 
 		public override void RowSelected(UIKit.UITableView tableView, Foundation.NSIndexPath indexPath)

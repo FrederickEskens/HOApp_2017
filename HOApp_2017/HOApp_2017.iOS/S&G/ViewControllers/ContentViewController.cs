@@ -87,7 +87,7 @@ namespace HOApp_2017.iOS
 			BaseContentViewController contentViewController = null;
 			switch (page)
 			{
-				case ScoutsEnGidsen.HO.BL.Controllers.NavigationController.PagesEnum.INFO:
+                case ScoutsEnGidsen.HO.BL.Controllers.NavigationController.PagesEnum.INTRO:
                     contentViewController = _introViewController;
 					break;
 				case ScoutsEnGidsen.HO.BL.Controllers.NavigationController.PagesEnum.PROGRAM:
@@ -99,9 +99,11 @@ namespace HOApp_2017.iOS
 				default:
 					break;
 			}
-
+            if (contentViewController != null)
+                contentViewController.Controller = controller;
 			ActiveViewController = contentViewController;
-			SidebarController.CloseMenu();
+            if (SidebarController != null)
+			    SidebarController.CloseMenu();
 
 		}
 
@@ -137,7 +139,7 @@ namespace HOApp_2017.iOS
             _introViewController = Storyboard.InstantiateViewController("IntroViewController") as BaseContentViewController;
             _programmViewController = Storyboard.InstantiateViewController("ProgramViewController") as BaseContentViewController;
             _mapViewController = Storyboard.InstantiateViewController("MapImageView") as BaseContentViewController;
-            ActiveViewController = _introViewController;
+            AppController.Instance.NavigationController.SideMenuButtonClicked(ScoutsEnGidsen.HO.BL.Controllers.NavigationController.PagesEnum.INTRO);
 		}
 		#endregion
 

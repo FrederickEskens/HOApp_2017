@@ -133,6 +133,11 @@ namespace HOApp_2017.iOS
                 }
             }
         }
+
+        public override void SetData()
+        {
+            throw new NotImplementedException();
+        }
     }
 
     class GeoJsonObject

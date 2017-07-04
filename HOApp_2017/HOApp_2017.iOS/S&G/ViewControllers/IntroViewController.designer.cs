@@ -14,12 +14,36 @@ namespace HOApp_2017.iOS
 	{
 		[Outlet]
 		UIKit.UIImageView imgIntroTopImage { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lblIntroSubTitle { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lblIntroText { get; set; }
+
+		[Outlet]
+		UIKit.UILabel lblIntroTitle { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
 			if (imgIntroTopImage != null) {
 				imgIntroTopImage.Dispose ();
 				imgIntroTopImage = null;
+			}
+
+			if (lblIntroText != null) {
+				lblIntroText.Dispose ();
+				lblIntroText = null;
+			}
+
+			if (lblIntroSubTitle != null) {
+				lblIntroSubTitle.Dispose ();
+				lblIntroSubTitle = null;
+			}
+
+			if (lblIntroTitle != null) {
+				lblIntroTitle.Dispose ();
+				lblIntroTitle = null;
 			}
 		}
 	}

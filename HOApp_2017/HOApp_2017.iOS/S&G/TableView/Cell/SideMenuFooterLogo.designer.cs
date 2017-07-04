@@ -9,25 +9,17 @@ using System.CodeDom.Compiler;
 
 namespace HOApp_2017.iOS
 {
-	[Register ("ImageMapViewController")]
-	partial class ImageMapViewController
+	[Register ("SideMenuFooterLogo")]
+	partial class SideMenuFooterLogo
 	{
 		[Outlet]
-		UIKit.UIImageView mapImage { get; set; }
-
-		[Outlet]
-		UIKit.UIScrollView scrMapScroll { get; set; }
+		UIKit.UIImageView imgLogo { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (mapImage != null) {
-				mapImage.Dispose ();
-				mapImage = null;
-			}
-
-			if (scrMapScroll != null) {
-				scrMapScroll.Dispose ();
-				scrMapScroll = null;
+			if (imgLogo != null) {
+				imgLogo.Dispose ();
+				imgLogo = null;
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 // WARNING
 //
-// This file has been generated automatically by Xamarin Studio to store outlets and
+// This file has been generated automatically by Visual Studio to store outlets and
 // actions made in the UI designer. If it is removed, they will be lost.
 // Manual changes to this file may not be handled correctly.
 //
@@ -14,6 +14,9 @@ namespace HOApp_2017.iOS
 	{
 		[Outlet]
 		UIKit.UIButton btnIntro { get; set; }
+
+		[Outlet]
+		UIKit.UIButton btnMenuTitle { get; set; }
 
 		[Outlet]
 		UIKit.UIButton btnProgramm { get; set; }
@@ -36,6 +39,11 @@ namespace HOApp_2017.iOS
 			if (tblSideMenu != null) {
 				tblSideMenu.Dispose ();
 				tblSideMenu = null;
+			}
+
+			if (btnMenuTitle != null) {
+				btnMenuTitle.Dispose ();
+				btnMenuTitle = null;
 			}
 		}
 	}

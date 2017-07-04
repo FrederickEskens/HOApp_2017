@@ -9,8 +9,8 @@ using UIKit;
 
 namespace HOApp_2017.iOS
 {
-	public partial class ImageMapViewController : BaseContentViewController
-	{
+    public partial class ImageMapViewController : BaseContentViewController
+    {
         CLLocationManager locationManager;
         CLLocationCoordinate2D coordinate1;
         CLLocationCoordinate2D coordinate2;
@@ -32,16 +32,16 @@ namespace HOApp_2017.iOS
             userLocation.Image = UIImage.FromBundle("SharedAssets/Images/Map/UserIcon.png");
             mapImage.AddSubview(userLocation);
             locationManager = new CLLocationManager();
-            locationManager.AuthorizationChanged+= LocationManager_AuthorizationChanged;
+            locationManager.AuthorizationChanged+= OnAuthorizationChanged;
             locationManager.UpdatedLocation += LocationManager_UpdatedLocation;
             locationManager.LocationsUpdated += OnLocationsUpdated;
-            StartTrackingLocation();
+           
         }
 
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
-            scrMapScroll.ZoomScale = 0.2f;
+            scrMapScroll.ZoomScale = 0.1f;
             MapPoint1 = new CGPoint(352, 545);
             MapPoint2 = new CGPoint(2207, 1387);
             coordinate1 = new CLLocationCoordinate2D(51.242910, 4.917918);
@@ -56,90 +56,98 @@ namespace HOApp_2017.iOS
             var xScale = pixelDistanceLong / longDistance;
 
             Scaling = new CGSize(xScale, yScale);
+			StartTrackingLocation();
         }
 
-        void LocationManager_AuthorizationChanged(object sender, CLAuthorizationChangedEventArgs e)
+        public override void ViewWillDisappear(bool animated)
         {
-            
+            base.ViewWillDisappear(animated);
+            if (locationManager != null)
+                locationManager.StopUpdatingLocation();
         }
 
-		void StartTrackingLocation()
-		{
-			CLAuthorizationStatus status = CLLocationManager.Status;
-			if (status == CLAuthorizationStatus.NotDetermined)
-			{
-				locationManager.RequestWhenInUseAuthorization();
-			}
-			else if (status == CLAuthorizationStatus.AuthorizedWhenInUse || status == CLAuthorizationStatus.AuthorizedAlways)
-			{
-				locationManager.StartUpdatingLocation();
-			}
-		}
+        void StartTrackingLocation()
+        {
+            CLAuthorizationStatus status = CLLocationManager.Status;
+            if (status == CLAuthorizationStatus.NotDetermined)
+            {
+                locationManager.RequestWhenInUseAuthorization();
+            }
+            else if (status == CLAuthorizationStatus.AuthorizedWhenInUse || status == CLAuthorizationStatus.AuthorizedAlways)
+            {
+                locationManager.StartUpdatingLocation();
+            }
+        }
 
-		void OnAuthorizationChanged(object sender, CLAuthorizationChangedEventArgs e)
-		{
-			switch (e.Status)
-			{
-				case CLAuthorizationStatus.AuthorizedAlways:
-				case CLAuthorizationStatus.AuthorizedWhenInUse:
-					Console.WriteLine("Got authorization, start tracking location");
-					StartTrackingLocation();
-					break;
+        void OnAuthorizationChanged(object sender, CLAuthorizationChangedEventArgs e)
+        {
+            switch (e.Status)
+            {
+                case CLAuthorizationStatus.AuthorizedAlways:
+                case CLAuthorizationStatus.AuthorizedWhenInUse:
+                    Console.WriteLine("Got authorization, start tracking location");
+                    StartTrackingLocation();
+                    break;
 
-				case CLAuthorizationStatus.NotDetermined:
-					locationManager.RequestWhenInUseAuthorization();
-					break;
+                case CLAuthorizationStatus.NotDetermined:
+                    locationManager.RequestWhenInUseAuthorization();
+                    break;
 
-				default:
-					break;
-			}
-		}
+                default:
+                    break;
+            }
+        }
 
-		void OnLocationsUpdated(object sender, CLLocationsUpdatedEventArgs e)
-		{
-			// Pass location updates to the map view.
-			foreach (var l in e.Locations)
-			{
-				Console.WriteLine("Location (Floor {0}): {1}", l.Floor, l);
-				UpdateViewWithLocation(l);
-			}
-		}
+        void OnLocationsUpdated(object sender, CLLocationsUpdatedEventArgs e)
+        {
+            // Pass location updates to the map view.
+            foreach (var l in e.Locations)
+            {
+                Console.WriteLine("Location (Floor {0}): {1}", l.Floor, l);
+                UpdateViewWithLocation(l);
+            }
+        }
 
         private void UpdateViewWithLocation(CLLocation l)
         {
             var pt = calculatePosition(l.Coordinate.Longitude, l.Coordinate.Latitude);
-			CGPoint userPos = new CGPoint((nfloat)pt.X, (nfloat)pt.Y);
-            if (true)
-			{
-				userLocation.Hidden = false;
-				float extraY = 0;
-				
-				
-                    userLocation.Frame = new CGRect((float)(userPos.X)-28.5, (float)(userPos.Y)-28.5, 57, 57);
-			
-			}
-			else
-			{
-				imgUserLocation.Hidden = true;
-			}
+            CGPoint userPos = new CGPoint((nfloat)pt.X, (nfloat)pt.Y);
+            if (userPos.X > 0 && userPos.Y > 0 && userPos.X < mapImage.Frame.Width && userPos.Y < mapImage.Frame.Height)
+            {
+                userLocation.Hidden = false;
+                float extraY = 0;
+
+
+                userLocation.Frame = new CGRect((float)(userPos.X) - 28.5, (float)(userPos.Y) - 28.5, 57, 57);
+
+            }
+            else
+            {
+                userLocation.Hidden = true;
+            }
         }
 
         private CGPoint calculatePosition(double userLong, double userLat)
         {
-            var x1 = MapPoint1.X+(Scaling.Width*(coordinate1.Longitude-userLong));
-            var y1 = MapPoint1.Y+(Scaling.Height*(coordinate1.Latitude-userLat))*-1;
+            var x1 = MapPoint1.X + (Scaling.Width * (coordinate1.Longitude - userLong));
+            var y1 = MapPoint1.Y + (Scaling.Height * (coordinate1.Latitude - userLat)) * -1;
 
-			return new CGPoint((int)(x1), (int)y1);
+            return new CGPoint((int)(x1), (int)y1);
         }
 
         void LocationManager_UpdatedLocation(object sender, CLLocationUpdatedEventArgs e)
         {
-            Console.WriteLine("Location (Floor {0}): {1}", e.NewLocation.Floor, e.NewLocation); 
+            Console.WriteLine("Location (Floor {0}): {1}", e.NewLocation.Floor, e.NewLocation);
         }
 
-		public static double degreesToRadians(double value)
-		{
-			return value * (Math.PI / 180);
-		}
+        public static double degreesToRadians(double value)
+        {
+            return value * (Math.PI / 180);
+        }
+
+        public override void SetData()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

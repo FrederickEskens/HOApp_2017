@@ -46,7 +46,7 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
 		#region public methods
 		public string GetCopy(string copyKey)
 		{
-			string returnValue = string.Empty;
+			string returnValue = copyKey;
 			var copyItem = copyItems.Find(x => x.CopyKey == copyKey);
 			if (copyItem != null)
 				returnValue = copyItem.CopyValue_NL;
