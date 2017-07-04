@@ -185,6 +185,10 @@
     <Compile Include="S&amp;G\ViewControllers\ImageMapViewController.designer.cs">
       <DependentUpon>ImageMapViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuFooterLogo.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuFooterLogo.designer.cs">
+      <DependentUpon>SideMenuFooterLogo.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\HOApp_2017\SharedAssets\HO.sqlite">
@@ -309,6 +313,24 @@
     </BundleResource>
     <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\UserIcon%402x.png">
       <Link>SharedAssets\Images\Map\UserIcon%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\logo_scoutsgidsenvl.png">
+      <Link>SharedAssets\Images\Menu\logo_scoutsgidsenvl.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\intro\anton.jpg">
+      <Link>SharedAssets\Images\intro\anton.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Fonts\Roboto-Bold.ttf">
+      <Link>SharedAssets\Fonts\Roboto-Bold.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Fonts\Roboto-Italic.ttf">
+      <Link>SharedAssets\Fonts\Roboto-Italic.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Fonts\Roboto-Light.ttf">
+      <Link>SharedAssets\Fonts\Roboto-Light.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Fonts\Roboto-Regular.ttf">
+      <Link>SharedAssets\Fonts\Roboto-Regular.ttf</Link>
     </BundleResource>
   </ItemGroup>
   <Import Project="..\HOApp_2017\HOApp_2017.projitems" Label="Shared" Condition="Exists('..\HOApp_2017\HOApp_2017.projitems')" />

@@ -1,4 +1,4 @@
-﻿//
+﻿﻿//
 // BaseViewController.cs
 //
 // Author:
@@ -34,6 +34,11 @@ namespace HOApp_2017.iOS.SG.ViewControllers.Base
 				return (UIApplication.SharedApplication.Delegate as AppDelegate).RootViewController.Storyboard;
 			}
 		}
+
+        public override UIStatusBarStyle PreferredStatusBarStyle()
+        {
+            return UIStatusBarStyle.LightContent;
+        }
 
 	}
 }

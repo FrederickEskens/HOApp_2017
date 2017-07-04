@@ -22,9 +22,13 @@ namespace HOApp_2017.iOS
 		{
 			base.ViewDidLoad();
 			tblSideMenu.Source = new SideMenuTableViewSource() { Items = AppController.Instance.NavigationController.MenuItems.ToList() };
-
+            btnMenuTitle.TouchUpInside+= BtnMenuTitle_TouchUpInside;
 		}
 
 
-	}
+        void BtnMenuTitle_TouchUpInside(object sender, EventArgs e)
+        {
+            AppController.Instance.NavigationController.SideMenuButtonClicked(ScoutsEnGidsen.HO.BL.Controllers.NavigationController.PagesEnum.INTRO);
+        }
+    }
 }
