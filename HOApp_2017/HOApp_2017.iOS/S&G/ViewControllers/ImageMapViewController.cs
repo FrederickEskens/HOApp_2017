@@ -44,13 +44,13 @@ namespace HOApp_2017.iOS
             scrMapScroll.ZoomScale = 0.1f;
             MapPoint1 = new CGPoint(352, 545);
             MapPoint2 = new CGPoint(2207, 1387);
-            coordinate1 = new CLLocationCoordinate2D(51.242910, 4.917918);
+            coordinate1 = new CLLocationCoordinate2D(51.243642, 4.918261);
             coordinate2 = new CLLocationCoordinate2D(51.238957, 4.944440);
 
             var pixelDistanceLong = 352 - 2207;
             var pixelDistanceLat = 545 - 1387;
             var latDistance = coordinate1.Latitude - coordinate2.Latitude;
-            var longDistance = coordinate2.Longitude - coordinate1.Longitude;
+            var longDistance = coordinate1.Longitude - coordinate2.Longitude;
 
             var yScale = pixelDistanceLat / latDistance;
             var xScale = pixelDistanceLong / longDistance;
@@ -115,22 +115,17 @@ namespace HOApp_2017.iOS
             if (userPos.X > 0 && userPos.Y > 0 && userPos.X < mapImage.Frame.Width && userPos.Y < mapImage.Frame.Height)
             {
                 userLocation.Hidden = false;
-                float extraY = 0;
 
 
                 userLocation.Frame = new CGRect((float)(userPos.X) - 28.5, (float)(userPos.Y) - 28.5, 57, 57);
 
-            }
-            else
-            {
-                userLocation.Hidden = true;
-            }
+          
         }
 
         private CGPoint calculatePosition(double userLong, double userLat)
         {
-            var x1 = MapPoint1.X + (Scaling.Width * (coordinate1.Longitude - userLong));
-            var y1 = MapPoint1.Y + (Scaling.Height * (coordinate1.Latitude - userLat)) * -1;
+            var x1 = MapPoint1.X + (Scaling.Width * (coordinate1.Longitude - userLong))*-1;
+            var y1 = MapPoint1.Y + (Scaling.Height * (coordinate1.Latitude - userLat)*-1);
 
             return new CGPoint((int)(x1), (int)y1);
         }
