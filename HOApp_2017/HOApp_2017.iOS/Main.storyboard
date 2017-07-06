@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -452,6 +453,202 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQ1-T4-blC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2334" y="754"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="gCK-6E-FsO">
+            <objects>
+                <viewController restorationIdentifier="InfoViewController" storyboardIdentifier="InfoViewController" id="C3V-FF-j33" customClass="InfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eF7-Ia-PDG"/>
+                        <viewControllerLayoutGuide type="bottom" id="CSE-1M-fbu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yyp-fe-oaf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Pu-dH-LBK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-Mp-qkJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="736"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Praktisch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqP-cJ-355">
+                                                <rect key="frame" x="20" y="50" width="95.5" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infopunt (GG)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7R-YZ-MOd">
+                                                <rect key="frame" x="20" y="91" width="108.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WAo-WC-xGA">
+                                                <rect key="frame" x="20" y="127" width="335" height="142.5"/>
+                                                <string key="text">› voor al je HO-vragen
+
+› verloren voorwerpen melden of brengen
+
+› je smartphone/GSM opladen
+
+Telefonisch bereikbaar op 0477 38 24 12</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barinfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF3-7P-Dsb">
+                                                <rect key="frame" x="20" y="300" width="57.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbf-uZ-mfP">
+                                                <rect key="frame" x="20" y="336" width="335" height="142.5"/>
+                                                <string key="text">› de bar op de grote grond sluit om 02.30
+
+› de bar van K30 sluit om 02.00
+
+› de bar van Loods 30 sluit op 02.00
+
+› de bonnetjesverkoop sluit telkens een half uur vroeger</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free WIFI (GG)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ds-ir-viO">
+                                                <rect key="frame" x="20" y="508" width="116.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Het wachtwoord is herfstontmoeting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQO-C9-7IY">
+                                                <rect key="frame" x="20" y="544" width="335" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bij noodgevallen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk0-UT-X3L">
+                                                <rect key="frame" x="20" y="594.5" width="131" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paI-u1-Nuf">
+                                                <rect key="frame" x="20" y="630.5" width="335" height="20.5"/>
+                                                <string key="text">Verwittig de hulpdiensten nooit rechtstreeks. Bij ernstige ongevallen bel je het noodnummer van Scouts en Gidsen Vlaanderen. Voor kleine ongevallen ga je naar het Rode Kruis.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aH5-uS-XXH" customClass="UIButton">
+                                                <rect key="frame" x="20" y="666" width="147.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noodnummer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfl-si-8Jr">
+                                                        <rect key="frame" x="20.5" y="15" width="105" height="21"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="UxO-T7-N1a"/>
+                                                    <constraint firstItem="Dfl-si-8Jr" firstAttribute="centerY" secondItem="aH5-uS-XXH" secondAttribute="centerY" id="V0S-mP-0QA"/>
+                                                    <constraint firstItem="Dfl-si-8Jr" firstAttribute="centerX" secondItem="aH5-uS-XXH" secondAttribute="centerX" id="yUp-zX-IFl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llt-8m-ATv" customClass="UIButton">
+                                                <rect key="frame" x="207.5" y="666" width="147" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toon Rode Kruis op de kaart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeu-Pa-Iej">
+                                                        <rect key="frame" x="0.0" y="-0.5" width="147" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="MDN-yh-bk7"/>
+                                                    <constraint firstItem="Jeu-Pa-Iej" firstAttribute="centerX" secondItem="llt-8m-ATv" secondAttribute="centerX" id="NeU-B2-rf0"/>
+                                                    <constraint firstItem="Jeu-Pa-Iej" firstAttribute="height" secondItem="llt-8m-ATv" secondAttribute="height" id="mwH-Hd-ecv"/>
+                                                    <constraint firstItem="Jeu-Pa-Iej" firstAttribute="centerY" secondItem="llt-8m-ATv" secondAttribute="centerY" id="qFD-UU-CIV"/>
+                                                    <constraint firstItem="Jeu-Pa-Iej" firstAttribute="width" secondItem="llt-8m-ATv" secondAttribute="width" id="uGE-rp-A8L"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="4Ds-ir-viO" firstAttribute="top" secondItem="Lbf-uZ-mfP" secondAttribute="bottom" constant="30" id="0xg-xK-wr3"/>
+                                            <constraint firstItem="sk0-UT-X3L" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="1hZ-WQ-kTY"/>
+                                            <constraint firstItem="vqP-cJ-355" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="2nf-Vf-7qA"/>
+                                            <constraint firstItem="4Ds-ir-viO" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="6x7-gJ-Z1A"/>
+                                            <constraint firstAttribute="trailing" secondItem="nQO-C9-7IY" secondAttribute="trailing" constant="20" id="89R-Tx-EPS"/>
+                                            <constraint firstAttribute="trailing" secondItem="llt-8m-ATv" secondAttribute="trailing" constant="20" id="BwV-c6-kLM"/>
+                                            <constraint firstItem="paI-u1-Nuf" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="D2H-j0-oqg"/>
+                                            <constraint firstItem="VF3-7P-Dsb" firstAttribute="top" secondItem="WAo-WC-xGA" secondAttribute="bottom" constant="30" id="Ear-14-Ecy"/>
+                                            <constraint firstAttribute="centerX" secondItem="aH5-uS-XXH" secondAttribute="trailing" constant="20" id="FLJ-Ec-Ptp"/>
+                                            <constraint firstItem="nQO-C9-7IY" firstAttribute="top" secondItem="4Ds-ir-viO" secondAttribute="bottom" constant="15" id="HUi-fh-ccc"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lbf-uZ-mfP" secondAttribute="trailing" constant="20" id="Kwt-0U-GQE"/>
+                                            <constraint firstItem="paI-u1-Nuf" firstAttribute="top" secondItem="sk0-UT-X3L" secondAttribute="bottom" constant="15" id="Muh-tZ-lkg"/>
+                                            <constraint firstAttribute="trailing" secondItem="paI-u1-Nuf" secondAttribute="trailing" constant="20" id="RVE-YY-8AX"/>
+                                            <constraint firstAttribute="bottom" secondItem="aH5-uS-XXH" secondAttribute="bottom" constant="20" id="SVI-M4-9Nu"/>
+                                            <constraint firstItem="Lbf-uZ-mfP" firstAttribute="top" secondItem="VF3-7P-Dsb" secondAttribute="bottom" constant="15" id="VI4-Tu-jkS"/>
+                                            <constraint firstItem="WAo-WC-xGA" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="W5w-EH-eO8"/>
+                                            <constraint firstItem="k7R-YZ-MOd" firstAttribute="top" secondItem="vqP-cJ-355" secondAttribute="bottom" constant="15" id="Wre-jT-aHD"/>
+                                            <constraint firstItem="llt-8m-ATv" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="centerX" constant="20" id="XDc-wu-s7h"/>
+                                            <constraint firstItem="Lbf-uZ-mfP" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="f9r-Kp-byc"/>
+                                            <constraint firstItem="sk0-UT-X3L" firstAttribute="top" secondItem="nQO-C9-7IY" secondAttribute="bottom" constant="30" id="h9X-3M-mB6"/>
+                                            <constraint firstItem="llt-8m-ATv" firstAttribute="top" secondItem="paI-u1-Nuf" secondAttribute="bottom" constant="15" id="hAl-Fa-gFv"/>
+                                            <constraint firstItem="nQO-C9-7IY" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="jXF-lV-bES"/>
+                                            <constraint firstItem="k7R-YZ-MOd" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="kBX-yB-40O"/>
+                                            <constraint firstAttribute="bottom" secondItem="llt-8m-ATv" secondAttribute="bottom" constant="20" id="lYX-up-Tjy"/>
+                                            <constraint firstAttribute="trailing" secondItem="WAo-WC-xGA" secondAttribute="trailing" constant="20" id="mTX-ML-Sfj"/>
+                                            <constraint firstItem="VF3-7P-Dsb" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="nMS-fo-IDA"/>
+                                            <constraint firstItem="aH5-uS-XXH" firstAttribute="leading" secondItem="h3H-Mp-qkJ" secondAttribute="leading" constant="20" id="o2x-sc-FZS"/>
+                                            <constraint firstItem="WAo-WC-xGA" firstAttribute="top" secondItem="k7R-YZ-MOd" secondAttribute="bottom" constant="15" id="oWn-N1-fWd"/>
+                                            <constraint firstItem="vqP-cJ-355" firstAttribute="top" secondItem="h3H-Mp-qkJ" secondAttribute="top" constant="50" id="sQQ-qB-Ixe"/>
+                                            <constraint firstItem="aH5-uS-XXH" firstAttribute="top" secondItem="paI-u1-Nuf" secondAttribute="bottom" constant="15" id="teB-pS-d5A"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="h3H-Mp-qkJ" firstAttribute="top" secondItem="1Pu-dH-LBK" secondAttribute="top" id="IVy-Xf-OSd"/>
+                                    <constraint firstItem="h3H-Mp-qkJ" firstAttribute="width" secondItem="1Pu-dH-LBK" secondAttribute="width" id="anw-8k-X67"/>
+                                    <constraint firstAttribute="bottom" secondItem="h3H-Mp-qkJ" secondAttribute="bottom" id="bHb-aH-KmY"/>
+                                    <constraint firstAttribute="trailing" secondItem="h3H-Mp-qkJ" secondAttribute="trailing" id="iVj-iJ-FPx"/>
+                                    <constraint firstItem="h3H-Mp-qkJ" firstAttribute="leading" secondItem="1Pu-dH-LBK" secondAttribute="leading" id="t6c-TF-7rm"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Pu-dH-LBK" firstAttribute="top" secondItem="eF7-Ia-PDG" secondAttribute="bottom" id="BZX-9N-YZd"/>
+                            <constraint firstItem="1Pu-dH-LBK" firstAttribute="leading" secondItem="yyp-fe-oaf" secondAttribute="leading" id="H5w-RS-ugG"/>
+                            <constraint firstItem="CSE-1M-fbu" firstAttribute="top" secondItem="1Pu-dH-LBK" secondAttribute="bottom" id="dve-Dh-Fdb"/>
+                            <constraint firstAttribute="trailing" secondItem="1Pu-dH-LBK" secondAttribute="trailing" id="kN9-nh-f5e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCallEmergency" destination="aH5-uS-XXH" id="OOu-oh-Kkf"/>
+                        <outlet property="btnShowFirstAid" destination="llt-8m-ATv" id="FjV-JO-lsy"/>
+                        <outlet property="lblCallEmergency" destination="Dfl-si-8Jr" id="0Ip-sS-SUZ"/>
+                        <outlet property="lblDetailBar" destination="Lbf-uZ-mfP" id="OqW-wz-SZQ"/>
+                        <outlet property="lblDetailFirstAid" destination="paI-u1-Nuf" id="iYp-wV-izv"/>
+                        <outlet property="lblDetailInfoPoint" destination="WAo-WC-xGA" id="8bV-h0-kJa"/>
+                        <outlet property="lblDetailWIFI" destination="nQO-C9-7IY" id="4kl-Cj-43i"/>
+                        <outlet property="lblShowFirstAid" destination="Jeu-Pa-Iej" id="6Ie-6s-YWc"/>
+                        <outlet property="lblSubtitleBar" destination="VF3-7P-Dsb" id="yxP-3W-708"/>
+                        <outlet property="lblSubtitleFirstAid" destination="sk0-UT-X3L" id="ZZM-bg-Dqk"/>
+                        <outlet property="lblSubtitleInfoPoint" destination="k7R-YZ-MOd" id="rFv-4K-3wG"/>
+                        <outlet property="lblSubtitleWIFI" destination="4Ds-ir-viO" id="sCH-s0-Xis"/>
+                        <outlet property="lblTitle" destination="vqP-cJ-355" id="Ud3-3e-Gz0"/>
+                        <outlet property="scrMainScrollView" destination="1Pu-dH-LBK" id="hjj-De-G13"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvc-Ug-uig" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3209" y="770"/>
         </scene>
     </scenes>
 </document>

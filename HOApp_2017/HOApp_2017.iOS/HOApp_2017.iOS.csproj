@@ -189,6 +189,10 @@
     <Compile Include="S&amp;G\TableView\Cell\SideMenuFooterLogo.designer.cs">
       <DependentUpon>SideMenuFooterLogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="S&amp;G\ViewControllers\InfoViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\HOApp_2017\SharedAssets\HO.sqlite">
