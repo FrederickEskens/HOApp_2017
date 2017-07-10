@@ -25,6 +25,7 @@ namespace HOApp_2017.iOS
 		BaseContentViewController _programmViewController;
         BaseContentViewController _mapViewController;
         BaseContentViewController _infoViewController;
+        BaseContentViewController _songViewController;
 		#endregion
 
 		#region constructor
@@ -100,6 +101,9 @@ namespace HOApp_2017.iOS
                 case ScoutsEnGidsen.HO.BL.Controllers.NavigationController.PagesEnum.INFO:
                     contentViewController = _infoViewController;
                     break;
+                case ScoutsEnGidsen.HO.BL.Controllers.NavigationController.PagesEnum.YEARSONG:
+                    contentViewController = _songViewController;
+                    break;
 				default:
 					break;
 			}
@@ -144,6 +148,7 @@ namespace HOApp_2017.iOS
             _programmViewController = Storyboard.InstantiateViewController("ProgramViewController") as BaseContentViewController;
             _mapViewController = Storyboard.InstantiateViewController("MapImageView") as BaseContentViewController;
             _infoViewController = Storyboard.InstantiateViewController("InfoViewController") as BaseContentViewController;
+            _songViewController = Storyboard.InstantiateViewController("SongViewController") as BaseContentViewController;
 
 			AppController.Instance.NavigationController.SideMenuButtonClicked(ScoutsEnGidsen.HO.BL.Controllers.NavigationController.PagesEnum.INTRO);
 		}
