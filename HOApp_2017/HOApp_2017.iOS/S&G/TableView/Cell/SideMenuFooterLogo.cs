@@ -21,7 +21,7 @@ namespace HOApp_2017.iOS
 
         protected override void Initialize()
         {
-            imgLogo.Image = UIImage.FromBundle("SharedAssets/Images/Menu/logo_scoutsgidsenvl.png");
+            imgLogo.Image = UIImage.FromBundle("SharedAssets/Images/Menu/hologo.png");
         }
     }
 }

@@ -9,18 +9,12 @@ using System.CodeDom.Compiler;
 
 namespace HOApp_2017.iOS
 {
-	[Register ("ProgramViewController")]
-	partial class ProgramViewController
+	[Register ("ProgrammViewController")]
+	partial class ProgrammViewController
 	{
-		[Outlet]
-		UIKit.UITableView tblProgram { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (tblProgram != null) {
-				tblProgram.Dispose ();
-				tblProgram = null;
-			}
 		}
 	}
 }

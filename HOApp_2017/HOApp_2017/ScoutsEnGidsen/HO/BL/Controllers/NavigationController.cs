@@ -66,6 +66,9 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
                 case PagesEnum.YEARSONG:
                     controller = new SongPageController();
                     break;
+                case PagesEnum.PROGRAM:
+                    controller = new ProgramPageController();
+                    break;
 				default:
 					controller = null;
 					break;
