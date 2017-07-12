@@ -30,5 +30,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\IntroPageController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\VO\MenuItemVO.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\Utilities\GeneralConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\InfoPageController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\SongPageController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\VO\ProgramItemVO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\VO\LocationVO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\ProgramPageController.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DAL\DO\ProgramItemDO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DAL\DO\LocationDO.cs" />
   </ItemGroup>
 </Project>

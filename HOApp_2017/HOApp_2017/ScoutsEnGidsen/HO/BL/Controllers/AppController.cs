@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using HOApp_2017.ScoutsEnGidsen.HO.BL.VO;
 using HOApp_2017.ScoutsEnGidsen.HO.DAL.DO;
 using HOApp_2017.ScoutsEnGidsen.HO.DL;
 
@@ -15,6 +16,9 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
 		NavigationController _navigationController;
 
 		List<CopyDO> copyItems;
+
+        List<LocationVO> Locations;
+        List<ProgramItemVO> ProgramItems;
 		#endregion
 
 		#region constructor
@@ -22,6 +26,7 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
 		{
 			_navigationController = new NavigationController();
 			copyItems = database.GetAllCopy();
+
 		}
 		#endregion
 
@@ -52,6 +57,51 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
 				returnValue = copyItem.CopyValue_NL;
 			return returnValue;
 		}
+
+        public List<ProgramItemVO> GetAllProgramItems(){
+            if (ProgramItems == null)
+            {
+                List<ProgramItemVO> returnValue = new List<ProgramItemVO>();
+                var locations = database.GetAllLocations();
+                Locations = new List<LocationVO>();
+                foreach (var location in locations)
+                {
+                    LocationVO loc = new LocationVO(location);
+                    Locations.Add(loc);
+                }
+                var progItems = database.GetAllProgramItems();
+                ProgramItems = new List<ProgramItemVO>();
+                foreach (var progItem in progItems)
+                {
+                    ProgramItemVO programmaItem = new ProgramItemVO(progItem.ParentID, progItem.ID, progItem.Title, progItem.StartTime, progItem.EndTime);
+                    if (progItem.Location != null)
+                        programmaItem.Location = Locations.Find(x => x.ID == progItem.Location);
+                    var parentItem = ProgramItems.Find(x => x.ID == programmaItem.ParentID);
+                    if (parentItem != null)
+                    {
+                        parentItem.HasChildProgramItems = true;
+                        if (parentItem.ChildProgramItems == null)
+                            parentItem.ChildProgramItems = new List<ProgramItemVO>();
+                        parentItem.ChildProgramItems.Add(programmaItem);
+                        if (parentItem.ParentID != 0)
+                            programmaItem.HasParentProgramItems = true;
+                        else
+                            programmaItem.HasParentProgramItems = false;
+                        
+                            ProgramItems.Insert(ProgramItems.IndexOf(parentItem) + parentItem.ChildProgramItems.Count, programmaItem);
+                    }
+                    else
+                    {
+                        ProgramItems.Add(programmaItem);
+                    }
+                }
+
+
+            }
+                return ProgramItems;
+
+
+        }
 		#region override methods
 
 		#region Viewcycle

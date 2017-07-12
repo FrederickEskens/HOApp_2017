@@ -5,6 +5,7 @@ using CoreGraphics;
 using CoreLocation;
 using Foundation;
 using HOApp_2017.iOS.SG.ViewControllers.Base;
+using HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers;
 using UIKit;
 
 namespace HOApp_2017.iOS
@@ -56,6 +57,14 @@ namespace HOApp_2017.iOS
             var xScale = pixelDistanceLong / longDistance;
 
             Scaling = new CGSize(xScale, yScale);
+
+            if (AppController.Instance.NavigationController.PinnedLocation != CGPoint.Empty){
+                var pinLocation = AppController.Instance.NavigationController.PinnedLocation;
+                scrMapScroll.ZoomScale = 0.7f;
+                scrMapScroll.ScrollRectToVisible(new CGRect(pinLocation.X*0.7-200, pinLocation.Y*0.7-200,400,400),true);
+                AppController.Instance.NavigationController.PinnedLocation = CGPoint.Empty;
+            }
+
 			StartTrackingLocation();
         }
 
@@ -120,8 +129,11 @@ namespace HOApp_2017.iOS
                 userLocation.Frame = new CGRect((float)(userPos.X) - 28.5, (float)(userPos.Y) - 28.5, 57, 57);
 
           
-        }
+            }else{
+                userLocation.Hidden = true;
+            }
 
+        }
         private CGPoint calculatePosition(double userLong, double userLat)
         {
             var x1 = MapPoint1.X + (Scaling.Width * (coordinate1.Longitude - userLong))*-1;

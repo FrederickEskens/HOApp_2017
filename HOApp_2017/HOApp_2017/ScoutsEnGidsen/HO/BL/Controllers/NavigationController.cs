@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using HOApp_2017.ScoutsEnGidsen.HO.BL.VO;
 
 namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
@@ -9,17 +10,19 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
 
 		#region events
 		public event GoToPageDelegate GoToPageEvent;
-		#endregion
-		#region variables
 
-		#endregion
 
-		#region constructor
+        #endregion
+        #region variables
 
-		#endregion
+        #endregion
 
-		#region properties
-		public IEnumerable<MenuItemVO> MenuItems
+        #region constructor
+
+        #endregion
+
+        #region properties
+        public IEnumerable<MenuItemVO> MenuItems
 		{
 			get { 
 				var menuItems = new List<MenuItemVO>();
@@ -40,6 +43,12 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
 				return menuItems;
 			}
 		}
+
+        public CoreGraphics.CGPoint PinnedLocation
+        {
+            get;
+            set;
+        }
 		#endregion
 
 		#region public methods
@@ -51,6 +60,15 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
 				case PagesEnum.INTRO:
 					controller = new IntroPageController();
 					break;
+                case PagesEnum.INFO:
+                    controller = new InfoPageController();
+                    break;
+                case PagesEnum.YEARSONG:
+                    controller = new SongPageController();
+                    break;
+                case PagesEnum.PROGRAM:
+                    controller = new ProgramPageController();
+                    break;
 				default:
 					controller = null;
 					break;
@@ -58,6 +76,16 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
 			if (GoToPageEvent != null)
 				GoToPageEvent(page, controller);
 		}
+
+		public void ShowFirstAidOnMap()
+		{
+            ShowLocationOnMap(1833, 1255);
+		}
+
+        public void ShowLocationOnMap(int xPos, int yPos){
+            PinnedLocation = new CoreGraphics.CGPoint(xPos,yPos);
+			SideMenuButtonClicked(PagesEnum.MAP);
+        }
 		#region override methods
 
 		#region Viewcycle

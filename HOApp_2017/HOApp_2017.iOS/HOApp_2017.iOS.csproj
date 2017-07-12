@@ -189,6 +189,31 @@
     <Compile Include="S&amp;G\TableView\Cell\SideMenuFooterLogo.designer.cs">
       <DependentUpon>SideMenuFooterLogo.cs</DependentUpon>
     </Compile>
+    <Compile Include="S&amp;G\ViewControllers\InfoViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\SongViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\SongViewController.designer.cs">
+      <DependentUpon>SongViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\ProgrammHeaderCell.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\ProgrammHeaderCell.designer.cs">
+      <DependentUpon>ProgrammHeaderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\ProgrammSingleCell.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\ProgrammSingleCell.designer.cs">
+      <DependentUpon>ProgrammSingleCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\ProgramMultiCell.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\ProgramMultiCell.designer.cs">
+      <DependentUpon>ProgramMultiCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\CollectionView\Cell\ProgramMultiCellChoiceCell.cs" />
+    <Compile Include="S&amp;G\CollectionView\Cell\ProgramMultiCellChoiceCell.designer.cs">
+      <DependentUpon>ProgramMultiCellChoiceCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Source\ProgramTableViewSource.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\HOApp_2017\SharedAssets\HO.sqlite">
@@ -210,6 +235,10 @@
     <Folder Include="S&amp;G\TableView\" />
     <Folder Include="S&amp;G\TableView\Cell\" />
     <Folder Include="S&amp;G\TableView\Source\" />
+    <Folder Include="SharedAssets\Images\Song\" />
+    <Folder Include="S&amp;G\CollectionView\" />
+    <Folder Include="S&amp;G\CollectionView\Cell\" />
+    <Folder Include="S&amp;G\CollectionView\Source\" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="..\HOApp_2017\SharedAssets\Images\General\burger.png">
@@ -331,6 +360,12 @@
     </BundleResource>
     <BundleResource Include="..\HOApp_2017\SharedAssets\Fonts\Roboto-Regular.ttf">
       <Link>SharedAssets\Fonts\Roboto-Regular.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Jaarthema\jaarthema.jpg">
+      <Link>SharedAssets\Images\Jaarthema\jaarthema.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\hologo.png">
+      <Link>SharedAssets\Images\Menu\hologo.png</Link>
     </BundleResource>
   </ItemGroup>
   <Import Project="..\HOApp_2017\HOApp_2017.projitems" Label="Shared" Condition="Exists('..\HOApp_2017\HOApp_2017.projitems')" />
