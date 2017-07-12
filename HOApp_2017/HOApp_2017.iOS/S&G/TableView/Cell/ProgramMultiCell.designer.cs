@@ -13,7 +13,7 @@ namespace HOApp_2017.iOS
 	partial class ProgramMultiCell
 	{
 		[Outlet]
-		UIKit.UICollectionView colChoices { get; set; }
+		UIKit.UILabel lblSubTitle { get; set; }
 
 		[Outlet]
 		UIKit.UILabel lblTimeFrame { get; set; }
@@ -33,9 +33,9 @@ namespace HOApp_2017.iOS
 				lblTitle = null;
 			}
 
-			if (colChoices != null) {
-				colChoices.Dispose ();
-				colChoices = null;
+			if (lblSubTitle != null) {
+				lblSubTitle.Dispose ();
+				lblSubTitle = null;
 			}
 		}
 	}

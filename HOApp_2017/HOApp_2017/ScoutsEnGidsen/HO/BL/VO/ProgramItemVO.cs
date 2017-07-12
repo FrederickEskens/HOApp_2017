@@ -64,5 +64,11 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.VO
             get;
             set;
         }
+
+        public bool HasParentProgramItems
+        {
+            get;
+            set;
+        }
     }
 }

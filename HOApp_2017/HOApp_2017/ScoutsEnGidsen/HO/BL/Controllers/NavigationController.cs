@@ -79,9 +79,13 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
 
 		public void ShowFirstAidOnMap()
 		{
-            PinnedLocation = new CoreGraphics.CGPoint(1833, 1255);
-            SideMenuButtonClicked(PagesEnum.MAP);
+            ShowLocationOnMap(1833, 1255);
 		}
+
+        public void ShowLocationOnMap(int xPos, int yPos){
+            PinnedLocation = new CoreGraphics.CGPoint(xPos,yPos);
+			SideMenuButtonClicked(PagesEnum.MAP);
+        }
 		#region override methods
 
 		#region Viewcycle

@@ -23,6 +23,7 @@ namespace HOApp_2017.iOS
         protected override void Initialize()
         {
             Console.WriteLine("initialize");
+            lblTitle.Font = UIFont.FromName("Roboto-Bold", 21);
         }
     }
 }

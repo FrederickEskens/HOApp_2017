@@ -83,7 +83,11 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers {
                         if (parentItem.ChildProgramItems == null)
                             parentItem.ChildProgramItems = new List<ProgramItemVO>();
                         parentItem.ChildProgramItems.Add(programmaItem);
-                        if (parentItem.ParentID == 0)
+                        if (parentItem.ParentID != 0)
+                            programmaItem.HasParentProgramItems = true;
+                        else
+                            programmaItem.HasParentProgramItems = false;
+                        
                             ProgramItems.Insert(ProgramItems.IndexOf(parentItem) + parentItem.ChildProgramItems.Count, programmaItem);
                     }
                     else

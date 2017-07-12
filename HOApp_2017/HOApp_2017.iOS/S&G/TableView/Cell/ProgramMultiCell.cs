@@ -17,8 +17,11 @@ namespace HOApp_2017.iOS
 		public static readonly NSString Key = new NSString("ProgramMultiCell");
 		public override void SetData(object data)
 		{
-			lblTitle.Text = (data as ProgramItemVO).Title;
-			
+			lblSubTitle.Text = (data as ProgramItemVO).Title;
+			if ((data as ProgramItemVO).Location != null)
+				lblTitle.Text = (data as ProgramItemVO).Location.Name;
+			else
+				lblTitle.Text = string.Empty;
 			lblTimeFrame.Text = (data as ProgramItemVO).StartTime + (((data as ProgramItemVO).StartTime != null & (data as ProgramItemVO).EndTime != null) ? " - " : "") + (data as ProgramItemVO).EndTime;
 
 		}
@@ -26,6 +29,9 @@ namespace HOApp_2017.iOS
 		protected override void Initialize()
 		{
 			Console.WriteLine("initialize");
+			lblTimeFrame.Font = UIFont.FromName("Roboto-Regular", 14);
+			lblTitle.Font = UIFont.FromName("Roboto-Italic", 14);
+			lblSubTitle.Font = UIFont.FromName("Roboto-Bold", 16);
 		}
 	}
 }

@@ -8,10 +8,10 @@ namespace HOApp_2017.iOS.SG.TableView.Source
 {
     public class ProgramTableViewSource:BaseTableViewSource
     {
-        
+        ProgramPageController Controller;   
         public ProgramTableViewSource(ProgramPageController Controller)
         {
-            
+            this.Controller = Controller;
         }
         public List<ProgramItemVO> ProgramDays
         {
@@ -29,7 +29,7 @@ namespace HOApp_2017.iOS.SG.TableView.Source
             if (programItem.ParentID == 0){
                 return ProgrammHeaderCell.Key;
             }
-            if (programItem.HasChildProgramItems)
+            if (programItem.HasParentProgramItems)
                 return ProgramMultiCell.Key;
             else
                 return ProgrammSingleCell.Key;
@@ -38,14 +38,18 @@ namespace HOApp_2017.iOS.SG.TableView.Source
         public override nfloat GetHeightForRow(UIKit.UITableView tableView, Foundation.NSIndexPath indexPath)
         {
             var programItem = ProgramDays[indexPath.Row];
-			if (programItem.ParentID == 0)
-			{
-				return 50;
-			}
-			if (programItem.HasChildProgramItems)
-				return 100;
-			else
-				return 75;
+            if (programItem.ParentID == 0)
+                return 45;
+            
+            return 60;
+        }
+
+        public override void RowSelected(UIKit.UITableView tableView, Foundation.NSIndexPath indexPath)
+        {
+            var programItem = ProgramDays[indexPath.Row];
+            if (programItem.Location != null && programItem.Location.XPosition!= 0){
+                Controller.ShowLocationOnMap(programItem.Location);
+            }
         }
     }
 }

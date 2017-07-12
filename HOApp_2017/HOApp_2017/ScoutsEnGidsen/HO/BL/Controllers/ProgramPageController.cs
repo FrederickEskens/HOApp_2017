@@ -25,5 +25,9 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers
             });
           
         }
+
+        public void ShowLocationOnMap(LocationVO location){
+            AppController.Instance.NavigationController.ShowLocationOnMap(location.XPosition, location.YPosition);
+        }
     }
 }
