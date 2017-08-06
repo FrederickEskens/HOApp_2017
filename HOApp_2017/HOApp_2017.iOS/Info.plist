@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>HO gids</string>
 	<key>CFBundleIdentifier</key>
-	<string>be.bazookas.mobile.scoutsengidsenvlaanderen.hogids.dev</string>
+	<string>be.scoutsengidsenvlaanderen.hogids</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -42,7 +42,7 @@
 	<key>CFBundleName</key>
 	<string>HO gids</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.5</string>
+	<string>1.9</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
 	<key>UIStatusBarStyle</key>
@@ -58,5 +58,7 @@
 		<string>SharedAssets/Fonts/Roboto-Light.ttf</string>
 		<string>SharedAssets/Fonts/Roboto-Regular.ttf</string>
 	</array>
+	<key>Pushwoosh_APPID</key>
+	<string>142E9-FBCCD</string>
 </dict>
 </plist>

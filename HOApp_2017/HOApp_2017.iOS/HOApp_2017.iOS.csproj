@@ -58,10 +58,12 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchProfiling>true</MtouchProfiling>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchProfiling>false</MtouchProfiling>
+    <CodesignKey>iPhone Developer: Jeroen Crevits (L36MX7RE3A)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignProvision></CodesignProvision>
+    <CodesignProvision>ho gids dev</CodesignProvision>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -79,6 +81,9 @@
     </Reference>
     <Reference Include="GeoJSON.Net">
       <HintPath>..\..\packages\GeoJSON.Net.0.1.56\lib\portable-net40+sl5+wp80+win8+wpa81\GeoJSON.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Pushwoosh.Xamarin.iOS">
+      <HintPath>..\..\lib\Pushwoosh.Xamarin.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -209,11 +214,12 @@
     <Compile Include="S&amp;G\TableView\Cell\ProgramMultiCell.designer.cs">
       <DependentUpon>ProgramMultiCell.cs</DependentUpon>
     </Compile>
-    <Compile Include="S&amp;G\CollectionView\Cell\ProgramMultiCellChoiceCell.cs" />
-    <Compile Include="S&amp;G\CollectionView\Cell\ProgramMultiCellChoiceCell.designer.cs">
-      <DependentUpon>ProgramMultiCellChoiceCell.cs</DependentUpon>
-    </Compile>
     <Compile Include="S&amp;G\TableView\Source\ProgramTableViewSource.cs" />
+    <Compile Include="S&amp;G\ViewControllers\RulesViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\RulesViewController.designer.cs">
+      <DependentUpon>RulesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\CollectionView\Cell\BaseCollectionViewCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\HOApp_2017\SharedAssets\HO.sqlite">
@@ -366,6 +372,27 @@
     </BundleResource>
     <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\hologo.png">
       <Link>SharedAssets\Images\Menu\hologo.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\actie.jpg">
+      <Link>SharedAssets\Images\Rules\actie.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\alcohol.jpg">
+      <Link>SharedAssets\Images\Rules\alcohol.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\eigendrank.jpg">
+      <Link>SharedAssets\Images\Rules\eigendrank.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\geendrugs.jpg">
+      <Link>SharedAssets\Images\Rules\geendrugs.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\nachtrust.jpg">
+      <Link>SharedAssets\Images\Rules\nachtrust.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\respect.jpg">
+      <Link>SharedAssets\Images\Rules\respect.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\rookzones.jpg">
+      <Link>SharedAssets\Images\Rules\rookzones.jpg</Link>
     </BundleResource>
   </ItemGroup>
   <Import Project="..\HOApp_2017\HOApp_2017.projitems" Label="Shared" Condition="Exists('..\HOApp_2017\HOApp_2017.projitems')" />

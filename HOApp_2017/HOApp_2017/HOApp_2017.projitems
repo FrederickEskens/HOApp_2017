@@ -37,5 +37,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\ProgramPageController.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DAL\DO\ProgramItemDO.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\DAL\DO\LocationDO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ScoutsEnGidsen\HO\BL\Controllers\RulesPageController.cs" />
   </ItemGroup>
 </Project>
