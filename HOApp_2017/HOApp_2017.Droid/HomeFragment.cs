@@ -4,14 +4,25 @@ using Android.OS;
 using Android.Support.V4.App;
 using Android.Views;
 using Android.Widget;
+using HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers;
 
 namespace HOApp_2017.Droid
 {
-    public class HomeFragment : Fragment
+    public class HomeFragment : BaseContentFragmen
     {
         private ImageView headerImage;
         private TextView title;
         private TextView body;
+
+         IntroPageController IntroController
+        {
+            get{
+                if (ContentController is IntroPageController)
+                    return ContentController as IntroPageController;
+                else
+                    return null;
+            }
+        }
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -21,12 +32,18 @@ namespace HOApp_2017.Droid
             title = view.FindViewById<TextView>(Resource.Id.title);
             body = view.FindViewById<TextView>(Resource.Id.body);
 
-            headerImage.SetImageResource(Resource.Drawable.headers_intro);
-            title.Text = "Herfstontmoeting";
 
-            body.Text = FillBody();
 
             return view;
+        }
+        public override void OnResume()
+        {
+            base.OnResume();
+			headerImage.SetImageResource(Resource.Drawable.headers_intro);
+			if (IntroController != null)
+				title.Text = IntroController.Title;
+			if (IntroController != null)
+				body.Text = IntroController.IntroText;
         }
 
         private static string FillBody()

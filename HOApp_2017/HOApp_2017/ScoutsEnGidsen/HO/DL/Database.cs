@@ -132,5 +132,26 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.DL {
 			}
 		}
 
+        public List<LocationDO> GetAllLocations(){
+			lock (database)
+			{
+				var cmd = new SQLiteCommand(database);
+				cmd.CommandText = "select * from tblLocations";
+				var copyItems = cmd.ExecuteQuery<LocationDO>();
+				return copyItems;
+			}
+        }
+
+		public List<ProgramItemDO> GetAllProgramItems()
+		{
+			lock (database)
+			{
+				var cmd = new SQLiteCommand(database);
+				cmd.CommandText = "select * from tblProgram";
+                var copyItems = cmd.ExecuteQuery<ProgramItemDO>();
+				return copyItems;
+			}
+		}
+
 	}
 }

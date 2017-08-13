@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <resources>
-  <color name="background_color">#efa690</color>
-  <color name="primary_blue">#003050</color>
-  <color name="secondary_blue">#6F4D43</color>
-  <color name="primary_blue_dark">#002B48</color>
+  <color name="background_color">#FFFFFF</color>
+  <color name="primary_blue">#000000</color>
+  <color name="secondary_blue">#000000</color>
+  <color name="primary_blue_dark">#000000</color>
   <color name="primary_brown">#6F4D43</color>
+	<color name="primary_red">#EB2126</color>
 </resources>

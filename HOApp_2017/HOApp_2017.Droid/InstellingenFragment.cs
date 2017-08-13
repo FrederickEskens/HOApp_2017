@@ -8,7 +8,7 @@ using Android.Widget;
 
 namespace HOApp_2017.Droid
 {
-    public class InstellingenFragment : Fragment
+    public class InstellingenFragment : BaseContentFragmen
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {

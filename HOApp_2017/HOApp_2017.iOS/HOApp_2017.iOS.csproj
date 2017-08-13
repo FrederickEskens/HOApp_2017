@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
@@ -23,6 +24,7 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <MtouchProfiling>true</MtouchProfiling>
+    <CodesignKey>iPhone Developer</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -56,16 +58,33 @@
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchProfiling>true</MtouchProfiling>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchProfiling>false</MtouchProfiling>
+    <CodesignKey>iPhone Developer: Jeroen Crevits (L36MX7RE3A)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignProvision>fd8d85bd-f53b-4a62-a9c6-7d9f7de6e6b7</CodesignProvision>
+    <CodesignProvision>ho gids dev</CodesignProvision>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <BuildIpa>true</BuildIpa>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
+    <Reference Include="Xamarin-Sidebar-Unified">
+      <HintPath>..\..\Components\SidebarNavigation-1.9\lib\ios-unified\Xamarin-Sidebar-Unified.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Maps">
+      <HintPath>..\..\packages\Xamarin.Google.iOS.Maps.2.1.0.1\lib\Xamarin.iOS10\Google.Maps.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="GeoJSON.Net">
+      <HintPath>..\..\packages\GeoJSON.Net.0.1.56\lib\portable-net40+sl5+wp80+win8+wpa81\GeoJSON.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Pushwoosh.Xamarin.iOS">
+      <HintPath>..\..\lib\Pushwoosh.Xamarin.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json">
@@ -131,6 +150,7 @@
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -139,12 +159,250 @@
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="S&amp;G\ViewControllers\Base\BaseViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\ContentViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\ContentViewController.designer.cs">
+      <DependentUpon>ContentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\IntroViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\IntroViewController.designer.cs">
+      <DependentUpon>IntroViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\ProgramViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\ProgramViewController.designer.cs">
+      <DependentUpon>ProgramViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\SideMenuViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\SideMenuViewController.designer.cs">
+      <DependentUpon>SideMenuViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuFooter.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuFooter.designer.cs">
+      <DependentUpon>SideMenuFooter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuTableViewCell.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuTableViewCell.designer.cs">
+      <DependentUpon>SideMenuTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Source\SideMenuTableViewSource.cs" />
+    <Compile Include="S&amp;G\TableView\Source\BaseTableViewSource.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\BaseTableViewCell.cs" />
+    <Compile Include="S&amp;G\ViewControllers\Base\BaseContentViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\MapViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\MapViewController.designer.cs">
+      <DependentUpon>MapViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\ImageMapViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\ImageMapViewController.designer.cs">
+      <DependentUpon>ImageMapViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuFooterLogo.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\SideMenuFooterLogo.designer.cs">
+      <DependentUpon>SideMenuFooterLogo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\InfoViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\InfoViewController.designer.cs">
+      <DependentUpon>InfoViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\ViewControllers\SongViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\SongViewController.designer.cs">
+      <DependentUpon>SongViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\ProgrammHeaderCell.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\ProgrammHeaderCell.designer.cs">
+      <DependentUpon>ProgrammHeaderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\ProgrammSingleCell.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\ProgrammSingleCell.designer.cs">
+      <DependentUpon>ProgrammSingleCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Cell\ProgramMultiCell.cs" />
+    <Compile Include="S&amp;G\TableView\Cell\ProgramMultiCell.designer.cs">
+      <DependentUpon>ProgramMultiCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\TableView\Source\ProgramTableViewSource.cs" />
+    <Compile Include="S&amp;G\ViewControllers\RulesViewController.cs" />
+    <Compile Include="S&amp;G\ViewControllers\RulesViewController.designer.cs">
+      <DependentUpon>RulesViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="S&amp;G\CollectionView\Cell\BaseCollectionViewCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\HOApp_2017\SharedAssets\HO.sqlite">
       <Link>SharedAssets\HO.sqlite</Link>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="SidebarNavigation">
+      <Version>1.9</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="S&amp;G\" />
+    <Folder Include="S&amp;G\ViewControllers\" />
+    <Folder Include="S&amp;G\ViewControllers\Base\" />
+    <Folder Include="SharedAssets\Images\" />
+    <Folder Include="SharedAssets\Images\General\" />
+    <Folder Include="S&amp;G\TableView\" />
+    <Folder Include="S&amp;G\TableView\Cell\" />
+    <Folder Include="S&amp;G\TableView\Source\" />
+    <Folder Include="SharedAssets\Images\Song\" />
+    <Folder Include="S&amp;G\CollectionView\" />
+    <Folder Include="S&amp;G\CollectionView\Cell\" />
+    <Folder Include="S&amp;G\CollectionView\Source\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\General\burger.png">
+      <Link>SharedAssets\Images\General\burger.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\facebook.png">
+      <Link>SharedAssets\Images\Menu\facebook.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\instagram.png">
+      <Link>SharedAssets\Images\Menu\instagram.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\twitter.png">
+      <Link>SharedAssets\Images\Menu\twitter.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\map.geo.json">
+      <Link>SharedAssets\map.geo.json</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\afwasbatterij%402x.png">
+      <Link>SharedAssets\Images\Map\afwasbatterij%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\afwasbatterij.png">
+      <Link>SharedAssets\Images\Map\afwasbatterij.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\bar%402x.png">
+      <Link>SharedAssets\Images\Map\bar%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\bar.png">
+      <Link>SharedAssets\Images\Map\bar.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\ehbo.png">
+      <Link>SharedAssets\Images\Map\ehbo.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\eten%402x.png">
+      <Link>SharedAssets\Images\Map\eten%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\eten.png">
+      <Link>SharedAssets\Images\Map\eten.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\evacuatiepunt%402x.png">
+      <Link>SharedAssets\Images\Map\evacuatiepunt%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\evacuatiepunt.png">
+      <Link>SharedAssets\Images\Map\evacuatiepunt.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\info.png">
+      <Link>SharedAssets\Images\Map\info.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\infopunt%402x.png">
+      <Link>SharedAssets\Images\Map\infopunt%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\infopunt.png">
+      <Link>SharedAssets\Images\Map\infopunt.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\layers-2x.png">
+      <Link>SharedAssets\Images\Map\layers-2x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\layers.png">
+      <Link>SharedAssets\Images\Map\layers.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\leeg.png">
+      <Link>SharedAssets\Images\Map\leeg.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\locatie.png">
+      <Link>SharedAssets\Images\Map\locatie.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\marker-icon%402x.png">
+      <Link>SharedAssets\Images\Map\marker-icon%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\marker-icon.png">
+      <Link>SharedAssets\Images\Map\marker-icon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\marker-location%402x.png">
+      <Link>SharedAssets\Images\Map\marker-location%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\marker-location.png">
+      <Link>SharedAssets\Images\Map\marker-location.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\marker-shadow.png">
+      <Link>SharedAssets\Images\Map\marker-shadow.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\onthaal.png">
+      <Link>SharedAssets\Images\Map\onthaal.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\sanitair%402x.png">
+      <Link>SharedAssets\Images\Map\sanitair%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\sanitair.png">
+      <Link>SharedAssets\Images\Map\sanitair.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\sis.png">
+      <Link>SharedAssets\Images\Map\sis.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\tent.png">
+      <Link>SharedAssets\Images\Map\tent.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\map.png">
+      <Link>SharedAssets\Images\Map\map.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\UserIcon.png">
+      <Link>SharedAssets\Images\Map\UserIcon.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Map\UserIcon%402x.png">
+      <Link>SharedAssets\Images\Map\UserIcon%402x.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\logo_scoutsgidsenvl.png">
+      <Link>SharedAssets\Images\Menu\logo_scoutsgidsenvl.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\intro\anton.jpg">
+      <Link>SharedAssets\Images\intro\anton.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Fonts\Roboto-Bold.ttf">
+      <Link>SharedAssets\Fonts\Roboto-Bold.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Fonts\Roboto-Italic.ttf">
+      <Link>SharedAssets\Fonts\Roboto-Italic.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Fonts\Roboto-Light.ttf">
+      <Link>SharedAssets\Fonts\Roboto-Light.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Fonts\Roboto-Regular.ttf">
+      <Link>SharedAssets\Fonts\Roboto-Regular.ttf</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Jaarthema\jaarthema.jpg">
+      <Link>SharedAssets\Images\Jaarthema\jaarthema.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Menu\hologo.png">
+      <Link>SharedAssets\Images\Menu\hologo.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\actie.jpg">
+      <Link>SharedAssets\Images\Rules\actie.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\alcohol.jpg">
+      <Link>SharedAssets\Images\Rules\alcohol.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\eigendrank.jpg">
+      <Link>SharedAssets\Images\Rules\eigendrank.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\geendrugs.jpg">
+      <Link>SharedAssets\Images\Rules\geendrugs.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\nachtrust.jpg">
+      <Link>SharedAssets\Images\Rules\nachtrust.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\respect.jpg">
+      <Link>SharedAssets\Images\Rules\respect.jpg</Link>
+    </BundleResource>
+    <BundleResource Include="..\HOApp_2017\SharedAssets\Images\Rules\rookzones.jpg">
+      <Link>SharedAssets\Images\Rules\rookzones.jpg</Link>
+    </BundleResource>
+  </ItemGroup>
   <Import Project="..\HOApp_2017\HOApp_2017.projitems" Label="Shared" Condition="Exists('..\HOApp_2017\HOApp_2017.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets" Condition="Exists('..\..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.targets')" />
+  <Import Project="..\..\packages\Xamarin.Google.iOS.Maps.2.1.0.1\build\Xamarin.Google.iOS.Maps.targets" Condition="Exists('..\..\packages\Xamarin.Google.iOS.Maps.2.1.0.1\build\Xamarin.Google.iOS.Maps.targets')" />
 </Project>

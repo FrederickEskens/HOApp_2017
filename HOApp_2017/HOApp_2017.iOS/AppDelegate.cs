@@ -1,5 +1,9 @@
 ﻿using Foundation;
+using Google.Maps;
+using HOApp_2017.ScoutsEnGidsen.HO.Utilities;
+using Pushwoosh;
 using UIKit;
+using UserNotifications;
 
 namespace HOApp_2017.iOS
 {
@@ -14,11 +18,33 @@ namespace HOApp_2017.iOS
 			get;
 			set;
 		}
-
+		public ViewController RootViewController { get { return Window.RootViewController as ViewController; } }
 		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 		{
-			// Override point for customization after application launch.
-			// If not required for your application you can safely delete this method
+			// create a new window instance based on the screen size
+			Window = new UIWindow(UIScreen.MainScreen.Bounds);
+			UIStoryboard sb = UIStoryboard.FromName("Main", null);
+			// If you have defined a root view controller, set it here:
+			Window.RootViewController = sb.InstantiateInitialViewController();
+
+            MapServices.ProvideAPIKey(GeneralConstants.MapsApiKey);
+			// make the window visible
+			Window.MakeKeyAndVisible();
+
+			PushNotificationManager pushmanager = PushNotificationManager.PushManager;
+			pushmanager.Delegate = this;
+			UNUserNotificationCenter.Current.Delegate = pushmanager.notificationCenterDelegate;
+
+			if (launchOptions != null)
+			{
+				if (launchOptions.ContainsKey(UIApplication.LaunchOptionsRemoteNotificationKey))
+				{
+					pushmanager.HandlePushReceived(launchOptions);
+				}
+			}
+
+			pushmanager.RegisterForPushNotifications();
+
 			return true;
 		}
 
@@ -51,6 +77,21 @@ namespace HOApp_2017.iOS
 		public override void WillTerminate (UIApplication application)
 		{
 			// Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
+		}
+
+		public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+		{
+			PushNotificationManager.PushManager.HandlePushRegistration(deviceToken);
+		}
+
+		public override void FailedToRegisterForRemoteNotifications(UIApplication application, NSError error)
+		{
+			PushNotificationManager.PushManager.HandlePushRegistrationFailure(error);
+		}
+
+		public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)
+		{
+			PushNotificationManager.PushManager.HandlePushReceived(userInfo);
 		}
 	}
 }

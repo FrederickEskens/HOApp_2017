@@ -5,7 +5,7 @@ using Android.Views;
 
 namespace HOApp_2017.Droid
 {
-    public class KaartFragment : Fragment, IOnMapReadyCallback
+    public class KaartFragment : BaseContentFragmen, IOnMapReadyCallback
     {
         private GoogleMap map;
 

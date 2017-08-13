@@ -5,7 +5,7 @@ using Android.Widget;
 
 namespace HOApp_2017.Droid
 {
-    public class AboutFragment : Fragment
+    public class AboutFragment : BaseContentFragmen
     {
         private ImageView headerImage;
         private TextView title;

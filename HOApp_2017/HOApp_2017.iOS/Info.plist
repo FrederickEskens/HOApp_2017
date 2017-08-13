@@ -5,7 +5,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>HO gids</string>
 	<key>CFBundleIdentifier</key>
-	<string>be.scoutsengidsenvlaanderen.hogids.dev</string>
+	<string>be.scoutsengidsenvlaanderen.hogids</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -15,7 +15,6 @@
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
-		<integer>2</integer>
 	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
@@ -28,9 +27,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -46,6 +42,23 @@
 	<key>CFBundleName</key>
 	<string>HO gids</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.5</string>
+	<string>1.9</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<true/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleLightContent</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiY3JlamVyIiwiYSI6ImNqM2p5c3U4MDAwM3EzMm83aDB1MG9hanAifQ.hxbQ82oY3n7shNMlpTur2g</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Wij hebben uw locatie nodig om deze weer te geven op de map.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>SharedAssets/Fonts/Roboto-Italic.ttf</string>
+		<string>SharedAssets/Fonts/Roboto-Bold.ttf</string>
+		<string>SharedAssets/Fonts/Roboto-Light.ttf</string>
+		<string>SharedAssets/Fonts/Roboto-Regular.ttf</string>
+	</array>
+	<key>Pushwoosh_APPID</key>
+	<string>142E9-FBCCD</string>
 </dict>
 </plist>
