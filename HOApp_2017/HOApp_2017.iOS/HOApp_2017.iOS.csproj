@@ -132,6 +132,7 @@
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\splash_568h%402x.png" />
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\splash%402x.png" />
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\splash.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%403x copy.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="Resources\ITunesArtwork" />
