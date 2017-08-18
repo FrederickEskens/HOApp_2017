@@ -14,7 +14,7 @@
    
   <style name="NavigationDrawerStyle">
     <item name="android:textSize">17sp</item>
-    <item name="android:layout_marginLeft">10sp</item>
+    <item name="android:layout_marginLeft">5dp</item>
   </style>
 
   <style name="spinnerItemStyle" parent="android:Widget.TextView.SpinnerItem">

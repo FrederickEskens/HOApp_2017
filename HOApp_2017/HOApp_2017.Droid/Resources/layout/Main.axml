@@ -26,17 +26,45 @@
                 android:minWidth="25px"
                 android:minHeight="25px"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:background="#FFFFFF" />
         </LinearLayout>
-        <android.support.design.widget.NavigationView
-            android:id="@+id/nav_view"
+        <RelativeLayout
+            android:id="@+id/nav_viewHolder"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:paddingTop="8sp"
-            android:background="@color/primary_red"
-            app:itemTextColor="#000000"
-            app:theme="@style/NavigationDrawerStyle"
-            app:menu="@menu/nav_menu" />
+            android:background="@color/primary_red">
+            <TextView
+                android:id="@+id/HeaderText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#HO17"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="17sp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="14dp"
+                />
+            <android.support.design.widget.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@color/primary_red"
+                app:itemTextColor="#000000"
+                app:theme="@style/NavigationDrawerStyle"
+                app:menu="@menu/nav_menu"
+                app:elevation="0dp"
+                android:layout_below="@+id/HeaderText" />
+            <ImageView
+                android:id="@+id/menuLogo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="20dp"
+               android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+        </RelativeLayout>
     </android.support.v4.widget.DrawerLayout>
 </LinearLayout>
