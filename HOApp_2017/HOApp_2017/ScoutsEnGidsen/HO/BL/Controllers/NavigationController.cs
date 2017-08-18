@@ -1,30 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+#if __ANDROID__
 using Android.Graphics;
+#endif
 using HOApp_2017.ScoutsEnGidsen.HO.BL.VO;
 
 namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers
 {
     public class NavigationController
     {
-        #region delegates
+#region delegates
         public delegate void GoToPageDelegate(PagesEnum page, BaseContentController controller);
-        #endregion
+#endregion
 
-        #region events
+#region events
         public event GoToPageDelegate GoToPageEvent;
 
 
-        #endregion
-        #region variables
+#endregion
+#region variables
 
-        #endregion
+#endregion
 
-        #region constructor
+#region constructor
 
-        #endregion
+#endregion
 
-        #region properties
+#region properties
         public IEnumerable<MenuItemVO> MenuItems
         {
             get
@@ -60,9 +62,9 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers
             set;
         }
 #endif
-        #endregion
+#endregion
 
-        #region public methods
+#region public methods
         public void SideMenuButtonClicked(PagesEnum page)
         {
             BaseContentController controller;

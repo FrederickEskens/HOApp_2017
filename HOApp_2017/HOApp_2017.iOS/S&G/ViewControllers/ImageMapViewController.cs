@@ -43,13 +43,13 @@ namespace HOApp_2017.iOS
         {
             base.ViewDidAppear(animated);
             scrMapScroll.ZoomScale = 0.1f;
-            MapPoint1 = new CGPoint(352, 545);
-            MapPoint2 = new CGPoint(2207, 1387);
+            MapPoint1 = new CGPoint(322, 406);
+            MapPoint2 = new CGPoint(2003, 1164);
             coordinate1 = new CLLocationCoordinate2D(51.243642, 4.918261);
             coordinate2 = new CLLocationCoordinate2D(51.238957, 4.944440);
 
-            var pixelDistanceLong = 352 - 2207;
-            var pixelDistanceLat = 545 - 1387;
+            var pixelDistanceLong = 322 - 2003;
+            var pixelDistanceLat = 406 - 1164;
             var latDistance = coordinate1.Latitude - coordinate2.Latitude;
             var longDistance = coordinate1.Longitude - coordinate2.Longitude;
 

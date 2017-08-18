@@ -24,7 +24,7 @@ namespace HOApp_2017.ScoutsEnGidsen.HO.DL {
 		string originalDBLocation = "SharedAssets/HO.sqlite";
         #endif
 
-        const int DATABASE_VERSION = 1;
+        const int DATABASE_VERSION = 2;
 		string currentDBName = "HO" + DATABASE_VERSION + ".sqlite";
         string oldDBName = "HO" + (DATABASE_VERSION - 1) + ".sqlite";
 

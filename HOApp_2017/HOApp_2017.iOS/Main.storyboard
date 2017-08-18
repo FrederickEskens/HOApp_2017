@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -306,9 +306,9 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AE3-Rf-bXO">
-                                        <rect key="frame" x="0.0" y="0.0" width="3129" height="2480"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="3129" height="2212"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="2480" id="SmA-yN-PmC"/>
+                                            <constraint firstAttribute="height" constant="2212" id="SmA-yN-PmC"/>
                                             <constraint firstAttribute="width" constant="3129" id="X3g-Ef-TVT"/>
                                         </constraints>
                                     </imageView>
@@ -609,7 +609,7 @@ REFREIN</string>
                                         <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eXl-xZ-g28" id="Cmc-CK-A5N">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFb-9V-he8">
@@ -632,7 +632,7 @@ REFREIN</string>
                                         <rect key="frame" x="0.0" y="78" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VO3-R3-Jen" id="m8K-vp-I0a">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3G-OB-5AF">
@@ -674,7 +674,7 @@ REFREIN</string>
                                         <rect key="frame" x="0.0" y="138" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KIl-Hc-VPe" id="xQG-aY-HYu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AB-Ff-5kg">
@@ -757,7 +757,7 @@ REFREIN</string>
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-Mp-qkJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="819"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="797.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Praktisch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqP-cJ-355">
                                                 <rect key="frame" x="20" y="50" width="96" height="26"/>
@@ -784,18 +784,18 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barinfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF3-7P-Dsb">
-                                                <rect key="frame" x="20" y="301" width="58" height="21"/>
+                                                <rect key="frame" x="20" y="300" width="58" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbf-uZ-mfP">
-                                                <rect key="frame" x="20" y="337" width="374" height="163"/>
+                                                <rect key="frame" x="20" y="336" width="374" height="142.33333333333331"/>
                                                 <string key="text">› de bar op de grote grond sluit om 02.30
 
 › de bar van K30 sluit om 02.00
 
-› de bar van Loods 30 sluit op 02.00
+› de bar van Loods 30 sluit om 02.00
 
 › de bonnetjesverkoop sluit telkens een half uur vroeger</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -803,32 +803,32 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free WIFI (GG)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ds-ir-viO">
-                                                <rect key="frame" x="20" y="529" width="117" height="21"/>
+                                                <rect key="frame" x="20" y="508.33333333333337" width="117" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Het wachtwoord is herfstontmoeting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQO-C9-7IY">
-                                                <rect key="frame" x="20" y="565" width="374" height="21"/>
+                                                <rect key="frame" x="20" y="544.33333333333337" width="374" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bij noodgevallen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sk0-UT-X3L">
-                                                <rect key="frame" x="20" y="616" width="131" height="21"/>
+                                                <rect key="frame" x="20" y="595.33333333333337" width="131" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <color key="textColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="paI-u1-Nuf">
-                                                <rect key="frame" x="20" y="652" width="374" height="82"/>
+                                                <rect key="frame" x="20" y="631.33333333333337" width="374" height="81.333333333333258"/>
                                                 <string key="text">Verwittig de hulpdiensten nooit rechtstreeks. Bij ernstige ongevallen bel je het noodnummer van Scouts en Gidsen Vlaanderen. Voor kleine ongevallen ga je naar het Rode Kruis.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aH5-uS-XXH" customClass="UIButton">
-                                                <rect key="frame" x="20" y="749" width="167" height="50"/>
+                                                <rect key="frame" x="20" y="727.66666666666663" width="167" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noodnummer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dfl-si-8Jr">
                                                         <rect key="frame" x="31" y="15" width="105" height="21"/>
@@ -845,7 +845,7 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="llt-8m-ATv" customClass="UIButton">
-                                                <rect key="frame" x="227" y="749" width="167" height="50"/>
+                                                <rect key="frame" x="227" y="727.66666666666663" width="167" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toon Rode Kruis op de kaart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jeu-Pa-Iej">
                                                         <rect key="frame" x="0.0" y="0.0" width="167" height="50"/>
@@ -953,7 +953,7 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                 <rect key="frame" x="0.0" y="20" width="414" height="980"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TMO-bX-8XQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1042"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1041"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leefregels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IBT-Ib-68q">
                                                 <rect key="frame" x="20" y="50" width="107" height="26"/>
@@ -962,52 +962,52 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We rekenen erop dat jullie de wijsheid hebben om volgende zeven vuistregels op te volgen." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bva-qT-ftF">
-                                                <rect key="frame" x="20" y="91" width="394" height="41"/>
+                                                <rect key="frame" x="20" y="91" width="394" height="40.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1jh-UF-WC1">
-                                                <rect key="frame" x="20" y="152" width="177" height="177"/>
+                                                <rect key="frame" x="20" y="151.66666666666669" width="177" height="177.00000000000006"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="1jh-UF-WC1" secondAttribute="height" multiplier="1:1" id="9dq-WF-Fyj"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9GJ-UJ-CiZ">
-                                                <rect key="frame" x="217" y="152" width="177" height="177"/>
+                                                <rect key="frame" x="217" y="151.66666666666669" width="177" height="177.00000000000006"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9GJ-UJ-CiZ" secondAttribute="height" multiplier="1:1" id="2S2-45-nw9"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QXg-Ic-2Xd">
-                                                <rect key="frame" x="20" y="349" width="177" height="177"/>
+                                                <rect key="frame" x="20" y="348.66666666666663" width="177" height="176.99999999999989"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="QXg-Ic-2Xd" secondAttribute="height" multiplier="1:1" id="k7U-0c-bBq"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="43z-hg-jeK">
-                                                <rect key="frame" x="217" y="349" width="177" height="177"/>
+                                                <rect key="frame" x="217" y="348.66666666666663" width="177" height="176.99999999999989"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="43z-hg-jeK" secondAttribute="height" multiplier="1:1" id="AF2-Qf-U0R"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yyZ-M9-fUY">
-                                                <rect key="frame" x="20" y="546" width="177" height="177"/>
+                                                <rect key="frame" x="20" y="545.66666666666663" width="177" height="177"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="yyZ-M9-fUY" secondAttribute="height" multiplier="1:1" id="dRV-fD-YoP"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M6n-V8-9v5">
-                                                <rect key="frame" x="217" y="546" width="177" height="177"/>
+                                                <rect key="frame" x="217" y="545.66666666666663" width="177" height="177"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="M6n-V8-9v5" secondAttribute="height" multiplier="1:1" id="4ne-2T-5aa"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="69N-OW-8YT">
-                                                <rect key="frame" x="119" y="743" width="177" height="177"/>
+                                                <rect key="frame" x="119" y="742.66666666666663" width="177" height="177"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBw-09-x9G">
-                                                <rect key="frame" x="20" y="940" width="374" height="82"/>
+                                                <rect key="frame" x="20" y="939.66666666666652" width="374" height="81.333333333333371"/>
                                                 <string key="text">Door je in te schrijven voor Herfstontmoeting, ga je akkoord met de leefregels. Overtreed je de leefre-
 gels, dan zal er een sanctie en natraject volgen.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
