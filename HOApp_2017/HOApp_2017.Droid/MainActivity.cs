@@ -102,12 +102,12 @@ namespace HOApp_2017.Droid
                 case (Resource.Id.nav_jaarlied):
                     selectedPage = NavigationController.PagesEnum.YEARSONG;
                     break;
-                case (Resource.Id.nav_instellingen):
-                    selectedPage = NavigationController.PagesEnum.SETTINGS;
-                    break;
-                case (Resource.Id.nav_about):
-                    selectedPage = NavigationController.PagesEnum.ABOUT;
-                    break;
+                //case (Resource.Id.nav_instellingen):
+                //    selectedPage = NavigationController.PagesEnum.SETTINGS;
+                //    break;
+                //case (Resource.Id.nav_about):
+                //    selectedPage = NavigationController.PagesEnum.ABOUT;
+                //    break;
                 case Resource.Id.nav_home:
                     selectedPage = NavigationController.PagesEnum.INTRO;
                     break;

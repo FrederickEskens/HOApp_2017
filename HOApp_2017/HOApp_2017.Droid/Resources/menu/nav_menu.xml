@@ -19,11 +19,12 @@
     <item
       android:id="@+id/nav_jaarlied"
       android:title="Jaarlied" />
+    <!--
     <item
       android:id="@+id/nav_instellingen"
       android:title="Instellingen" />
     <item
       android:id="@+id/nav_about"
-      android:title="Over deze app" />		
+      android:title="Over deze app" />		-->
   </group> 
 </menu>

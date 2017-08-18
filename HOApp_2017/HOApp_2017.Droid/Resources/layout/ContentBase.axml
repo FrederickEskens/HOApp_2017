@@ -12,6 +12,7 @@
             android:id="@+id/header_image"
             android:layout_width="fill_parent"
             android:layout_height="300dp"
+            android:scaleType="centerCrop"
             android:adjustViewBounds="true" />
         <LinearLayout
             android:orientation="vertical"
@@ -19,21 +20,31 @@
             android:layout_height="wrap_content"
             android:paddingLeft="30sp"
             android:paddingRight="30sp"
-            android:paddingTop="20sp">
+            android:paddingTop="20sp"
+            >
             <TextView
                 android:id="@+id/title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/primary_blue"
-                android:textSize="36sp"
+                android:textSize="21sp"
                 android:textStyle="bold"
-                android:paddingTop="20sp"
+                android:paddingTop="20sp" />
+            <TextView
+                android:id="@+id/subTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/primary_blue"
+                android:textSize="12sp"
                 android:paddingBottom="10sp" />
             <TextView
                 android:id="@+id/body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/primary_blue" />
+                android:textColor="@color/primary_blue"
+                android:textStyle="italic"
+                android:textSize="17sp"
+                android:paddingBottom="10dp"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

@@ -5,7 +5,7 @@ using Android.Views;
 
 namespace HOApp_2017.Droid
 {
-    public class KaartFragment : BaseContentFragmen, IOnMapReadyCallback
+    public class KaartFragment : BaseContentFragmen
     {
         private GoogleMap map;
 
@@ -13,17 +13,11 @@ namespace HOApp_2017.Droid
         {
             var view = inflater.Inflate(HOApp_2017.Droid.Resource.Layout.ContentBase, container, false);
 
-            var mapFragment = new SupportKaartFragment();
-            var transaction = FragmentManager.BeginTransaction();
-            transaction.Add(Resource.Id.map, mapFragment).Commit();
-            mapFragment.GetMapAsync(this);
+            
 
             return view;
         }
 
-        public void OnMapReady(GoogleMap googleMap)
-        {
-            map = googleMap;
-        }
+       
     }
 }

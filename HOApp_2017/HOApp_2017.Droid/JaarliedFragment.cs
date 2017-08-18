@@ -5,6 +5,7 @@ using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
 using HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers;
+using Com.Bumptech.Glide;
 
 namespace HOApp_2017.Droid
 {
@@ -13,6 +14,7 @@ namespace HOApp_2017.Droid
         private ImageView headerImage;
         private TextView title;
         private TextView body;
+        private TextView subTitle;
 
         SongPageController _songController{
             get{
@@ -30,9 +32,10 @@ namespace HOApp_2017.Droid
             headerImage = view.FindViewById<ImageView>(Resource.Id.header_image);
             title = view.FindViewById<TextView>(Resource.Id.title);
             body = view.FindViewById<TextView>(Resource.Id.body);
-
-            headerImage.SetImageResource(Resource.Drawable.jaarthema);
+            subTitle = view.FindViewById<TextView>(Resource.Id.subTitle);
             headerImage.SetScaleType(ImageView.ScaleType.CenterInside);
+            Glide.With(Activity).Load(Resource.Drawable.jaarthema).Into(headerImage);
+            
             headerImage.SetBackgroundColor(new Android.Graphics.Color(ContextCompat.GetColor(Activity, Resource.Color.primary_red)));
 
             return view;
@@ -41,8 +44,13 @@ namespace HOApp_2017.Droid
         public override void OnResume()
         {
             base.OnResume();
-            title.Text = _songController.Title;
-            body.Text = _songController.SongText;
+            if (_songController != null)
+            {
+                title.Text = _songController.Title;
+                body.Text = _songController.SongText;
+                subTitle.Text = _songController.SubTitle;
+            }
+           
         }
     }
 }
