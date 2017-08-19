@@ -14,7 +14,7 @@ using Com.Bumptech.Glide;
 
 namespace HOApp_2017.Droid
 {
-    [Activity(Label = "HO 2017", MainLauncher = true)]
+    [Activity(Label = "HO 2017", MainLauncher = true, ScreenOrientation = Android.Content.PM.ScreenOrientation.Portrait)]
     public class MainActivity : AppCompatActivity,View.IOnClickListener
     {
         private DrawerLayout drawerLayout;
@@ -59,6 +59,7 @@ namespace HOApp_2017.Droid
             drawerToggle.SyncState();
             createContentFragments();
             // Load default home screen
+            if (savedInstanceState == null)
             AppController.Instance.NavigationController.SideMenuButtonClicked(NavigationController.PagesEnum.INTRO);
 
             Glide.With(this).Load(Resource.Drawable.hologo).Into(logoimageView);

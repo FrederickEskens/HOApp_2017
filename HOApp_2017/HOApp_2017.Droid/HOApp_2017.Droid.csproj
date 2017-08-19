@@ -130,7 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AboutFragment.cs" />
+    <Compile Include="InfoFragment.cs" />
     <Compile Include="ProgrammFragment.cs" />
+    <Compile Include="ScaledImageView.cs" />
     <Compile Include="SupportKaartFragment.cs" />
     <Compile Include="KaartFragment.cs" />
     <Compile Include="JaarliedFragment.cs" />
@@ -166,6 +168,15 @@
     </AndroidResource>
     <AndroidResource Include="..\HOApp_2017\SharedAssets\Images\Jaarthema\jaarthema.jpg">
       <Link>Resources\drawable\jaarthema.jpg</Link>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\programmFragmentLayout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\cell_program_ay_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\cell_programItem_Layout.axml">
+      <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
@@ -285,6 +296,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\hologo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\map.png" />
   </ItemGroup>
   <Import Project="..\HOApp_2017\HOApp_2017.projitems" Label="Shared" Condition="Exists('..\HOApp_2017\HOApp_2017.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
