@@ -129,7 +129,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutFragment.cs" />
     <Compile Include="InfoFragment.cs" />
     <Compile Include="ProgrammFragment.cs" />
     <Compile Include="ScaledImageView.cs" />

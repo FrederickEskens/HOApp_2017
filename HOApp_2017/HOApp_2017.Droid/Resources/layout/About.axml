@@ -8,142 +8,130 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="20sp">
-        <ImageView
-            android:id="@+id/header_image"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true" />
+        android:paddingBottom="20sp"
+       >
+      <TextView
+               android:id="@+id/about_title"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:textColor="#000000"
+               android:textSize="21sp"
+               android:textStyle="bold"
+               android:paddingTop="20sp"
+               android:paddingBottom="10sp"
+                android:paddingLeft="30sp"
+               android:text="Praktisch"/>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="30sp"
+             android:paddingLeft="30sp"
             android:paddingRight="30sp"
             android:paddingTop="20sp">
             <TextView
                 android:id="@+id/about_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/primary_blue"
-                android:textSize="36sp"
-                android:textStyle="bold"
+                android:textColor="@color/primary_red"
+                android:textSize="18sp"
+                android:textStyle="italic"
                 android:paddingTop="20sp"
-                android:paddingBottom="10sp" />
+                android:paddingBottom="10sp"
+                android:text="Infopunt (GG)"/>
             <TextView
                 android:id="@+id/body"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/primary_blue" />
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:text="> voor al je HO-vragen \n\n> verloren voorwerpen melden of brengen  \n\n> je smartphone/GSM opladen  \n\nTelefonisch bereikbaar op 0477 38 24 12"/>
         </LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
+      <LinearLayout
+         android:orientation="vertical"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:paddingLeft="30sp"
+         android:paddingRight="30sp"
+         android:paddingTop="20sp">
+        <TextView
+            android:id="@+id/about_title"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="30sp"
-            android:paddingRight="30sp">
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20sp">
-                <TextView
-                    android:id="@+id/about_dev_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primary_brown"
-                    android:text="Ontwikkelaars" />
-                <TextView
-                    android:id="@+id/about_dev"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20sp">
-                <TextView
-                    android:id="@+id/about_tester_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primary_brown"
-                    android:text="Testers" />
-                <TextView
-                    android:id="@+id/about_testers"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20sp">
-                <TextView
-                    android:id="@+id/about_photos_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primary_brown"
-                    android:text="Foto's" />
-                <TextView
-                    android:id="@+id/about_photos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20sp">
-                <TextView
-                    android:id="@+id/about_illustrations_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primary_brown"
-                    android:text="Illustratie's" />
-                <TextView
-                    android:id="@+id/about_illustrations"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20sp">
-                <TextView
-                    android:id="@+id/about_badge_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primary_brown"
-                    android:text="Jaarteken" />
-                <TextView
-                    android:id="@+id/about_badge"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:paddingBottom="20sp">
-                <TextView
-                    android:id="@+id/about_thanks_title"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/primary_brown"
-                    android:text="Met dank aan" />
-                <TextView
-                    android:id="@+id/about_thanks"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#000" />
-            </LinearLayout>
-        </LinearLayout>
+            android:textColor="@color/primary_red"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:paddingTop="20sp"
+            android:paddingBottom="10sp"
+            android:text="Barinfo"/>
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="> de bar op de grote grond sluit om 02:30 \n\n> de bar van K30 sluit om 02:00 \n\n> de bar van Loods 30 sluit om 02:00 \n\n> de bonnetjesverkoop sluit telkens een half uur vroeger"/>
+      </LinearLayout>
+      <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:paddingLeft="30sp"
+           android:paddingRight="30sp"
+           android:paddingTop="20sp">
+        <TextView
+            android:id="@+id/about_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_red"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:paddingTop="20sp"
+            android:paddingBottom="10sp"
+            android:text="Free WIFI (GG)"/>
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="Het wachtwoord is herfstontmoeting"/>
+      </LinearLayout>
+      <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:paddingLeft="30sp"
+           android:paddingRight="30sp"
+           android:paddingTop="20sp">
+        <TextView
+            android:id="@+id/about_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_red"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:paddingTop="20sp"
+            android:paddingBottom="10sp"
+            android:text="Bij noodgevallen"/>
+        <TextView
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:paddingBottom="10sp"
+            android:text="Verwittig de hulpdiensten nooit rechtstreeks. Bij ernstige ongevallen bel je het noodnummer van Scouts en Gidsen Vlaanderen. Voor kleine ongevallen ga je naar het Rode Kruis"/>
+        <TextView
+          android:id="@+id/emergencyButton"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="10dp"
+          android:textSize="12sp"
+          android:textStyle="italic"
+          android:textColor="#000000"
+          android:background="@color/primary_red"
+          android:gravity="center"
+          android:text="Noodnummer"/>
+      </LinearLayout>
     </LinearLayout>
 </ScrollView>

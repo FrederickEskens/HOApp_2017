@@ -11,6 +11,8 @@ using HOApp_2017.ScoutsEnGidsen.HO.BL.Controllers;
 using Fragment = Android.Support.V4.App.Fragment;
 using Android.Widget;
 using Com.Bumptech.Glide;
+using Android.Content.PM;
+using Android.Runtime;
 
 namespace HOApp_2017.Droid
 {
@@ -24,11 +26,11 @@ namespace HOApp_2017.Droid
 
         HomeFragment _homeFragment;
         KaartFragment _mapFragment;
-        AboutFragment _aboutFragment;
         InstellingenFragment _settingsFragment;
         JaarliedFragment _yearSongFragment;
         LeefregelsFragment _liveRulesFragment;
         ProgramFragment _programFragment;
+        InfoFragment _infoFragment;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -71,11 +73,11 @@ namespace HOApp_2017.Droid
         {
             _homeFragment = new HomeFragment();
             _mapFragment = new KaartFragment();
-            _aboutFragment = new AboutFragment();
             _liveRulesFragment = new LeefregelsFragment();
             _settingsFragment = new InstellingenFragment();
             _yearSongFragment = new JaarliedFragment();
             _programFragment = new ProgramFragment();
+            _infoFragment = new InfoFragment();
         }
 
         private void LoadFragment(Fragment fragment)
@@ -157,7 +159,7 @@ namespace HOApp_2017.Droid
                     contentFragment = _programFragment;
                     break;
                 case NavigationController.PagesEnum.INFO:
-                    contentFragment = _homeFragment;
+                    contentFragment = _infoFragment;
                     break;
                 case NavigationController.PagesEnum.LIVERULES:
                     contentFragment = _liveRulesFragment;
@@ -167,9 +169,6 @@ namespace HOApp_2017.Droid
                     break;
                 case NavigationController.PagesEnum.SETTINGS:
                     contentFragment = _settingsFragment;
-                    break;
-                case NavigationController.PagesEnum.ABOUT:
-                    contentFragment = _aboutFragment;
                     break;
             }
             if (controller != null){
@@ -200,6 +199,25 @@ namespace HOApp_2017.Droid
                 drawerLayout.CloseDrawers();
             }
                 
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            switch (requestCode)
+            {
+                case 1:
+                    if (grantResults.Length > 0 && grantResults[0] == Permission.Granted)
+                    {
+                        if (_infoFragment != null)
+                            _infoFragment.CallPermissionGranted();
+                    }
+                    else
+                    {
+
+                    }
+                    return;
+                    break;
+            }
         }
     }
 }
