@@ -15,6 +15,10 @@ class Copy {
     static let TABBAR_ITEM3 = "TABBAR_ITEM3"
     static let TABBAR_ITEM4 = "TABBAR_ITEM4"
     static let TABBAR_ITEM5 = "TABBAR_ITEM5"
+    
+    static let Intro_Title = "Intro_Title"
+    static let Intro_SubTitle = "Intro_SubTitle"
+    static let Intro_IntroText = "Intro_IntroText"
 }
 
 

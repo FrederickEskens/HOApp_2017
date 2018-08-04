@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B69894492115E35500DD3347 /* hoFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B69894482115E35500DD3347 /* hoFont.ttf */; };
+		B698944E2115F97400DD3347 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B698944A2115F96C00DD3347 /* Roboto-Bold.ttf */; };
+		B698944F2115F97400DD3347 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B698944B2115F96D00DD3347 /* Roboto-Regular.ttf */; };
+		B69894502115F97400DD3347 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B698944C2115F97200DD3347 /* Roboto-Italic.ttf */; };
+		B69894512115F97400DD3347 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B698944D2115F97300DD3347 /* Roboto-Light.ttf */; };
+		B69894532115F97800DD3347 /* hoFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B69894522115F97700DD3347 /* hoFont.ttf */; };
 		B6FCD36D2115B41C00BB9F2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCD36C2115B41C00BB9F2F /* AppDelegate.swift */; };
 		B6FCD36F2115B41C00BB9F2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCD36E2115B41C00BB9F2F /* HomeViewController.swift */; };
 		B6FCD3722115B41C00BB9F2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FCD3702115B41C00BB9F2F /* Main.storyboard */; };
@@ -29,7 +33,11 @@
 
 /* Begin PBXFileReference section */
 		5CB24BA55B8636376CAAE6B5 /* Pods_HO_gids.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HO_gids.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B69894482115E35500DD3347 /* hoFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hoFont.ttf; path = "glyphter-font/fonts/hoFont.ttf"; sourceTree = "<group>"; };
+		B698944A2115F96C00DD3347 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Bold.ttf"; path = "Fonts/Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		B698944B2115F96D00DD3347 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Regular.ttf"; path = "Fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		B698944C2115F97200DD3347 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Italic.ttf"; path = "Fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		B698944D2115F97300DD3347 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		B69894522115F97700DD3347 /* hoFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hoFont.ttf; path = "Fonts/glyphter-font/fonts/hoFont.ttf"; sourceTree = "<group>"; };
 		B6FCD3692115B41B00BB9F2F /* HO gids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HO gids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FCD36C2115B41C00BB9F2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FCD36E2115B41C00BB9F2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +166,11 @@
 		B6FCD3B02115D26700BB9F2F /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				B69894482115E35500DD3347 /* hoFont.ttf */,
+				B69894522115F97700DD3347 /* hoFont.ttf */,
+				B698944A2115F96C00DD3347 /* Roboto-Bold.ttf */,
+				B698944C2115F97200DD3347 /* Roboto-Italic.ttf */,
+				B698944D2115F97300DD3347 /* Roboto-Light.ttf */,
+				B698944B2115F96D00DD3347 /* Roboto-Regular.ttf */,
 				B6FCD3B12115D26700BB9F2F /* HO.sqlite */,
 			);
 			name = Assets;
@@ -226,10 +238,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B698944F2115F97400DD3347 /* Roboto-Regular.ttf in Resources */,
 				B6FCD3B22115D26700BB9F2F /* HO.sqlite in Resources */,
-				B69894492115E35500DD3347 /* hoFont.ttf in Resources */,
 				B6FCD37A2115B41C00BB9F2F /* LaunchScreen.storyboard in Resources */,
+				B698944E2115F97400DD3347 /* Roboto-Bold.ttf in Resources */,
+				B69894532115F97800DD3347 /* hoFont.ttf in Resources */,
+				B69894502115F97400DD3347 /* Roboto-Italic.ttf in Resources */,
 				B6FCD3772115B41C00BB9F2F /* Assets.xcassets in Resources */,
+				B69894512115F97400DD3347 /* Roboto-Light.ttf in Resources */,
 				B6FCD3722115B41C00BB9F2F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
