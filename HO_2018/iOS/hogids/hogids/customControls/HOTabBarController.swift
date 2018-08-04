@@ -24,7 +24,7 @@ class HOTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.tintColor = Colors.TabBarSelected
-        self.tabBar.unselectedItemTintColor = Colors.hoBlack
+        self.tabBar.unselectedItemTintColor = Colors.TabBarSelectedBackground
         self.tabBar.backgroundImage = UIImage.imageWithColor(color: UIColor.white, size: self.tabBar.frame.size)
         self.tabBar.shadowImage = UIImage()
         selectedIndex = 0
