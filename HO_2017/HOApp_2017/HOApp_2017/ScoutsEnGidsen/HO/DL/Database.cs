@@ -8,9 +8,8 @@ using Android.App;
 
 #if __IOS__
 using Foundation;
-#endif
-
 using HOApp_2017.ScoutsEnGidsen.HO.DAL.DO;
+#endif
 
 using SQLite;
 
