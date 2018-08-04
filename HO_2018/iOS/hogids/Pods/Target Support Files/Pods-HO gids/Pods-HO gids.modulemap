@@ -1,0 +1,6 @@
+framework module Pods_HO_gids {
+  umbrella header "Pods-HO gids-umbrella.h"
+
+  export *
+  module * { export * }
+}
