@@ -12,6 +12,8 @@
 		B69894502115F97400DD3347 /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B698944C2115F97200DD3347 /* Roboto-Italic.ttf */; };
 		B69894512115F97400DD3347 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B698944D2115F97300DD3347 /* Roboto-Light.ttf */; };
 		B69894532115F97800DD3347 /* hoFont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B69894522115F97700DD3347 /* hoFont.ttf */; };
+		B69894552116078300DD3347 /* DayProgramTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69894542116078300DD3347 /* DayProgramTableViewController.swift */; };
+		B698945721160AF100DD3347 /* ProgramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B698945621160AF100DD3347 /* ProgramTableViewCell.swift */; };
 		B6FCD36D2115B41C00BB9F2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCD36C2115B41C00BB9F2F /* AppDelegate.swift */; };
 		B6FCD36F2115B41C00BB9F2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FCD36E2115B41C00BB9F2F /* HomeViewController.swift */; };
 		B6FCD3722115B41C00BB9F2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FCD3702115B41C00BB9F2F /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		B698944C2115F97200DD3347 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Italic.ttf"; path = "Fonts/Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		B698944D2115F97300DD3347 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "Fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
 		B69894522115F97700DD3347 /* hoFont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = hoFont.ttf; path = "Fonts/glyphter-font/fonts/hoFont.ttf"; sourceTree = "<group>"; };
+		B69894542116078300DD3347 /* DayProgramTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayProgramTableViewController.swift; sourceTree = "<group>"; };
+		B698945621160AF100DD3347 /* ProgramTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTableViewCell.swift; sourceTree = "<group>"; };
 		B6FCD3692115B41B00BB9F2F /* HO gids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HO gids.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FCD36C2115B41C00BB9F2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6FCD36E2115B41C00BB9F2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 				B6FCD3842115C5D000BB9F2F /* MapViewController.swift */,
 				B6FCD3862115C5DD00BB9F2F /* ThemeViewController.swift */,
 				B6FCD3882115C5ED00BB9F2F /* MoreViewController.swift */,
+				B69894542116078300DD3347 /* DayProgramTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				B6FCD38B2115CACC00BB9F2F /* HOTabBarController.swift */,
+				B698945621160AF100DD3347 /* ProgramTableViewCell.swift */,
 			);
 			path = customControls;
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewPager-Swift/ViewPager_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -270,6 +277,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewPager_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +313,7 @@
 				B6FCD3AD2115CD8200BB9F2F /* Constants.swift in Sources */,
 				B6FCD3A22115CD8200BB9F2F /* LocationController.swift in Sources */,
 				B6FCD3892115C5ED00BB9F2F /* MoreViewController.swift in Sources */,
+				B69894552116078300DD3347 /* DayProgramTableViewController.swift in Sources */,
 				B6FCD3A12115CD8200BB9F2F /* LocalStorage.swift in Sources */,
 				B6FCD3872115C5DD00BB9F2F /* ThemeViewController.swift in Sources */,
 				B6FCD38C2115CACC00BB9F2F /* HOTabBarController.swift in Sources */,
@@ -313,6 +322,7 @@
 				B6FCD3852115C5D000BB9F2F /* MapViewController.swift in Sources */,
 				B6FCD36D2115B41C00BB9F2F /* AppDelegate.swift in Sources */,
 				B6FCD3AE2115CD8200BB9F2F /* UIImage+extension.swift in Sources */,
+				B698945721160AF100DD3347 /* ProgramTableViewCell.swift in Sources */,
 				B6FCD3AF2115CD8200BB9F2F /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

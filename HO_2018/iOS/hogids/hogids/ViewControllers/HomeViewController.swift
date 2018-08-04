@@ -10,13 +10,14 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var lblTopTitle: UILabel!
     @IBOutlet weak var imgIntroTopImage: UIImageView!
     @IBOutlet weak var lblintroTitle: UILabel!
     @IBOutlet weak var lblIntroSubtitle: UILabel!
     @IBOutlet weak var lblIntroText: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        lblTopTitle.text = LocalStorage.Instance.getCopy(copyKey: Copy.TABBAR_ITEM1)
         lblintroTitle.text = LocalStorage.Instance.getCopy(copyKey: Copy.Intro_Title)
         lblIntroSubtitle.text = LocalStorage.Instance.getCopy(copyKey: Copy.Intro_SubTitle)
         lblIntroText.text = LocalStorage.Instance.getCopy(copyKey: Copy.Intro_IntroText)

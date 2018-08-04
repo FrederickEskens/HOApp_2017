@@ -33,12 +33,14 @@ PODS:
   - SQLite.swift (0.11.5):
     - SQLite.swift/standard (= 0.11.5)
   - SQLite.swift/standard (0.11.5)
+  - ViewPager-Swift (1.2.1)
 
 DEPENDENCIES:
   - AppCenter
   - Firebase/Core
   - Kingfisher (~> 4.0)
   - SQLite.swift
+  - ViewPager-Swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -51,6 +53,7 @@ SPEC REPOS:
     - Kingfisher
     - nanopb
     - SQLite.swift
+    - ViewPager-Swift
 
 SPEC CHECKSUMS:
   AppCenter: 7e7b42e94b70294d1de3d747f164f0c1668a28e1
@@ -62,7 +65,8 @@ SPEC CHECKSUMS:
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
+  ViewPager-Swift: 2ec693504b75e818fc86437499860b64f0331b22
 
-PODFILE CHECKSUM: 8f723ea5860640efe20eb9b6b84fca4b20ca0545
+PODFILE CHECKSUM: 5e97fdceb00bdc2a8a6024a520a8a8732604b3f6
 
 COCOAPODS: 1.5.3

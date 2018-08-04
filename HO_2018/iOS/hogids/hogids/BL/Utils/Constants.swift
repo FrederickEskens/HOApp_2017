@@ -26,6 +26,8 @@ class Fonts {
     static func imageFont(size: CGFloat) -> UIFont {
         return UIFont(name: "hoFont", size: size)!
     }
+    
+    static let Roboto16 = UIFont(name: "Roboto-Regular", size: 16)!
 }
 
 class Colors {

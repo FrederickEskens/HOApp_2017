@@ -82,4 +82,41 @@ class LocalStorage {
         }
     }
     
+    func getProgram(forDay:Int) -> [ProgramItem]{
+        var returnList : [ProgramItem] = []
+        do {
+            let day = Expression<Int?>("ParentID")
+            let title = Expression<String?>("Title")
+            let timeBegin = Expression<String?>("TimeBegin")
+            let timeEnd = Expression<String?>("TimeEnd")
+            let location = Expression<Int?>("LocationID")
+            let programTable = Table("tblProgram")
+            for programItem in try db.prepare(programTable.select(title, timeBegin, timeEnd, location).where(day == forDay + 1)){
+                
+                
+                let item = ProgramItem.init(Title: programItem[title], Time: "\(programItem[timeBegin] ?? "...") - \(programItem[timeEnd] ?? "...")", Location: getLocation(forID: programItem[location] ?? 0))
+                returnList.append(item)
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        return returnList
+    }
+    
+    func getLocation(forID:Int) -> String{
+        var returnString = ""
+        do {
+            let id = Expression<Int?>("ID")
+            let name = Expression<String?>("Name")
+            let table = Table("tblLocations")
+            for locationItem in try db.prepare(table.select(name).where(id == forID)){
+                returnString = locationItem[name] ?? ""
+                break
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        return returnString
+    }
+    
 }

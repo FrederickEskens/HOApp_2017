@@ -10,4 +10,5 @@ pod 'AppCenter'
 pod 'Firebase/Core'
 pod 'Kingfisher', '~> 4.0'
 pod 'SQLite.swift'
+pod 'ViewPager-Swift'
 end
