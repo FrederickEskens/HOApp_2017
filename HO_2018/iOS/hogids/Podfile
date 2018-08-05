@@ -11,4 +11,5 @@ pod 'Firebase/Core'
 pod 'Kingfisher', '~> 4.0'
 pod 'SQLite.swift'
 pod 'ViewPager-Swift'
+pod 'Mapbox-iOS-SDK', '~> 4.2'
 end

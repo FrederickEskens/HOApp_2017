@@ -25,6 +25,7 @@ PODS:
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - Kingfisher (4.8.0)
+  - Mapbox-iOS-SDK (4.2.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - AppCenter
   - Firebase/Core
   - Kingfisher (~> 4.0)
+  - Mapbox-iOS-SDK (~> 4.2)
   - SQLite.swift
   - ViewPager-Swift
 
@@ -51,6 +53,7 @@ SPEC REPOS:
     - FirebaseInstanceID
     - GoogleToolboxForMac
     - Kingfisher
+    - Mapbox-iOS-SDK
     - nanopb
     - SQLite.swift
     - ViewPager-Swift
@@ -63,10 +66,11 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: f3f0657372592ecdfdfe2cac604a5a75758376a6
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
+  Mapbox-iOS-SDK: 706d52e3ad095e16944d9643f37d5a97627f6c19
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   SQLite.swift: 6e5356850bb1791459f8c16d6ee9195b28714a2e
   ViewPager-Swift: 2ec693504b75e818fc86437499860b64f0331b22
 
-PODFILE CHECKSUM: 5e97fdceb00bdc2a8a6024a520a8a8732604b3f6
+PODFILE CHECKSUM: 12f2291bbf465ec0c561ea4c7f1f5da707bb1b57
 
 COCOAPODS: 1.5.3
