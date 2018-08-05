@@ -23,6 +23,10 @@ class Copy {
     static let Song_Title = "Song_Title"
     static let Song_Subtitle = "Song_Subtitle"
     static let Song_Text = "Song_Text"
+    
+    static let Rules_Title = "Rules_Title"
+    static let Rules_IntroText = "Rules_IntroText"
+    static let Rules_FooterText = "Rules_FooterText"
 }
 
 
