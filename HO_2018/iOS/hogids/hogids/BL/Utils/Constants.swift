@@ -19,6 +19,10 @@ class Copy {
     static let Intro_Title = "Intro_Title"
     static let Intro_SubTitle = "Intro_SubTitle"
     static let Intro_IntroText = "Intro_IntroText"
+    
+    static let Song_Title = "Song_Title"
+    static let Song_Subtitle = "Song_Subtitle"
+    static let Song_Text = "Song_Text"
 }
 
 
