@@ -28,6 +28,7 @@ class MapViewController: UIViewController, MGLMapViewDelegate {
     
     func mapViewDidFinishLoadingMap(_ mapView: MGLMapView) {
         // Start downloading tiles and resources for z13-16.
+        self.mapView.zoom
         startOfflinePackDownload()
     }
     

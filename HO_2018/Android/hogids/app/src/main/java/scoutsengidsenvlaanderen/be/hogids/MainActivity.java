@@ -13,6 +13,7 @@ import android.database.SQLException;
 import java.io.IOException;
 
 import scoutsengidsenvlaanderen.be.hogids.fragments.IntroFragment;
+import scoutsengidsenvlaanderen.be.hogids.fragments.MapFragment;
 import scoutsengidsenvlaanderen.be.hogids.fragments.MoreFragment;
 import scoutsengidsenvlaanderen.be.hogids.fragments.ProgramFragment;
 import scoutsengidsenvlaanderen.be.hogids.fragments.ThemeFragment;
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_map:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM3"));
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, MapFragment.newInstance()).commit();
                     return true;
                 case R.id.navigation_theme:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM4"));
