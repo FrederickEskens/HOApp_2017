@@ -5,13 +5,9 @@
     android:layout_height="match_parent"
     tools:context="scoutsengidsenvlaanderen.be.hogids.fragments.MapFragment">
 
-    <com.mapbox.mapboxsdk.maps.MapView
-        android:id="@+id/mapView"
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.mapbox.mapboxsdk.maps.MapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        mapbox:mapbox_cameraTargetLat="51.2427903"
-        mapbox:mapbox_cameraTargetLng="4.9162632"
-        mapbox:mapbox_styleUrl="mapbox://styles/crejer/cjkgp87eb1wvv2rpg9vdunmso"
-        mapbox:mapbox_cameraZoom="14" />
-
+        android:layout_height="match_parent" />
 </FrameLayout>

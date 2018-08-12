@@ -10,6 +10,20 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.SQLException;
+
+import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.mapbox.mapboxsdk.constants.Style;
+import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.mapbox.mapboxsdk.geometry.LatLngBounds;
+import com.mapbox.mapboxsdk.maps.MapView;
+import com.mapbox.mapboxsdk.maps.MapboxMap;
+import com.mapbox.mapboxsdk.maps.MapboxMapOptions;
+import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
+import com.mapbox.mapboxsdk.maps.SupportMapFragment;
+import com.mapbox.mapboxsdk.plugins.locationlayer.LocationLayerPlugin;
+import com.mapbox.mapboxsdk.plugins.locationlayer.modes.CameraMode;
+
 import java.io.IOException;
 
 import scoutsengidsenvlaanderen.be.hogids.fragments.IntroFragment;
@@ -25,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
 
     private ProgramFragment programFragment = ProgramFragment.newInstance("","");
-
+    private SupportMapFragment mapFragment;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
@@ -42,7 +56,26 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_map:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM3"));
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, MapFragment.newInstance()).commit();
+                    MapboxMapOptions options = new MapboxMapOptions();
+                    options.styleUrl("mapbox://styles/crejer/cjkgp87eb1wvv2rpg9vdunmso");
+                    options.camera(new CameraPosition.Builder().zoom(14).build());
+                    mapFragment = SupportMapFragment.newInstance(options);
+                    mapFragment.getMapAsync(new OnMapReadyCallback() {
+                        @Override
+                        public void onMapReady(MapboxMap mapboxMap) {
+                            // Set bounds to Australia
+                            mapboxMap.setLatLngBoundsForCameraTarget(HO_BOUNDS);
+                            mapboxMap.setMinZoomPreference(12);
+                            mapboxMap.setMaxZoomPreference(16.5);
+
+                            LocationLayerPlugin locationLayerPlugin = new LocationLayerPlugin((MapView)mapFragment.getView(), mapboxMap);
+
+                            // Set the plugin's camera mode
+                            locationLayerPlugin.setCameraMode(CameraMode.TRACKING);
+                            getLifecycle().addObserver(locationLayerPlugin);
+                        }
+                    });
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, mapFragment).commit();
                     return true;
                 case R.id.navigation_theme:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM4"));
@@ -57,14 +90,21 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    private static final LatLngBounds HO_BOUNDS = new LatLngBounds.Builder()
+            .include(new LatLng(51.223, 4.894))
+            .include(new LatLng(51.262, 4.986))
+            .build();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Mapbox.getInstance(this, getString(R.string.mapBox_accestoken));
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
 
         mDBHelper = new DatabaseHelper(this);
 

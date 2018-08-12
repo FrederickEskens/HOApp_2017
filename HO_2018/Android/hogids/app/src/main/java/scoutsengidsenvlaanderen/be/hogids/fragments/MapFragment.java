@@ -52,7 +52,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Permiss
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Mapbox.getInstance(getContext(), getString(R.string.mapBox_accestoken));
+
     }
 
     @Override
@@ -60,10 +60,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Permiss
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_map, container, false);
-
-        mapView = view.findViewById(R.id.mapView);
-        mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this);
 
 
 
@@ -117,17 +113,5 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, Permiss
     @Override
     public void onPermissionResult(boolean granted) {
        showUserLocation();
-    }
-
-    @Override
-    public void onStop() {
-        mapView.onStop();
-        super.onStop();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        mapView.onStart();
     }
 }
