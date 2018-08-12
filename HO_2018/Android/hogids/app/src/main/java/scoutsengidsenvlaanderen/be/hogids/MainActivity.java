@@ -13,6 +13,7 @@ import android.database.SQLException;
 import java.io.IOException;
 
 import scoutsengidsenvlaanderen.be.hogids.fragments.IntroFragment;
+import scoutsengidsenvlaanderen.be.hogids.fragments.MoreFragment;
 import scoutsengidsenvlaanderen.be.hogids.fragments.ProgramFragment;
 import scoutsengidsenvlaanderen.be.hogids.fragments.ThemeFragment;
 
@@ -22,9 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase mDb;
     private TextView mTextMessage;
 
-    private IntroFragment introFragment = IntroFragment.newInstance();
     private ProgramFragment programFragment = ProgramFragment.newInstance("","");
-    private ThemeFragment themeFragment = ThemeFragment.newInstance();
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -34,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_home:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM1"));
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, introFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, IntroFragment.newInstance()).commit();
                     return true;
                 case R.id.navigation_program:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM2"));
@@ -45,10 +44,11 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_theme:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM4"));
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, themeFragment).commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, ThemeFragment.newInstance()).commit();
                     return true;
                 case R.id.navigation_practical:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM5"));
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, MoreFragment.newInstance()).commit();
                     return true;
             }
             return false;
