@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ho_logo"
+        android:title="@string/title_home"/>
+
+    <item
+        android:id="@+id/navigation_program"
+        android:icon="@drawable/calendar"
+        android:title="@string/title_dashboard" />
+
+    <item
+        android:id="@+id/navigation_map"
+        android:icon="@drawable/map"
+        android:title="@string/title_notifications" />
+    <item
+        android:id="@+id/navigation_theme"
+        android:icon="@drawable/jaarteken"
+        android:title="@string/title_notifications" />
+    <item
+        android:id="@+id/navigation_practical"
+        android:icon="@drawable/bullhorn"
+        android:title="@string/title_notifications" />
+
+</menu>

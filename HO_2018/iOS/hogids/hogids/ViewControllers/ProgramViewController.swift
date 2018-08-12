@@ -19,8 +19,12 @@ class ProgramViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         lblTopTitle.text = LocalStorage.Instance.getCopy(copyKey: Copy.TABBAR_ITEM2)
-         setupViewPager()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setupViewPager()
     }
 
     override func didReceiveMemoryWarning() {

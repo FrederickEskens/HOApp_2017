@@ -7,7 +7,12 @@
 		<key>HO gids.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>0</integer>
+		</dict>
+		<key>HO gids_release.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
 		</dict>
 		<key>hogids.xcscheme</key>
 		<dict>

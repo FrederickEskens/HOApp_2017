@@ -25,7 +25,8 @@ class PracticalViewController: UIViewController {
     @IBOutlet weak var btnShowFirstAid: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+btnShowFirstAid.layer.cornerRadius = 3
+        btnCallEmergency.layer.cornerRadius = 3
         // Do any additional setup after loading the view.
     }
 
@@ -34,7 +35,14 @@ class PracticalViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func callEmergencyPressed(_ sender: Any) {
+        if let phone = URL(string: "tel://+32474261401"){
+            if UIApplication.shared.canOpenURL(phone){
+                UIApplication.shared.open(phone, options: [:], completionHandler: nil)
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

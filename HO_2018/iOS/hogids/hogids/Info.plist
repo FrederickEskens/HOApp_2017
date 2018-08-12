@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We willen jou locatie weten om je op de map weer te geven</string>
-	<key>MGLMapboxAccessToken</key>
-	<string>pk.eyJ1IjoiY3JlamVyIiwiYSI6ImNqM2p5c3U4MDAwM3EzMm83aDB1MG9hanAifQ.hxbQ82oY3n7shNMlpTur2g</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -21,9 +17,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>3.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>6</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoiY3JlamVyIiwiYSI6ImNqM2p5c3U4MDAwM3EzMm83aDB1MG9hanAifQ.hxbQ82oY3n7shNMlpTur2g</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We willen jou locatie weten om je op de map weer te geven</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Roboto-Bold.ttf</string>

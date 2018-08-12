@@ -297,30 +297,33 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                                 <rect key="frame" x="24" y="644" width="143.66666666666666" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noodnummer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTE-B2-Vn6">
-                                                        <rect key="frame" x="19.333333333333343" y="14.333333333333373" width="105" height="22.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <rect key="frame" x="28.666666666666664" y="16.333333333333371" width="86.666666666666686" height="18.666666666666671"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.38431372549999998" green="0.50980392159999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="vTE-B2-Vn6" firstAttribute="centerX" secondItem="62O-3N-OoZ" secondAttribute="centerX" id="1Bh-bY-L1W"/>
                                                     <constraint firstItem="vTE-B2-Vn6" firstAttribute="centerY" secondItem="62O-3N-OoZ" secondAttribute="centerY" id="MGa-wr-lue"/>
                                                     <constraint firstAttribute="height" constant="50" id="gHd-bd-qXx"/>
                                                 </constraints>
+                                                <connections>
+                                                    <action selector="callEmergencyPressed:" destination="RPj-Nd-Dbj" eventType="touchUpInside" id="Xba-DH-acV"/>
+                                                </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZU-O6-v8J" customClass="UIButton">
                                                 <rect key="frame" x="207.66666666666663" y="644" width="143.33333333333337" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toon Rode Kruis op de kaart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4m-8o-5t5">
                                                         <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="50"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.92007261510000005" green="0.12910786269999999" blue="0.14969107509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.38431372549999998" green="0.50980392159999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="G4m-8o-5t5" firstAttribute="height" secondItem="qZU-O6-v8J" secondAttribute="height" id="JVJ-X1-USJ"/>
                                                     <constraint firstItem="G4m-8o-5t5" firstAttribute="width" secondItem="qZU-O6-v8J" secondAttribute="width" id="SLb-54-8tT"/>
