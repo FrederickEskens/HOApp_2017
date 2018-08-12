@@ -664,7 +664,7 @@ gels, dan zal er een sanctie en natraject volgen.</string>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-E3-Rxk">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="390.33333333333331"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anton-smagghe" translatesAutoresizingMaskIntoConstraints="NO" id="wi6-Gt-fqg">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anton_smagghe" translatesAutoresizingMaskIntoConstraints="NO" id="wi6-Gt-fqg">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="wi6-Gt-fqg" secondAttribute="height" multiplier="3:2" id="jbf-ta-QTr"/>
@@ -805,7 +805,7 @@ gels, dan zal er een sanctie en natraject volgen.</string>
         <image name="Jaarteken_noBG" width="851" height="1616"/>
         <image name="actie" width="407" height="407"/>
         <image name="alcohol" width="407" height="407"/>
-        <image name="anton-smagghe" width="4928" height="3264"/>
+        <image name="anton_smagghe" width="1080" height="715"/>
         <image name="eigendrank" width="407" height="407"/>
         <image name="geendrugs" width="407" height="407"/>
         <image name="nachtrust" width="407" height="407"/>
