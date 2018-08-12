@@ -14,6 +14,7 @@ import java.io.IOException;
 
 import scoutsengidsenvlaanderen.be.hogids.fragments.IntroFragment;
 import scoutsengidsenvlaanderen.be.hogids.fragments.ProgramFragment;
+import scoutsengidsenvlaanderen.be.hogids.fragments.ThemeFragment;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     private IntroFragment introFragment = IntroFragment.newInstance();
     private ProgramFragment programFragment = ProgramFragment.newInstance("","");
+    private ThemeFragment themeFragment = ThemeFragment.newInstance();
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -43,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_theme:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM4"));
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, themeFragment).commit();
                     return true;
                 case R.id.navigation_practical:
                     setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM5"));
@@ -61,11 +64,6 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        for(int i = 1; i < 6; i++) {
-            MenuItem item = navigation.getMenu().getItem(i - 1);
-            item.setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM" + i));
-        }
-
         mDBHelper = new DatabaseHelper(this);
 
         try {
@@ -80,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
         } catch (SQLException mSQLException) {
             throw mSQLException;
         }
+
+        for(int i = 1; i < 6; i++) {
+            MenuItem item = navigation.getMenu().getItem(i - 1);
+            item.setTitle(LocalStorage.getInstance().getCopy("TABBAR_ITEM" + i));
+        }
+
 
         navigation.setSelectedItemId(R.id.navigation_home);
 

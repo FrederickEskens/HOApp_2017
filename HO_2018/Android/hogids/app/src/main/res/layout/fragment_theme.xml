@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="scoutsengidsenvlaanderen.be.hogids.fragments.IntroFragment">
+    tools:context="scoutsengidsenvlaanderen.be.hogids.fragments.ThemeFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -22,8 +22,8 @@
                 android:layout_height="0dp"
                 android:adjustViewBounds="true"
                 android:contentDescription="@string/app_name"
-                android:scaleType="centerCrop"
-                android:src="@drawable/anton_smagghe"
+                android:scaleType="centerInside"
+                android:src="@drawable/jaarteken_no_bg"
                 app:layout_constraintDimensionRatio="H,3:2"
                 android:background="@color/colorPrimary"/>
 
