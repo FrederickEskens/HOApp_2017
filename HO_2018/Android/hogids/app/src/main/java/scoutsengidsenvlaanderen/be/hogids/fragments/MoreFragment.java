@@ -63,6 +63,7 @@ public class MoreFragment extends Fragment {
         viewPager.setOffscreenPageLimit(viewPagerAdapter.getCount());
 
         tabLayot.setupWithViewPager(viewPager);
+        tabLayot.setTabGravity(TabLayout.GRAVITY_FILL);
 
         return view;
     }

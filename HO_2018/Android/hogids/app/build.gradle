@@ -2,12 +2,21 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
+    signingConfigs {
+        release {
+            keyAlias 'hogids-release'
+            keyPassword 'ThEmuWubra4eq3dr'
+            storeFile file('/Volumes/LaCie_Porsche_Design_Mac/Git_Bazookas/HOApp_2017/HO_2018/Android/hogids/keystores/hogids-release-key.keystore')
+            storePassword 'ThEmuWubra4eq3dr'
+        }
+    }
+
     defaultConfig {
-        applicationId "scoutsengidsenvlaanderen.be.hogids"
+        applicationId "be.scoutsengidsenvlaanderen.hogids"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
+        versionCode 273
+        versionName "3.0.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
@@ -15,11 +24,15 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    productFlavors {
     }
 }
 
@@ -36,6 +49,7 @@ dependencies {
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:6.3.0'
     implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-locationlayer:0.7.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'

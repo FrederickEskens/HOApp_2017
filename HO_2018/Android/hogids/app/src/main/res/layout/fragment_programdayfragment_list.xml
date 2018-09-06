@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list"
+    android:name="scoutsengidsenvlaanderen.be.hogids.fragments.ProgramDayFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    android:paddingBottom="24dp"
+    android:paddingTop="24dp"
+    app:layoutManager="LinearLayoutManager"
+    app:layout_insetEdge="top"
+    tools:context="scoutsengidsenvlaanderen.be.hogids.fragments.ProgramDayFragment"
+    tools:listitem="@layout/fragment_programdayfragment"
+    android:clipToPadding="false"/>

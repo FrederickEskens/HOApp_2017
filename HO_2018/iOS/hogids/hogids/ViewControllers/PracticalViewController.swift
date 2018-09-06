@@ -21,11 +21,8 @@ class PracticalViewController: UIViewController {
     @IBOutlet weak var lblDetailFirstAid: UILabel!
     @IBOutlet weak var lblCallEmergency: UILabel!
     @IBOutlet weak var btnCallEmergency: UIButton!
-    @IBOutlet weak var lblShowFirstAid: UILabel!
-    @IBOutlet weak var btnShowFirstAid: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-btnShowFirstAid.layer.cornerRadius = 3
         btnCallEmergency.layer.cornerRadius = 3
         // Do any additional setup after loading the view.
     }

@@ -4,9 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,12 +30,12 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/crejer/cjkgp87eb1wvv2rpg9vdunmso"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/crejer/cjl0wc2y47d992rqmnfsul7d3"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="latitude">
-                                        <real key="value" value="51.242790300000003"/>
+                                        <real key="value" value="51.243000000000002"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="longitude">
-                                        <real key="value" value="4.9162632000000004"/>
+                                        <real key="value" value="4.9160000000000004"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minimumZoomLevel">
                                         <real key="value" value="14"/>
@@ -82,7 +80,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welkom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-Dv-iXU">
-                                        <rect key="frame" x="144" y="7.0000000000000018" width="87.333333333333314" height="31.666666666666671"/>
+                                        <rect key="frame" x="144.66666666666666" y="8.3333333333333357" width="86" height="28"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -134,7 +132,7 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWr-Yd-aVd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="390.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Jaarteken_noBG" translatesAutoresizingMaskIntoConstraints="NO" id="gou-rE-MUe">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
@@ -144,17 +142,17 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welkom op HO!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mde-iZ-Ja9">
-                                                <rect key="frame" x="24.000000000000007" y="274" width="117.66666666666669" height="22.666666666666686"/>
+                                                <rect key="frame" x="24.000000000000007" y="274" width="119.66666666666669" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="van de verbondscommissaris" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjm-qd-S0L">
-                                                <rect key="frame" x="24" y="296.66666666666669" width="327" height="16"/>
+                                                <rect key="frame" x="24" y="294" width="327" height="14"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDi-eh-yMb">
-                                                <rect key="frame" x="24" y="327.66666666666669" width="327" height="22.666666666666686"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDi-eh-yMb">
+                                                <rect key="frame" x="24" y="323" width="327" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -223,21 +221,21 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UWb-yj-AF6">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="718"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="666.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Praktisch" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0R-XI-hOv">
-                                                <rect key="frame" x="24" y="24" width="73" height="22.666666666666671"/>
+                                                <rect key="frame" x="24" y="24" width="71" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Infopunt (GG)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Bv-0U-Hvb">
-                                                <rect key="frame" x="24" y="61.666666666666664" width="104" height="22.666666666666664"/>
+                                                <rect key="frame" x="23.999999999999993" y="59" width="102.33333333333331" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <color key="textColor" red="0.38431372549999998" green="0.50980392159999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mvn-X4-LlN">
-                                                <rect key="frame" x="24" y="99.333333333333343" width="327" height="120.33333333333334"/>
+                                                <rect key="frame" x="24" y="94" width="327" height="106.33333333333331"/>
                                                 <string key="text">› voor al je HO-vragen
 
 › verloren voorwerpen melden of brengen
@@ -250,13 +248,13 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Barinfo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bJ-89-NiW">
-                                                <rect key="frame" x="24" y="249.66666666666666" width="56" height="22.666666666666657"/>
+                                                <rect key="frame" x="23.999999999999996" y="230.33333333333331" width="54.666666666666657" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <color key="textColor" red="0.38431372549999998" green="0.50980392159999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFy-K1-rn3">
-                                                <rect key="frame" x="24" y="287.33333333333331" width="327" height="120.33333333333331"/>
+                                                <rect key="frame" x="24" y="265.33333333333331" width="327" height="106.33333333333331"/>
                                                 <string key="text">› de bar op de grote grond sluit om 02.30
 
 › de bar van K30 sluit om 02.00
@@ -269,35 +267,35 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free WIFI (GG)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43J-vm-ZC2">
-                                                <rect key="frame" x="24" y="437.66666666666669" width="111" height="22.666666666666686"/>
+                                                <rect key="frame" x="24" y="401.66666666666669" width="112" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <color key="textColor" red="0.38431372549999998" green="0.50980392159999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Het wachtwoord is herfstontmoeting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWJ-Im-XAG">
-                                                <rect key="frame" x="24" y="475.33333333333337" width="327" height="17.333333333333314"/>
+                                                <rect key="frame" x="24" y="436.66666666666669" width="327" height="15.333333333333314"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bij noodgevallen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvF-0y-VnZ">
-                                                <rect key="frame" x="24" y="522.66666666666663" width="126" height="22.666666666666629"/>
+                                                <rect key="frame" x="24" y="482" width="126" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <color key="textColor" red="0.38431372549999998" green="0.50980392159999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gk-Qg-gjR">
-                                                <rect key="frame" x="24" y="560.33333333333337" width="327" height="68.666666666666629"/>
+                                                <rect key="frame" x="24" y="517" width="327" height="60.666666666666629"/>
                                                 <string key="text">Verwittig de hulpdiensten nooit rechtstreeks. Bij ernstige ongevallen bel je het noodnummer van Scouts en Gidsen Vlaanderen. Voor kleine ongevallen ga je naar het Rode Kruis.</string>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62O-3N-OoZ" customClass="UIButton">
-                                                <rect key="frame" x="24" y="644" width="143.66666666666666" height="50"/>
+                                                <rect key="frame" x="24" y="592.66666666666663" width="327" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noodnummer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTE-B2-Vn6">
-                                                        <rect key="frame" x="28.666666666666664" y="16.333333333333371" width="86.666666666666686" height="18.666666666666671"/>
+                                                        <rect key="frame" x="120.33333333333334" y="17.666666666666742" width="86.666666666666657" height="16.333333333333329"/>
                                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -312,25 +310,6 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                                 <connections>
                                                     <action selector="callEmergencyPressed:" destination="RPj-Nd-Dbj" eventType="touchUpInside" id="Xba-DH-acV"/>
                                                 </connections>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZU-O6-v8J" customClass="UIButton">
-                                                <rect key="frame" x="207.66666666666663" y="644" width="143.33333333333337" height="50"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toon Rode Kruis op de kaart" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4m-8o-5t5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="50"/>
-                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.38431372549999998" green="0.50980392159999999" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstItem="G4m-8o-5t5" firstAttribute="height" secondItem="qZU-O6-v8J" secondAttribute="height" id="JVJ-X1-USJ"/>
-                                                    <constraint firstItem="G4m-8o-5t5" firstAttribute="width" secondItem="qZU-O6-v8J" secondAttribute="width" id="SLb-54-8tT"/>
-                                                    <constraint firstItem="G4m-8o-5t5" firstAttribute="centerY" secondItem="qZU-O6-v8J" secondAttribute="centerY" id="WOJ-Fo-Q3M"/>
-                                                    <constraint firstAttribute="height" constant="50" id="foE-22-84L"/>
-                                                    <constraint firstItem="G4m-8o-5t5" firstAttribute="centerX" secondItem="qZU-O6-v8J" secondAttribute="centerX" id="ijb-mD-iBA"/>
-                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -348,21 +327,17 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                             <constraint firstItem="mvn-X4-LlN" firstAttribute="leading" secondItem="UWb-yj-AF6" secondAttribute="leading" constant="24" id="N9p-hm-2Lt"/>
                                             <constraint firstItem="4bJ-89-NiW" firstAttribute="top" secondItem="mvn-X4-LlN" secondAttribute="bottom" constant="30" id="SD1-Ub-YFj"/>
                                             <constraint firstItem="62O-3N-OoZ" firstAttribute="leading" secondItem="UWb-yj-AF6" secondAttribute="leading" constant="24" id="Ugu-aG-aHr"/>
-                                            <constraint firstItem="qZU-O6-v8J" firstAttribute="leading" secondItem="UWb-yj-AF6" secondAttribute="centerX" constant="20" id="Wqi-sV-XAg"/>
                                             <constraint firstItem="43J-vm-ZC2" firstAttribute="leading" secondItem="UWb-yj-AF6" secondAttribute="leading" constant="24" id="acf-h0-ZAX"/>
                                             <constraint firstItem="e0R-XI-hOv" firstAttribute="leading" secondItem="UWb-yj-AF6" secondAttribute="leading" constant="24" id="cwo-F2-45F"/>
-                                            <constraint firstAttribute="bottom" secondItem="qZU-O6-v8J" secondAttribute="bottom" constant="24" id="dxx-Qq-Ivy"/>
                                             <constraint firstItem="62O-3N-OoZ" firstAttribute="top" secondItem="0Gk-Qg-gjR" secondAttribute="bottom" constant="15" id="eCG-X5-W1R"/>
                                             <constraint firstItem="qvF-0y-VnZ" firstAttribute="leading" secondItem="UWb-yj-AF6" secondAttribute="leading" constant="24" id="h5N-Qf-W1Q"/>
-                                            <constraint firstAttribute="centerX" secondItem="62O-3N-OoZ" secondAttribute="trailing" constant="20" id="iaH-tq-DFu"/>
+                                            <constraint firstAttribute="trailing" secondItem="62O-3N-OoZ" secondAttribute="trailing" constant="24" id="iaH-tq-DFu"/>
                                             <constraint firstAttribute="trailing" secondItem="bWJ-Im-XAG" secondAttribute="trailing" constant="24" id="lyF-uN-SON"/>
                                             <constraint firstAttribute="trailing" secondItem="BFy-K1-rn3" secondAttribute="trailing" constant="24" id="oVi-re-4J3"/>
-                                            <constraint firstItem="qZU-O6-v8J" firstAttribute="top" secondItem="0Gk-Qg-gjR" secondAttribute="bottom" constant="15" id="pKs-dX-68A"/>
                                             <constraint firstItem="qvF-0y-VnZ" firstAttribute="top" secondItem="bWJ-Im-XAG" secondAttribute="bottom" constant="30" id="pVf-6r-D4t"/>
                                             <constraint firstAttribute="trailing" secondItem="mvn-X4-LlN" secondAttribute="trailing" constant="24" id="qrI-BJ-05i"/>
                                             <constraint firstItem="0Gk-Qg-gjR" firstAttribute="top" secondItem="qvF-0y-VnZ" secondAttribute="bottom" constant="15" id="t82-bF-aEc"/>
                                             <constraint firstItem="bWJ-Im-XAG" firstAttribute="top" secondItem="43J-vm-ZC2" secondAttribute="bottom" constant="15" id="uNQ-Fh-R5n"/>
-                                            <constraint firstAttribute="trailing" secondItem="qZU-O6-v8J" secondAttribute="trailing" constant="24" id="vyu-HO-lbR"/>
                                             <constraint firstAttribute="bottom" secondItem="62O-3N-OoZ" secondAttribute="bottom" constant="24" id="x2f-sw-awz"/>
                                             <constraint firstItem="BFy-K1-rn3" firstAttribute="leading" secondItem="UWb-yj-AF6" secondAttribute="leading" constant="24" id="y7j-Tv-4AW"/>
                                         </constraints>
@@ -388,13 +363,11 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                     </view>
                     <connections>
                         <outlet property="btnCallEmergency" destination="62O-3N-OoZ" id="AFe-jB-aME"/>
-                        <outlet property="btnShowFirstAid" destination="qZU-O6-v8J" id="8g9-Fr-aqD"/>
                         <outlet property="lblCallEmergency" destination="vTE-B2-Vn6" id="qa2-8g-bCT"/>
                         <outlet property="lblDetailBar" destination="BFy-K1-rn3" id="U3v-ZC-W9X"/>
                         <outlet property="lblDetailFirstAid" destination="0Gk-Qg-gjR" id="JLf-lH-npJ"/>
                         <outlet property="lblDetailInfoPoint" destination="mvn-X4-LlN" id="uaV-Qj-alF"/>
                         <outlet property="lblDetailWIFI" destination="bWJ-Im-XAG" id="T3f-Ee-U9X"/>
-                        <outlet property="lblShowFirstAid" destination="G4m-8o-5t5" id="alY-sn-cZh"/>
                         <outlet property="lblSubtitleBar" destination="4bJ-89-NiW" id="rp3-9e-RUC"/>
                         <outlet property="lblSubtitleFirstAid" destination="qvF-0y-VnZ" id="0xx-fF-j3V"/>
                         <outlet property="lblSubtitleInfo" destination="8Bv-0U-Hvb" id="Y3X-3q-Fej"/>
@@ -422,61 +395,61 @@ Telefonisch bereikbaar op 0477 38 24 12</string>
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7gb-IG-h6p">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="979.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="956"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leefregels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ia-uw-axN">
-                                                <rect key="frame" x="23.999999999999993" y="24" width="80.333333333333314" height="22.666666666666671"/>
+                                                <rect key="frame" x="24" y="24" width="78.666666666666671" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We rekenen erop dat jullie de wijsheid hebben om volgende zeven vuistregels op te volgen." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wqe-MZ-WIt">
-                                                <rect key="frame" x="24" y="61.666666666666679" width="327" height="67.333333333333314"/>
+                                                <rect key="frame" x="24" y="59" width="327" height="59.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alcohol" translatesAutoresizingMaskIntoConstraints="NO" id="Rfp-xS-I9d">
-                                                <rect key="frame" x="24" y="149" width="153.66666666666666" height="153.66666666666663"/>
+                                                <rect key="frame" x="24" y="138.66666666666669" width="153.66666666666666" height="153.66666666666669"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Rfp-xS-I9d" secondAttribute="height" multiplier="1:1" id="4jS-qh-dKY"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eigendrank" translatesAutoresizingMaskIntoConstraints="NO" id="GTj-tU-UOX">
-                                                <rect key="frame" x="197.66666666666663" y="149" width="153.33333333333337" height="153.66666666666663"/>
+                                                <rect key="frame" x="197.66666666666663" y="138.66666666666669" width="153.33333333333337" height="153.66666666666669"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="GTj-tU-UOX" secondAttribute="height" multiplier="1:1" id="bag-JP-Lu8"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nachtrust" translatesAutoresizingMaskIntoConstraints="NO" id="u8e-0z-DWZ">
-                                                <rect key="frame" x="24" y="322.66666666666669" width="153.66666666666666" height="153.33333333333331"/>
+                                                <rect key="frame" x="24" y="312.33333333333331" width="153.66666666666666" height="153.33333333333331"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="u8e-0z-DWZ" secondAttribute="height" multiplier="1:1" id="vMC-7f-SaO"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="respect" translatesAutoresizingMaskIntoConstraints="NO" id="i3X-Hf-4Jn">
-                                                <rect key="frame" x="197.66666666666663" y="322.66666666666669" width="153.33333333333337" height="153.33333333333331"/>
+                                                <rect key="frame" x="197.66666666666663" y="312.33333333333331" width="153.33333333333337" height="153.33333333333331"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="i3X-Hf-4Jn" secondAttribute="height" multiplier="1:1" id="rWc-sN-033"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="actie" translatesAutoresizingMaskIntoConstraints="NO" id="85e-l1-3qR">
-                                                <rect key="frame" x="24" y="496.00000000000006" width="153.66666666666666" height="153.66666666666669"/>
+                                                <rect key="frame" x="24" y="485.66666666666669" width="153.66666666666666" height="153.66666666666669"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="85e-l1-3qR" secondAttribute="height" multiplier="1:1" id="tmp-Ia-NTk"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geendrugs" translatesAutoresizingMaskIntoConstraints="NO" id="phz-C0-cpP">
-                                                <rect key="frame" x="197.66666666666663" y="496.00000000000006" width="153.33333333333337" height="153.66666666666669"/>
+                                                <rect key="frame" x="197.66666666666663" y="485.66666666666669" width="153.33333333333337" height="153.66666666666669"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="phz-C0-cpP" secondAttribute="height" multiplier="1:1" id="XoK-nL-o2k"/>
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rookzones" translatesAutoresizingMaskIntoConstraints="NO" id="GCd-d7-g1s">
-                                                <rect key="frame" x="111.33333333333333" y="669.66666666666663" width="153.33333333333337" height="153.33333333333337"/>
+                                                <rect key="frame" x="111.33333333333333" y="659.33333333333337" width="153.33333333333337" height="153.33333333333337"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYp-N8-35Y">
-                                                <rect key="frame" x="24" y="847" width="327" height="112.33333333333337"/>
+                                                <rect key="frame" x="24" y="836.66666666666663" width="327" height="99.333333333333371"/>
                                                 <string key="text">Door je in te schrijven voor Herfstontmoeting, ga je akkoord met de leefregels. Overtreed je de leefre-
 gels, dan zal er een sanctie en natraject volgen.</string>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
@@ -567,7 +540,7 @@ gels, dan zal er een sanctie en natraject volgen.</string>
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welkom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A7e-fn-fsl">
-                                        <rect key="frame" x="144" y="7.0000000000000018" width="87.333333333333314" height="31.666666666666671"/>
+                                        <rect key="frame" x="144.66666666666666" y="8" width="86" height="28"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -645,7 +618,7 @@ gels, dan zal er een sanctie en natraject volgen.</string>
                                 <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welkom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTn-P9-CMd">
-                                        <rect key="frame" x="144" y="6.6666666666666661" width="87.333333333333314" height="31.666666666666671"/>
+                                        <rect key="frame" x="144.66666666666666" y="8.6666666666666643" width="86" height="28"/>
                                         <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -662,7 +635,7 @@ gels, dan zal er een sanctie en natraject volgen.</string>
                                 <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ES-E3-Rxk">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="390.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="383"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anton_smagghe" translatesAutoresizingMaskIntoConstraints="NO" id="wi6-Gt-fqg">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
@@ -671,17 +644,17 @@ gels, dan zal er een sanctie en natraject volgen.</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welkom op HO!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1D-Fw-o9s">
-                                                <rect key="frame" x="24.000000000000007" y="274" width="117.66666666666669" height="22.666666666666686"/>
+                                                <rect key="frame" x="24.000000000000007" y="274" width="119.66666666666669" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="van de verbondscommissaris" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0d-8I-Qpm">
-                                                <rect key="frame" x="24" y="296.66666666666669" width="158.33333333333334" height="16"/>
+                                                <rect key="frame" x="24" y="294" width="157.33333333333334" height="14"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-k8-dgN">
-                                                <rect key="frame" x="24" y="327.66666666666669" width="327" height="22.666666666666686"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGh-k8-dgN">
+                                                <rect key="frame" x="24" y="323" width="327" height="20"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
